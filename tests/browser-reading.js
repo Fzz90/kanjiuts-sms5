@@ -1,0 +1,24 @@
+return (async () => {
+  const { entries, checkReading } = await import('/src/lib/bank.js');
+  const failures = entries.filter(item => item.acceptedReadings.some(reading => !checkReading(reading, item))).map(item => item.word);
+  const word = document.querySelector('.word-prompt').textContent;
+  const item = entries.find(value => value.word === word);
+  const indonesian = document.querySelector('.meaning-id');
+  const english = document.querySelector('.meaning-en');
+  if (entries.some(entry => !entry.englishMeaning?.trim())) throw new Error('English coverage is incomplete');
+  if (indonesian.textContent !== item.meanings.join(' / ') || english.textContent !== item.englishMeaning) throw new Error('Displayed translations do not match the vocabulary');
+  if (indonesian.lang !== 'id' || english.lang !== 'en') throw new Error('Translation language tags must be present');
+  if (getComputedStyle(indonesian).color !== 'rgb(6, 214, 160)' || getComputedStyle(english).color !== 'rgb(229, 99, 153)') throw new Error('Translation colors differ from the requested hex values');
+  if (indonesian.getBoundingClientRect().top < english.getBoundingClientRect().bottom) throw new Error('Indonesian must be below English');
+  if (getComputedStyle(indonesian).fontStyle !== 'italic') throw new Error('Indonesian must be italic');
+  if (getComputedStyle(english).fontSize !== '24px') throw new Error('English must use its enlarged 24px size');
+  if (!indonesian.querySelector('q')) throw new Error('Indonesian must have quotation marks');
+  const input = document.querySelector('#reading');
+  const setter = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set;
+  setter.call(input, item.acceptedReadings[0]);
+  input.dispatchEvent(new Event('input', { bubbles: true }));
+  await new Promise(resolve => setTimeout(resolve, 0));
+  document.querySelector('.reading-form').requestSubmit();
+  await new Promise(resolve => setTimeout(resolve, 0));
+  return { word, translations: { indonesian: indonesian.textContent, english: english.textContent, orderColorsAndTypography: 'passed', englishSize: getComputedStyle(english).fontSize, indonesianStyle: getComputedStyle(indonesian).fontStyle, coverage: entries.length }, failures, voicedKanaRejected: !checkReading('せったい', { acceptedReadings: ['ぜったい'] }), smallKanaRejected: !checkReading('けつこん', { acceptedReadings: ['けっこん'] }), feedback: document.querySelector('.feedback').textContent };
+})();

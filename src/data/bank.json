@@ -1,0 +1,9717 @@
+{
+  "meetings": [
+    {
+      "id": 2,
+      "kanji": [
+        "込",
+        "連",
+        "窓",
+        "側",
+        "葉",
+        "景",
+        "記",
+        "形",
+        "吉",
+        "結",
+        "婚"
+      ],
+      "sourceCount": 79
+    },
+    {
+      "id": 3,
+      "kanji": [
+        "共",
+        "供",
+        "両",
+        "若",
+        "老",
+        "息",
+        "娘",
+        "奥",
+        "将",
+        "祖",
+        "育"
+      ],
+      "sourceCount": 66
+    },
+    {
+      "id": 4,
+      "kanji": [
+        "性",
+        "招",
+        "取",
+        "最",
+        "初",
+        "番",
+        "歳",
+        "枚",
+        "冊",
+        "億",
+        "点"
+      ],
+      "sourceCount": 69
+    },
+    {
+      "id": 5,
+      "kanji": [
+        "階",
+        "段",
+        "号",
+        "倍",
+        "次",
+        "々",
+        "他",
+        "勝",
+        "負",
+        "賛",
+        "成"
+      ],
+      "sourceCount": 69
+    },
+    {
+      "id": 6,
+      "kanji": [
+        "絶",
+        "対",
+        "続",
+        "辞",
+        "投",
+        "選",
+        "約",
+        "束",
+        "守",
+        "過",
+        "夢"
+      ],
+      "sourceCount": 71
+    },
+    {
+      "id": 7,
+      "kanji": [
+        "的",
+        "飛",
+        "機",
+        "失",
+        "鉄",
+        "速",
+        "遅",
+        "駐",
+        "泊",
+        "船",
+        "座",
+        "席"
+      ],
+      "sourceCount": 77
+    }
+  ],
+  "entries": [
+    {
+      "id": "38c7365e97655043",
+      "word": "込む",
+      "reading": "こむ",
+      "readings": [
+        "こむ"
+      ],
+      "meanings": [
+        "menjadi padat; berdesakan"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "込"
+      ],
+      "pages": [
+        185
+      ],
+      "acceptedReadings": [
+        "こむ"
+      ]
+    },
+    {
+      "id": "2388570197b0026c",
+      "word": "人込み",
+      "reading": "ひとごみ",
+      "readings": [
+        "ひとごみ"
+      ],
+      "meanings": [
+        "kerumunan orang"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "込"
+      ],
+      "pages": [
+        185
+      ],
+      "acceptedReadings": [
+        "ひとごみ"
+      ]
+    },
+    {
+      "id": "f8e06344fc08e8c5",
+      "word": "申し込む",
+      "reading": "もうしこむ",
+      "readings": [
+        "もうしこむ"
+      ],
+      "meanings": [
+        "mendaftar; mengajukan permohonan"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "込"
+      ],
+      "pages": [
+        185
+      ],
+      "acceptedReadings": [
+        "もうしこむ"
+      ]
+    },
+    {
+      "id": "6510f88a1d13bdfc",
+      "word": "飛び込む",
+      "reading": "とびこむ",
+      "readings": [
+        "とびこむ"
+      ],
+      "meanings": [
+        "melompat masuk"
+      ],
+      "tms": [
+        2,
+        7
+      ],
+      "roots": [
+        "込",
+        "飛"
+      ],
+      "pages": [
+        185,
+        206
+      ],
+      "acceptedReadings": [
+        "とびこむ"
+      ]
+    },
+    {
+      "id": "8dd7d0723b0ba8e4",
+      "word": "税込み",
+      "reading": "ぜいこみ",
+      "readings": [
+        "ぜいこみ"
+      ],
+      "meanings": [
+        "termasuk pajak"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "込"
+      ],
+      "pages": [
+        185
+      ],
+      "acceptedReadings": [
+        "ぜいこみ"
+      ]
+    },
+    {
+      "id": "28b50c0550e8c221",
+      "word": "割り込む",
+      "reading": "わりこむ",
+      "readings": [
+        "わりこむ"
+      ],
+      "meanings": [
+        "menyerobot antrean"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "込"
+      ],
+      "pages": [
+        185
+      ],
+      "acceptedReadings": [
+        "わりこむ"
+      ]
+    },
+    {
+      "id": "6489b48a2a1c0e8c",
+      "word": "思い込む",
+      "reading": "おもいこむ",
+      "readings": [
+        "おもいこむ"
+      ],
+      "meanings": [
+        "menganggap; meyakini suatu dugaan"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "込"
+      ],
+      "pages": [
+        185
+      ],
+      "acceptedReadings": [
+        "おもいこむ"
+      ]
+    },
+    {
+      "id": "9af963f6e6a41628",
+      "word": "連れて行く",
+      "reading": "つれていく",
+      "readings": [
+        "つれていく"
+      ],
+      "meanings": [
+        "membawa seseorang pergi"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "連"
+      ],
+      "pages": [
+        185
+      ],
+      "acceptedReadings": [
+        "つれていく"
+      ]
+    },
+    {
+      "id": "cb5cfb95a8eb536c",
+      "word": "連続",
+      "reading": "れんぞく",
+      "readings": [
+        "れんぞく"
+      ],
+      "meanings": [
+        "kelanjutan; berlangsung berturut-turut"
+      ],
+      "tms": [
+        2,
+        6
+      ],
+      "roots": [
+        "連",
+        "続"
+      ],
+      "pages": [
+        185,
+        202
+      ],
+      "acceptedReadings": [
+        "れんぞく"
+      ]
+    },
+    {
+      "id": "fb2b707cee6c53cd",
+      "word": "連絡する",
+      "reading": "れんらくする",
+      "readings": [
+        "れんらくする"
+      ],
+      "meanings": [
+        "menghubungi"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "連"
+      ],
+      "pages": [
+        185
+      ],
+      "acceptedReadings": [
+        "れんらくする"
+      ]
+    },
+    {
+      "id": "8c47b73ac325d536",
+      "word": "関連",
+      "reading": "かんれん",
+      "readings": [
+        "かんれん"
+      ],
+      "meanings": [
+        "hubungan; keterkaitan"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "連"
+      ],
+      "pages": [
+        185
+      ],
+      "acceptedReadings": [
+        "かんれん"
+      ]
+    },
+    {
+      "id": "1cdaa65c32dfdfe1",
+      "word": "連休",
+      "reading": "れんきゅう",
+      "readings": [
+        "れんきゅう"
+      ],
+      "meanings": [
+        "libur beberapa hari berturut-turut"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "連"
+      ],
+      "pages": [
+        185
+      ],
+      "acceptedReadings": [
+        "れんきゅう"
+      ]
+    },
+    {
+      "id": "7a9b15ce08325ec3",
+      "word": "連なる",
+      "reading": "つらなる",
+      "readings": [
+        "つらなる"
+      ],
+      "meanings": [
+        "berderet; berjajar"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "連"
+      ],
+      "pages": [
+        185
+      ],
+      "acceptedReadings": [
+        "つらなる"
+      ]
+    },
+    {
+      "id": "b3477f94a1ef9d50",
+      "word": "国際連合",
+      "reading": "こくさいれんごう",
+      "readings": [
+        "こくさいれんごう"
+      ],
+      "meanings": [
+        "Perserikatan Bangsa-Bangsa (PBB)"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "連"
+      ],
+      "pages": [
+        185
+      ],
+      "acceptedReadings": [
+        "こくさいれんごう"
+      ]
+    },
+    {
+      "id": "7ac3a6cd68e45339",
+      "word": "国連",
+      "reading": "こくれん",
+      "readings": [
+        "こくれん"
+      ],
+      "meanings": [
+        "PBB; singkatan dari 国際連合"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "連"
+      ],
+      "pages": [
+        185
+      ],
+      "acceptedReadings": [
+        "こくれん"
+      ]
+    },
+    {
+      "id": "2c2d6564a0bccf60",
+      "word": "窓",
+      "reading": "まど",
+      "readings": [
+        "まど"
+      ],
+      "meanings": [
+        "jendela"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "窓"
+      ],
+      "pages": [
+        185
+      ],
+      "acceptedReadings": [
+        "まど"
+      ]
+    },
+    {
+      "id": "7b5eb9ddae68f9fc",
+      "word": "窓口",
+      "reading": "まどぐち",
+      "readings": [
+        "まどぐち"
+      ],
+      "meanings": [
+        "loket; loket layanan kantor"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "窓"
+      ],
+      "pages": [
+        185
+      ],
+      "acceptedReadings": [
+        "まどぐち"
+      ]
+    },
+    {
+      "id": "0581f5308b4743d0",
+      "word": "同窓会",
+      "reading": "どうそうかい",
+      "readings": [
+        "どうそうかい"
+      ],
+      "meanings": [
+        "reuni sekolah"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "窓"
+      ],
+      "pages": [
+        185
+      ],
+      "acceptedReadings": [
+        "どうそうかい"
+      ]
+    },
+    {
+      "id": "86aedf9c6c314fd5",
+      "word": "窓側の席",
+      "reading": "まどがわのせき",
+      "readings": [
+        "まどがわのせき"
+      ],
+      "meanings": [
+        "tempat duduk di sisi jendela"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "窓"
+      ],
+      "pages": [
+        185
+      ],
+      "acceptedReadings": [
+        "まどがわのせき"
+      ]
+    },
+    {
+      "id": "0c3cf015fc243e1a",
+      "word": "右側",
+      "reading": "みぎがわ",
+      "readings": [
+        "みぎがわ"
+      ],
+      "meanings": [
+        "sisi kanan"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "側"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "みぎがわ"
+      ]
+    },
+    {
+      "id": "0de921322643fce9",
+      "word": "両側",
+      "reading": "りょうがわ",
+      "readings": [
+        "りょうがわ"
+      ],
+      "meanings": [
+        "kedua sisi"
+      ],
+      "tms": [
+        2,
+        3
+      ],
+      "roots": [
+        "側",
+        "両"
+      ],
+      "pages": [
+        186,
+        190
+      ],
+      "acceptedReadings": [
+        "りょうがわ"
+      ]
+    },
+    {
+      "id": "93775621295f0c61",
+      "word": "向こう側",
+      "reading": "むこうがわ",
+      "readings": [
+        "むこうがわ"
+      ],
+      "meanings": [
+        "sisi seberang"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "側"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "むこうがわ"
+      ]
+    },
+    {
+      "id": "30733596cdbb5a79",
+      "word": "側面",
+      "reading": "そくめん",
+      "readings": [
+        "そくめん"
+      ],
+      "meanings": [
+        "sisi; bagian samping"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "側"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "そくめん"
+      ]
+    },
+    {
+      "id": "eca0ca836f684455",
+      "word": "反対側",
+      "reading": "はんたいがわ",
+      "readings": [
+        "はんたいがわ"
+      ],
+      "meanings": [
+        "sisi yang berlawanan"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "側"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "はんたいがわ"
+      ]
+    },
+    {
+      "id": "35de088602e05d9f",
+      "word": "外側",
+      "reading": "そとがわ",
+      "readings": [
+        "そとがわ"
+      ],
+      "meanings": [
+        "bagian luar"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "側"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "そとがわ"
+      ]
+    },
+    {
+      "id": "3eaa3bfe2a08594b",
+      "word": "内側",
+      "reading": "うちがわ",
+      "readings": [
+        "うちがわ"
+      ],
+      "meanings": [
+        "bagian dalam"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "側"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "うちがわ"
+      ]
+    },
+    {
+      "id": "829560cefa5a49a1",
+      "word": "葉",
+      "reading": "は",
+      "readings": [
+        "は"
+      ],
+      "meanings": [
+        "daun"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "葉"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "は"
+      ]
+    },
+    {
+      "id": "cef4a2049ff3a5c0",
+      "word": "言葉",
+      "reading": "ことば",
+      "readings": [
+        "ことば"
+      ],
+      "meanings": [
+        "kata; bahasa"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "葉"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "ことば"
+      ]
+    },
+    {
+      "id": "39d2d353efa58505",
+      "word": "葉書",
+      "reading": "はがき",
+      "readings": [
+        "はがき"
+      ],
+      "meanings": [
+        "kartu pos"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "葉"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "はがき"
+      ]
+    },
+    {
+      "id": "ae800bb9172d949a",
+      "word": "紅葉",
+      "reading": "こうよう",
+      "readings": [
+        "こうよう"
+      ],
+      "meanings": [
+        "daun yang berubah warna pada musim gugur"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "葉"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "こうよう",
+        "もみじ"
+      ]
+    },
+    {
+      "id": "5a529275522deaa7",
+      "word": "紅葉",
+      "reading": "もみじ",
+      "readings": [
+        "もみじ"
+      ],
+      "meanings": [
+        "daun maple"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "葉"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "こうよう",
+        "もみじ"
+      ]
+    },
+    {
+      "id": "7286ea84e25151a4",
+      "word": "落ち葉",
+      "reading": "おちば",
+      "readings": [
+        "おちば"
+      ],
+      "meanings": [
+        "daun yang gugur"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "葉"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "おちば"
+      ]
+    },
+    {
+      "id": "756e74abdced4b01",
+      "word": "景色",
+      "reading": "けしき",
+      "readings": [
+        "けしき"
+      ],
+      "meanings": [
+        "pemandangan"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "景"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "けしき"
+      ]
+    },
+    {
+      "id": "89dea62df88b9f8b",
+      "word": "景気",
+      "reading": "けいき",
+      "readings": [
+        "けいき"
+      ],
+      "meanings": [
+        "keadaan ekonomi"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "景"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "けいき"
+      ]
+    },
+    {
+      "id": "18849dfae5d4f95d",
+      "word": "不景気",
+      "reading": "ふけいき",
+      "readings": [
+        "ふけいき"
+      ],
+      "meanings": [
+        "resesi; keadaan ekonomi lesu"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "景"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "ふけいき"
+      ]
+    },
+    {
+      "id": "14f51ed3e7f57cf2",
+      "word": "風景",
+      "reading": "ふうけい",
+      "readings": [
+        "ふうけい"
+      ],
+      "meanings": [
+        "pemandangan"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "景"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "ふうけい"
+      ]
+    },
+    {
+      "id": "ae597ffe83f6ecae",
+      "word": "夜景",
+      "reading": "やけい",
+      "readings": [
+        "やけい"
+      ],
+      "meanings": [
+        "pemandangan malam"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "景"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "やけい"
+      ]
+    },
+    {
+      "id": "a020f125631a0fee",
+      "word": "背景",
+      "reading": "はいけい",
+      "readings": [
+        "はいけい"
+      ],
+      "meanings": [
+        "latar belakang"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "景"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "はいけい"
+      ]
+    },
+    {
+      "id": "4be6226fade77c0a",
+      "word": "光景",
+      "reading": "こうけい",
+      "readings": [
+        "こうけい"
+      ],
+      "meanings": [
+        "pemandangan; suasana yang terlihat"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "景"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "こうけい"
+      ]
+    },
+    {
+      "id": "16cdbd307a513cba",
+      "word": "景品",
+      "reading": "けいひん",
+      "readings": [
+        "けいひん"
+      ],
+      "meanings": [
+        "hadiah; barang hadiah"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "景"
+      ],
+      "pages": [
+        186
+      ],
+      "acceptedReadings": [
+        "けいひん"
+      ]
+    },
+    {
+      "id": "b6df2b21dd5ce813",
+      "word": "日記",
+      "reading": "にっき",
+      "readings": [
+        "にっき"
+      ],
+      "meanings": [
+        "buku harian"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "記"
+      ],
+      "pages": [
+        187
+      ],
+      "acceptedReadings": [
+        "にっき"
+      ]
+    },
+    {
+      "id": "388eeca78817b06a",
+      "word": "暗記する",
+      "reading": "あんきする",
+      "readings": [
+        "あんきする"
+      ],
+      "meanings": [
+        "menghafal"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "記"
+      ],
+      "pages": [
+        187
+      ],
+      "acceptedReadings": [
+        "あんきする"
+      ]
+    },
+    {
+      "id": "315d2aaf431577b7",
+      "word": "記事",
+      "reading": "きじ",
+      "readings": [
+        "きじ"
+      ],
+      "meanings": [
+        "artikel berita"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "記"
+      ],
+      "pages": [
+        187
+      ],
+      "acceptedReadings": [
+        "きじ"
+      ]
+    },
+    {
+      "id": "d6e5f3e6079d41ad",
+      "word": "記者",
+      "reading": "きしゃ",
+      "readings": [
+        "きしゃ"
+      ],
+      "meanings": [
+        "wartawan"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "記"
+      ],
+      "pages": [
+        187
+      ],
+      "acceptedReadings": [
+        "きしゃ"
+      ]
+    },
+    {
+      "id": "bb60e2f26d30442a",
+      "word": "記入する",
+      "reading": "きにゅうする",
+      "readings": [
+        "きにゅうする"
+      ],
+      "meanings": [
+        "mengisi formulir; menuliskan isian"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "記"
+      ],
+      "pages": [
+        187
+      ],
+      "acceptedReadings": [
+        "きにゅうする"
+      ]
+    },
+    {
+      "id": "56cfd5e5d3015f3d",
+      "word": "記念",
+      "reading": "きねん",
+      "readings": [
+        "きねん"
+      ],
+      "meanings": [
+        "peringatan; kenang-kenangan"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "記"
+      ],
+      "pages": [
+        187
+      ],
+      "acceptedReadings": [
+        "きねん"
+      ]
+    },
+    {
+      "id": "fe1d3a7fcbe23722",
+      "word": "記録",
+      "reading": "きろく",
+      "readings": [
+        "きろく"
+      ],
+      "meanings": [
+        "catatan; rekaman"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "記"
+      ],
+      "pages": [
+        187
+      ],
+      "acceptedReadings": [
+        "きろく"
+      ]
+    },
+    {
+      "id": "9b0b8c83dff4999c",
+      "word": "記す",
+      "reading": "しるす",
+      "readings": [
+        "しるす"
+      ],
+      "meanings": [
+        "mencatat"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "記"
+      ],
+      "pages": [
+        187
+      ],
+      "acceptedReadings": [
+        "しるす"
+      ]
+    },
+    {
+      "id": "cbc35d59bc3bc285",
+      "word": "形",
+      "reading": "かたち",
+      "readings": [
+        "かたち"
+      ],
+      "meanings": [
+        "bentuk"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "形"
+      ],
+      "pages": [
+        187
+      ],
+      "acceptedReadings": [
+        "かたち"
+      ]
+    },
+    {
+      "id": "4b6b3e6fd4278578",
+      "word": "人形",
+      "reading": "にんぎょう",
+      "readings": [
+        "にんぎょう"
+      ],
+      "meanings": [
+        "boneka"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "形"
+      ],
+      "pages": [
+        187
+      ],
+      "acceptedReadings": [
+        "にんぎょう"
+      ]
+    },
+    {
+      "id": "3489a6b59c721f09",
+      "word": "形容詞",
+      "reading": "けいようし",
+      "readings": [
+        "けいようし"
+      ],
+      "meanings": [
+        "kata sifat"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "形"
+      ],
+      "pages": [
+        187
+      ],
+      "acceptedReadings": [
+        "けいようし"
+      ]
+    },
+    {
+      "id": "e9b9548248958719",
+      "word": "過去形",
+      "reading": "かこけい",
+      "readings": [
+        "かこけい"
+      ],
+      "meanings": [
+        "bentuk lampau"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "形"
+      ],
+      "pages": [
+        187
+      ],
+      "acceptedReadings": [
+        "かこけい"
+      ]
+    },
+    {
+      "id": "00ae0b3b49ee13b1",
+      "word": "現在形",
+      "reading": "げんざいけい",
+      "readings": [
+        "げんざいけい"
+      ],
+      "meanings": [
+        "bentuk sekarang"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "形"
+      ],
+      "pages": [
+        187
+      ],
+      "acceptedReadings": [
+        "げんざいけい"
+      ]
+    },
+    {
+      "id": "a2f6dcafbe36e80b",
+      "word": "図形",
+      "reading": "ずけい",
+      "readings": [
+        "ずけい"
+      ],
+      "meanings": [
+        "bentuk geometris; gambar bentuk"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "形"
+      ],
+      "pages": [
+        187
+      ],
+      "acceptedReadings": [
+        "ずけい"
+      ]
+    },
+    {
+      "id": "981ea9a346ad1d52",
+      "word": "正方形",
+      "reading": "せいほうけい",
+      "readings": [
+        "せいほうけい"
+      ],
+      "meanings": [
+        "persegi"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "形"
+      ],
+      "pages": [
+        187
+      ],
+      "acceptedReadings": [
+        "せいほうけい"
+      ]
+    },
+    {
+      "id": "180e39ca1dd2351a",
+      "word": "形見",
+      "reading": "かたみ",
+      "readings": [
+        "かたみ"
+      ],
+      "meanings": [
+        "barang peninggalan; kenang-kenangan"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "形"
+      ],
+      "pages": [
+        187
+      ],
+      "acceptedReadings": [
+        "かたみ"
+      ]
+    },
+    {
+      "id": "e84b1509f6e6019b",
+      "word": "吉",
+      "reading": "きち",
+      "readings": [
+        "きち"
+      ],
+      "meanings": [
+        "keberuntungan"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "吉"
+      ],
+      "pages": [
+        188
+      ],
+      "acceptedReadings": [
+        "きち"
+      ]
+    },
+    {
+      "id": "8115b5f8e256f218",
+      "word": "大吉",
+      "reading": "だいきち",
+      "readings": [
+        "だいきち"
+      ],
+      "meanings": [
+        "keberuntungan besar"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "吉"
+      ],
+      "pages": [
+        188
+      ],
+      "acceptedReadings": [
+        "だいきち"
+      ]
+    },
+    {
+      "id": "e6ae4e6eeb798bef",
+      "word": "吉日",
+      "reading": "きちじつ",
+      "readings": [
+        "きちじつ"
+      ],
+      "meanings": [
+        "hari baik; hari keberuntungan"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "吉"
+      ],
+      "pages": [
+        188
+      ],
+      "acceptedReadings": [
+        "きちじつ"
+      ]
+    },
+    {
+      "id": "7729b82dd366637d",
+      "word": "不吉な",
+      "reading": "ふきつな",
+      "readings": [
+        "ふきつな"
+      ],
+      "meanings": [
+        "membawa kesialan; pertanda buruk"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "吉"
+      ],
+      "pages": [
+        188
+      ],
+      "acceptedReadings": [
+        "ふきつな"
+      ]
+    },
+    {
+      "id": "45155c2b009050ea",
+      "word": "吉報",
+      "reading": "きっぽう",
+      "readings": [
+        "きっぽう"
+      ],
+      "meanings": [
+        "kabar baik"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "吉"
+      ],
+      "pages": [
+        188
+      ],
+      "acceptedReadings": [
+        "きっぽう"
+      ]
+    },
+    {
+      "id": "2b8290ec70f10e9e",
+      "word": "吉凶",
+      "reading": "きっきょう",
+      "readings": [
+        "きっきょう"
+      ],
+      "meanings": [
+        "keberuntungan dan kesialan"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "吉"
+      ],
+      "pages": [
+        188
+      ],
+      "acceptedReadings": [
+        "きっきょう"
+      ]
+    },
+    {
+      "id": "25b08a971cd97b7e",
+      "word": "吉田さん",
+      "reading": "よしださん",
+      "readings": [
+        "よしださん"
+      ],
+      "meanings": [
+        "Bapak/Ibu Yoshida"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "吉"
+      ],
+      "pages": [
+        188
+      ],
+      "acceptedReadings": [
+        "よしださん"
+      ]
+    },
+    {
+      "id": "b38f9175b5b4cd3c",
+      "word": "結婚する",
+      "reading": "けっこんする",
+      "readings": [
+        "けっこんする"
+      ],
+      "meanings": [
+        "menikah"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "結",
+        "婚"
+      ],
+      "pages": [
+        188,
+        189
+      ],
+      "acceptedReadings": [
+        "けっこんする"
+      ]
+    },
+    {
+      "id": "a90e0f81f5247d60",
+      "word": "結ぶ",
+      "reading": "むすぶ",
+      "readings": [
+        "むすぶ"
+      ],
+      "meanings": [
+        "mengikat; membuat simpul"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "結"
+      ],
+      "pages": [
+        188
+      ],
+      "acceptedReadings": [
+        "むすぶ"
+      ]
+    },
+    {
+      "id": "1e3427f27ce43ddd",
+      "word": "結果",
+      "reading": "けっか",
+      "readings": [
+        "けっか"
+      ],
+      "meanings": [
+        "hasil"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "結"
+      ],
+      "pages": [
+        188
+      ],
+      "acceptedReadings": [
+        "けっか"
+      ]
+    },
+    {
+      "id": "18b43cf73e800191",
+      "word": "結論",
+      "reading": "けつろん",
+      "readings": [
+        "けつろん"
+      ],
+      "meanings": [
+        "kesimpulan"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "結"
+      ],
+      "pages": [
+        188
+      ],
+      "acceptedReadings": [
+        "けつろん"
+      ]
+    },
+    {
+      "id": "b02dfec3ffcc54a4",
+      "word": "結う",
+      "reading": "ゆう",
+      "readings": [
+        "ゆう"
+      ],
+      "meanings": [
+        "mengikat"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "結"
+      ],
+      "pages": [
+        188
+      ],
+      "acceptedReadings": [
+        "ゆう"
+      ]
+    },
+    {
+      "id": "7296a7a939d3e2bc",
+      "word": "結局",
+      "reading": "けっきょく",
+      "readings": [
+        "けっきょく"
+      ],
+      "meanings": [
+        "akhirnya; pada akhirnya"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "結"
+      ],
+      "pages": [
+        188
+      ],
+      "acceptedReadings": [
+        "けっきょく"
+      ]
+    },
+    {
+      "id": "40b0ae90e3dee526",
+      "word": "団結する",
+      "reading": "だんけつする",
+      "readings": [
+        "だんけつする"
+      ],
+      "meanings": [
+        "bersatu"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "結"
+      ],
+      "pages": [
+        188
+      ],
+      "acceptedReadings": [
+        "だんけつする"
+      ]
+    },
+    {
+      "id": "17be2492a375d27b",
+      "word": "結構",
+      "reading": "けっこう",
+      "readings": [
+        "けっこう"
+      ],
+      "meanings": [
+        "cukup baik; baiklah"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "結"
+      ],
+      "pages": [
+        188
+      ],
+      "acceptedReadings": [
+        "けっこう"
+      ]
+    },
+    {
+      "id": "58d9631fbb70c195",
+      "word": "離婚",
+      "reading": "りこん",
+      "readings": [
+        "りこん"
+      ],
+      "meanings": [
+        "perceraian"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "婚"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "りこん"
+      ]
+    },
+    {
+      "id": "06a42ed1e333d47a",
+      "word": "婚約",
+      "reading": "こんやく",
+      "readings": [
+        "こんやく"
+      ],
+      "meanings": [
+        "pertunangan"
+      ],
+      "tms": [
+        2,
+        6
+      ],
+      "roots": [
+        "婚",
+        "約"
+      ],
+      "pages": [
+        189,
+        203
+      ],
+      "acceptedReadings": [
+        "こんやく"
+      ]
+    },
+    {
+      "id": "202b260da20d2a61",
+      "word": "婚約者",
+      "reading": "こんやくしゃ",
+      "readings": [
+        "こんやくしゃ"
+      ],
+      "meanings": [
+        "tunangan"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "婚"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "こんやくしゃ"
+      ]
+    },
+    {
+      "id": "79de602f9bddbcae",
+      "word": "既婚",
+      "reading": "きこん",
+      "readings": [
+        "きこん"
+      ],
+      "meanings": [
+        "sudah menikah"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "婚"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "きこん"
+      ]
+    },
+    {
+      "id": "11530ab4f2ac52ab",
+      "word": "未婚",
+      "reading": "みこん",
+      "readings": [
+        "みこん"
+      ],
+      "meanings": [
+        "belum menikah"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "婚"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "みこん"
+      ]
+    },
+    {
+      "id": "85d38cd55ce5c09b",
+      "word": "新婚",
+      "reading": "しんこん",
+      "readings": [
+        "しんこん"
+      ],
+      "meanings": [
+        "baru menikah"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "婚"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "しんこん"
+      ]
+    },
+    {
+      "id": "92c7a9584691b44f",
+      "word": "求婚する",
+      "reading": "きゅうこんする",
+      "readings": [
+        "きゅうこんする"
+      ],
+      "meanings": [
+        "melamar untuk menikah"
+      ],
+      "tms": [
+        2
+      ],
+      "roots": [
+        "婚"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "きゅうこんする"
+      ]
+    },
+    {
+      "id": "31deac6cd7dea69c",
+      "word": "共に",
+      "reading": "ともに",
+      "readings": [
+        "ともに"
+      ],
+      "meanings": [
+        "bersama"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "共"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "ともに"
+      ]
+    },
+    {
+      "id": "fd7391b362aa7c34",
+      "word": "共通",
+      "reading": "きょうつう",
+      "readings": [
+        "きょうつう"
+      ],
+      "meanings": [
+        "kesamaan; hal yang sama"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "共"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "きょうつう"
+      ]
+    },
+    {
+      "id": "8713e798796d821e",
+      "word": "公共",
+      "reading": "こうきょう",
+      "readings": [
+        "こうきょう"
+      ],
+      "meanings": [
+        "umum; publik"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "共"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "こうきょう"
+      ]
+    },
+    {
+      "id": "5f97c7ab9af6ff19",
+      "word": "共感する",
+      "reading": "きょうかんする",
+      "readings": [
+        "きょうかんする"
+      ],
+      "meanings": [
+        "berempati; merasakan hal yang sama"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "共"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "きょうかんする"
+      ]
+    },
+    {
+      "id": "d53ce85f6f1408e3",
+      "word": "共産主義",
+      "reading": "きょうさんしゅぎ",
+      "readings": [
+        "きょうさんしゅぎ"
+      ],
+      "meanings": [
+        "komunisme"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "共"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "きょうさんしゅぎ"
+      ]
+    },
+    {
+      "id": "954033b9cffb5f18",
+      "word": "共学",
+      "reading": "きょうがく",
+      "readings": [
+        "きょうがく"
+      ],
+      "meanings": [
+        "pendidikan bersama untuk siswa laki-laki dan perempuan"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "共"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "きょうがく"
+      ]
+    },
+    {
+      "id": "866c2802dcb392e8",
+      "word": "共同",
+      "reading": "きょうどう",
+      "readings": [
+        "きょうどう"
+      ],
+      "meanings": [
+        "kerja sama; bersama-sama"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "共"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "きょうどう"
+      ]
+    },
+    {
+      "id": "5fd1d37596998295",
+      "word": "子供",
+      "reading": "こども",
+      "readings": [
+        "こども"
+      ],
+      "meanings": [
+        "anak"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "供"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "こども"
+      ]
+    },
+    {
+      "id": "8193553b9af3721a",
+      "word": "供える",
+      "reading": "そなえる",
+      "readings": [
+        "そなえる"
+      ],
+      "meanings": [
+        "mempersembahkan sesajen"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "供"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "そなえる"
+      ]
+    },
+    {
+      "id": "28c755317cba5c02",
+      "word": "供給する",
+      "reading": "きょうきゅうする",
+      "readings": [
+        "きょうきゅうする"
+      ],
+      "meanings": [
+        "memasok"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "供"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "きょうきゅうする"
+      ]
+    },
+    {
+      "id": "c23507c5cac1997b",
+      "word": "提供",
+      "reading": "ていきょう",
+      "readings": [
+        "ていきょう"
+      ],
+      "meanings": [
+        "penyediaan; pemberian"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "供"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "ていきょう"
+      ]
+    },
+    {
+      "id": "8c75aa95f21d24f9",
+      "word": "試供品",
+      "reading": "しきょうひん",
+      "readings": [
+        "しきょうひん"
+      ],
+      "meanings": [
+        "sampel produk"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "供"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "しきょうひん"
+      ]
+    },
+    {
+      "id": "c739b6fadd05b1fe",
+      "word": "お供する",
+      "reading": "おともする",
+      "readings": [
+        "おともする"
+      ],
+      "meanings": [
+        "menemani"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "供"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "おともする"
+      ]
+    },
+    {
+      "id": "7963ce3cad823926",
+      "word": "供養",
+      "reading": "くよう",
+      "readings": [
+        "くよう"
+      ],
+      "meanings": [
+        "upacara penghormatan arwah"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "供"
+      ],
+      "pages": [
+        189
+      ],
+      "acceptedReadings": [
+        "くよう"
+      ]
+    },
+    {
+      "id": "9389f18983d37e98",
+      "word": "両親",
+      "reading": "りょうしん",
+      "readings": [
+        "りょうしん"
+      ],
+      "meanings": [
+        "orang tua; ayah dan ibu"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "両"
+      ],
+      "pages": [
+        190
+      ],
+      "acceptedReadings": [
+        "りょうしん"
+      ]
+    },
+    {
+      "id": "1aaf984dbc5ac283",
+      "word": "両手",
+      "reading": "りょうて",
+      "readings": [
+        "りょうて"
+      ],
+      "meanings": [
+        "kedua tangan"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "両"
+      ],
+      "pages": [
+        190
+      ],
+      "acceptedReadings": [
+        "りょうて"
+      ]
+    },
+    {
+      "id": "23aabf3d1d5ba18d",
+      "word": "両方",
+      "reading": "りょうほう",
+      "readings": [
+        "りょうほう"
+      ],
+      "meanings": [
+        "keduanya; kedua sisi"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "両"
+      ],
+      "pages": [
+        190
+      ],
+      "acceptedReadings": [
+        "りょうほう"
+      ]
+    },
+    {
+      "id": "3ba8bbefa77bfad7",
+      "word": "両替",
+      "reading": "りょうがえ",
+      "readings": [
+        "りょうがえ"
+      ],
+      "meanings": [
+        "penukaran uang"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "両"
+      ],
+      "pages": [
+        190
+      ],
+      "acceptedReadings": [
+        "りょうがえ"
+      ]
+    },
+    {
+      "id": "1ad3878ad0be30ce",
+      "word": "両立する",
+      "reading": "りょうりつする",
+      "readings": [
+        "りょうりつする"
+      ],
+      "meanings": [
+        "dapat berjalan seiring; dapat dilakukan bersamaan"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "両"
+      ],
+      "pages": [
+        190
+      ],
+      "acceptedReadings": [
+        "りょうりつする"
+      ]
+    },
+    {
+      "id": "c23e5bea4108c732",
+      "word": "若い",
+      "reading": "わかい",
+      "readings": [
+        "わかい"
+      ],
+      "meanings": [
+        "muda"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "若"
+      ],
+      "pages": [
+        190
+      ],
+      "acceptedReadings": [
+        "わかい"
+      ]
+    },
+    {
+      "id": "1661357561d7ec16",
+      "word": "若者",
+      "reading": "わかもの",
+      "readings": [
+        "わかもの"
+      ],
+      "meanings": [
+        "orang muda"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "若"
+      ],
+      "pages": [
+        190
+      ],
+      "acceptedReadings": [
+        "わかもの"
+      ]
+    },
+    {
+      "id": "7048a241549f16e4",
+      "word": "若々しい",
+      "reading": "わかわかしい",
+      "readings": [
+        "わかわかしい"
+      ],
+      "meanings": [
+        "tampak muda; penuh semangat muda"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "若"
+      ],
+      "pages": [
+        190
+      ],
+      "acceptedReadings": [
+        "わかわかしい"
+      ]
+    },
+    {
+      "id": "3165d9967df8c984",
+      "word": "若しくは",
+      "reading": "もしくは",
+      "readings": [
+        "もしくは"
+      ],
+      "meanings": [
+        "atau"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "若"
+      ],
+      "pages": [
+        190
+      ],
+      "acceptedReadings": [
+        "もしくは"
+      ]
+    },
+    {
+      "id": "c369f79f080ed0c6",
+      "word": "若輩",
+      "reading": "じゃくはい",
+      "readings": [
+        "じゃくはい"
+      ],
+      "meanings": [
+        "orang muda yang belum berpengalaman"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "若"
+      ],
+      "pages": [
+        190
+      ],
+      "acceptedReadings": [
+        "じゃくはい"
+      ]
+    },
+    {
+      "id": "c0200946559a7f71",
+      "word": "老若男女",
+      "reading": "ろうにゃくなんにょ",
+      "readings": [
+        "ろうにゃくなんにょ"
+      ],
+      "meanings": [
+        "laki-laki dan perempuan dari segala usia"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "若"
+      ],
+      "pages": [
+        190
+      ],
+      "acceptedReadings": [
+        "ろうにゃくなんにょ"
+      ]
+    },
+    {
+      "id": "65b5d7249a543de8",
+      "word": "老人",
+      "reading": "ろうじん",
+      "readings": [
+        "ろうじん"
+      ],
+      "meanings": [
+        "orang lanjut usia"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "老"
+      ],
+      "pages": [
+        190
+      ],
+      "acceptedReadings": [
+        "ろうじん"
+      ]
+    },
+    {
+      "id": "08f604b913457806",
+      "word": "老いる",
+      "reading": "おいる",
+      "readings": [
+        "おいる"
+      ],
+      "meanings": [
+        "menjadi tua"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "老"
+      ],
+      "pages": [
+        190
+      ],
+      "acceptedReadings": [
+        "おいる"
+      ]
+    },
+    {
+      "id": "a961a14ca15def5f",
+      "word": "老ける",
+      "reading": "ふける",
+      "readings": [
+        "ふける"
+      ],
+      "meanings": [
+        "menua; tampak tua"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "老"
+      ],
+      "pages": [
+        190
+      ],
+      "acceptedReadings": [
+        "ふける"
+      ]
+    },
+    {
+      "id": "e7f3f2a8bafdcf95",
+      "word": "老化",
+      "reading": "ろうか",
+      "readings": [
+        "ろうか"
+      ],
+      "meanings": [
+        "penuaan"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "老"
+      ],
+      "pages": [
+        190
+      ],
+      "acceptedReadings": [
+        "ろうか"
+      ]
+    },
+    {
+      "id": "d98ae58566744cb8",
+      "word": "老眼",
+      "reading": "ろうがん",
+      "readings": [
+        "ろうがん"
+      ],
+      "meanings": [
+        "rabun dekat akibat usia"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "老"
+      ],
+      "pages": [
+        190
+      ],
+      "acceptedReadings": [
+        "ろうがん"
+      ]
+    },
+    {
+      "id": "ecd249751f2aa169",
+      "word": "息",
+      "reading": "いき",
+      "readings": [
+        "いき"
+      ],
+      "meanings": [
+        "napas"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "息"
+      ],
+      "pages": [
+        191
+      ],
+      "acceptedReadings": [
+        "いき"
+      ]
+    },
+    {
+      "id": "0717e551c4a4cb61",
+      "word": "息子",
+      "reading": "むすこ",
+      "readings": [
+        "むすこ"
+      ],
+      "meanings": [
+        "anak laki-laki"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "息"
+      ],
+      "pages": [
+        191
+      ],
+      "acceptedReadings": [
+        "むすこ"
+      ]
+    },
+    {
+      "id": "c5b1b52b10411910",
+      "word": "休息",
+      "reading": "きゅうそく",
+      "readings": [
+        "きゅうそく"
+      ],
+      "meanings": [
+        "istirahat"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "息"
+      ],
+      "pages": [
+        191
+      ],
+      "acceptedReadings": [
+        "きゅうそく"
+      ]
+    },
+    {
+      "id": "51522f5d188c6ff2",
+      "word": "息をする",
+      "reading": "いきをする",
+      "readings": [
+        "いきをする"
+      ],
+      "meanings": [
+        "bernapas"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "息"
+      ],
+      "pages": [
+        191
+      ],
+      "acceptedReadings": [
+        "いきをする"
+      ]
+    },
+    {
+      "id": "40fc28d29ae73b6a",
+      "word": "消息",
+      "reading": "しょうそく",
+      "readings": [
+        "しょうそく"
+      ],
+      "meanings": [
+        "kabar; keberadaan seseorang"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "息"
+      ],
+      "pages": [
+        191
+      ],
+      "acceptedReadings": [
+        "しょうそく"
+      ]
+    },
+    {
+      "id": "0d51a869446264d9",
+      "word": "ため息",
+      "reading": "ためいき",
+      "readings": [
+        "ためいき"
+      ],
+      "meanings": [
+        "helaan napas; desahan"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "息"
+      ],
+      "pages": [
+        191
+      ],
+      "acceptedReadings": [
+        "ためいき"
+      ]
+    },
+    {
+      "id": "94795303eeba548b",
+      "word": "息切れ",
+      "reading": "いきぎれ",
+      "readings": [
+        "いきぎれ"
+      ],
+      "meanings": [
+        "kehabisan napas; terengah-engah"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "息"
+      ],
+      "pages": [
+        191
+      ],
+      "acceptedReadings": [
+        "いきぎれ"
+      ]
+    },
+    {
+      "id": "c1e460e49b4653fc",
+      "word": "息抜き",
+      "reading": "いきぬき",
+      "readings": [
+        "いきぬき"
+      ],
+      "meanings": [
+        "bersantai; mengambil jeda"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "息"
+      ],
+      "pages": [
+        191
+      ],
+      "acceptedReadings": [
+        "いきぬき"
+      ]
+    },
+    {
+      "id": "28295eb27a921ef1",
+      "word": "娘",
+      "reading": "むすめ",
+      "readings": [
+        "むすめ"
+      ],
+      "meanings": [
+        "anak perempuan"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "娘"
+      ],
+      "pages": [
+        191
+      ],
+      "acceptedReadings": [
+        "むすめ"
+      ]
+    },
+    {
+      "id": "e4f547516f541c56",
+      "word": "一人娘",
+      "reading": "ひとりむすめ",
+      "readings": [
+        "ひとりむすめ"
+      ],
+      "meanings": [
+        "anak perempuan satu-satunya"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "娘"
+      ],
+      "pages": [
+        191
+      ],
+      "acceptedReadings": [
+        "ひとりむすめ"
+      ]
+    },
+    {
+      "id": "deda5d587a83200b",
+      "word": "娘婿",
+      "reading": "むすめむこ",
+      "readings": [
+        "むすめむこ"
+      ],
+      "meanings": [
+        "menantu laki-laki"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "娘"
+      ],
+      "pages": [
+        191
+      ],
+      "acceptedReadings": [
+        "むすめむこ"
+      ]
+    },
+    {
+      "id": "97281763bdaaa5b0",
+      "word": "奥",
+      "reading": "おく",
+      "readings": [
+        "おく"
+      ],
+      "meanings": [
+        "bagian terdalam; bagian belakang"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "奥"
+      ],
+      "pages": [
+        191
+      ],
+      "acceptedReadings": [
+        "おく"
+      ]
+    },
+    {
+      "id": "83ac0c84a18d3445",
+      "word": "奥さん",
+      "reading": "おくさん",
+      "readings": [
+        "おくさん"
+      ],
+      "meanings": [
+        "istri seseorang"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "奥"
+      ],
+      "pages": [
+        191
+      ],
+      "acceptedReadings": [
+        "おくさん"
+      ]
+    },
+    {
+      "id": "4ec2e80f9122e6b5",
+      "word": "奥歯",
+      "reading": "おくば",
+      "readings": [
+        "おくば"
+      ],
+      "meanings": [
+        "gigi geraham; gigi bagian belakang"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "奥"
+      ],
+      "pages": [
+        191
+      ],
+      "acceptedReadings": [
+        "おくば"
+      ]
+    },
+    {
+      "id": "9d50736322ac8d00",
+      "word": "奥ゆかしい",
+      "reading": "おくゆかしい",
+      "readings": [
+        "おくゆかしい"
+      ],
+      "meanings": [
+        "santun; anggun dan rendah hati"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "奥"
+      ],
+      "pages": [
+        191
+      ],
+      "acceptedReadings": [
+        "おくゆかしい"
+      ]
+    },
+    {
+      "id": "2b0e497c2c34e2db",
+      "word": "奥行き",
+      "reading": "おくゆき",
+      "readings": [
+        "おくゆき"
+      ],
+      "meanings": [
+        "kedalaman suatu ruang"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "奥"
+      ],
+      "pages": [
+        191
+      ],
+      "acceptedReadings": [
+        "おくゆき"
+      ]
+    },
+    {
+      "id": "5118dfe237096b0b",
+      "word": "将来",
+      "reading": "しょうらい",
+      "readings": [
+        "しょうらい"
+      ],
+      "meanings": [
+        "masa depan"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "将"
+      ],
+      "pages": [
+        192
+      ],
+      "acceptedReadings": [
+        "しょうらい"
+      ]
+    },
+    {
+      "id": "3b4f2c01bddd999a",
+      "word": "将棋",
+      "reading": "しょうぎ",
+      "readings": [
+        "しょうぎ"
+      ],
+      "meanings": [
+        "shogi; catur Jepang"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "将"
+      ],
+      "pages": [
+        192
+      ],
+      "acceptedReadings": [
+        "しょうぎ"
+      ]
+    },
+    {
+      "id": "3d65e323207595b1",
+      "word": "将軍",
+      "reading": "しょうぐん",
+      "readings": [
+        "しょうぐん"
+      ],
+      "meanings": [
+        "shogun; panglima"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "将"
+      ],
+      "pages": [
+        192
+      ],
+      "acceptedReadings": [
+        "しょうぐん"
+      ]
+    },
+    {
+      "id": "d2b853d3a14e397d",
+      "word": "主将",
+      "reading": "しゅしょう",
+      "readings": [
+        "しゅしょう"
+      ],
+      "meanings": [
+        "kapten tim"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "将"
+      ],
+      "pages": [
+        192
+      ],
+      "acceptedReadings": [
+        "しゅしょう"
+      ]
+    },
+    {
+      "id": "3b05ac1772dbfc68",
+      "word": "祖父",
+      "reading": "そふ",
+      "readings": [
+        "そふ"
+      ],
+      "meanings": [
+        "kakek"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "祖"
+      ],
+      "pages": [
+        192
+      ],
+      "acceptedReadings": [
+        "そふ"
+      ]
+    },
+    {
+      "id": "df957e0341aaa717",
+      "word": "祖母",
+      "reading": "そぼ",
+      "readings": [
+        "そぼ"
+      ],
+      "meanings": [
+        "nenek"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "祖"
+      ],
+      "pages": [
+        192
+      ],
+      "acceptedReadings": [
+        "そぼ"
+      ]
+    },
+    {
+      "id": "326df0579107d13a",
+      "word": "祖先",
+      "reading": "そせん",
+      "readings": [
+        "そせん"
+      ],
+      "meanings": [
+        "leluhur"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "祖"
+      ],
+      "pages": [
+        192
+      ],
+      "acceptedReadings": [
+        "そせん"
+      ]
+    },
+    {
+      "id": "f31f5adb41c29ca0",
+      "word": "祖国",
+      "reading": "そこく",
+      "readings": [
+        "そこく"
+      ],
+      "meanings": [
+        "tanah air"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "祖"
+      ],
+      "pages": [
+        192
+      ],
+      "acceptedReadings": [
+        "そこく"
+      ]
+    },
+    {
+      "id": "8012d0eb82baf9c2",
+      "word": "先祖",
+      "reading": "せんぞ",
+      "readings": [
+        "せんぞ"
+      ],
+      "meanings": [
+        "leluhur"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "祖"
+      ],
+      "pages": [
+        192
+      ],
+      "acceptedReadings": [
+        "せんぞ"
+      ]
+    },
+    {
+      "id": "d16fa0593416e6b9",
+      "word": "祖父母",
+      "reading": "そふぼ",
+      "readings": [
+        "そふぼ"
+      ],
+      "meanings": [
+        "kakek dan nenek"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "祖"
+      ],
+      "pages": [
+        192
+      ],
+      "acceptedReadings": [
+        "そふぼ"
+      ]
+    },
+    {
+      "id": "40d166567dc878ac",
+      "word": "元祖",
+      "reading": "がんそ",
+      "readings": [
+        "がんそ"
+      ],
+      "meanings": [
+        "pencetus; pelopor pertama"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "祖"
+      ],
+      "pages": [
+        192
+      ],
+      "acceptedReadings": [
+        "がんそ"
+      ]
+    },
+    {
+      "id": "586d49af0e8a5011",
+      "word": "教祖",
+      "reading": "きょうそ",
+      "readings": [
+        "きょうそ"
+      ],
+      "meanings": [
+        "pendiri suatu agama"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "祖"
+      ],
+      "pages": [
+        192
+      ],
+      "acceptedReadings": [
+        "きょうそ"
+      ]
+    },
+    {
+      "id": "6d16cb9c903d428d",
+      "word": "教育",
+      "reading": "きょういく",
+      "readings": [
+        "きょういく"
+      ],
+      "meanings": [
+        "pendidikan"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "育"
+      ],
+      "pages": [
+        192
+      ],
+      "acceptedReadings": [
+        "きょういく"
+      ]
+    },
+    {
+      "id": "6542feb4f8ead501",
+      "word": "育てる",
+      "reading": "そだてる",
+      "readings": [
+        "そだてる"
+      ],
+      "meanings": [
+        "membesarkan; mendidik"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "育"
+      ],
+      "pages": [
+        192
+      ],
+      "acceptedReadings": [
+        "そだてる"
+      ]
+    },
+    {
+      "id": "fbfdc775541af716",
+      "word": "育つ",
+      "reading": "そだつ",
+      "readings": [
+        "そだつ"
+      ],
+      "meanings": [
+        "tumbuh; berkembang"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "育"
+      ],
+      "pages": [
+        192
+      ],
+      "acceptedReadings": [
+        "そだつ"
+      ]
+    },
+    {
+      "id": "a1f6ecc2274fc84a",
+      "word": "体育",
+      "reading": "たいいく",
+      "readings": [
+        "たいいく"
+      ],
+      "meanings": [
+        "pendidikan jasmani"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "育"
+      ],
+      "pages": [
+        192
+      ],
+      "acceptedReadings": [
+        "たいいく"
+      ]
+    },
+    {
+      "id": "f0035fda95a35144",
+      "word": "育児",
+      "reading": "いくじ",
+      "readings": [
+        "いくじ"
+      ],
+      "meanings": [
+        "pengasuhan anak"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "育"
+      ],
+      "pages": [
+        192
+      ],
+      "acceptedReadings": [
+        "いくじ"
+      ]
+    },
+    {
+      "id": "2edcab774a503d73",
+      "word": "保育",
+      "reading": "ほいく",
+      "readings": [
+        "ほいく"
+      ],
+      "meanings": [
+        "perawatan; pengasuhan anak"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "育"
+      ],
+      "pages": [
+        192
+      ],
+      "acceptedReadings": [
+        "ほいく"
+      ]
+    },
+    {
+      "id": "6660e3d643125067",
+      "word": "飼育する",
+      "reading": "しいくする",
+      "readings": [
+        "しいくする"
+      ],
+      "meanings": [
+        "memelihara hewan"
+      ],
+      "tms": [
+        3
+      ],
+      "roots": [
+        "育"
+      ],
+      "pages": [
+        192
+      ],
+      "acceptedReadings": [
+        "しいくする"
+      ]
+    },
+    {
+      "id": "c29248bd29e7a46d",
+      "word": "男性",
+      "reading": "だんせい",
+      "readings": [
+        "だんせい"
+      ],
+      "meanings": [
+        "laki-laki"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "性"
+      ],
+      "pages": [
+        193
+      ],
+      "acceptedReadings": [
+        "だんせい"
+      ]
+    },
+    {
+      "id": "8072e2afcecd6d35",
+      "word": "女性",
+      "reading": "じょせい",
+      "readings": [
+        "じょせい"
+      ],
+      "meanings": [
+        "perempuan"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "性"
+      ],
+      "pages": [
+        193
+      ],
+      "acceptedReadings": [
+        "じょせい"
+      ]
+    },
+    {
+      "id": "29b816bea2a20a4c",
+      "word": "性別",
+      "reading": "せいべつ",
+      "readings": [
+        "せいべつ"
+      ],
+      "meanings": [
+        "jenis kelamin"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "性"
+      ],
+      "pages": [
+        193
+      ],
+      "acceptedReadings": [
+        "せいべつ"
+      ]
+    },
+    {
+      "id": "e460acf9d2bf7d50",
+      "word": "性格",
+      "reading": "せいかく",
+      "readings": [
+        "せいかく"
+      ],
+      "meanings": [
+        "kepribadian"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "性"
+      ],
+      "pages": [
+        193
+      ],
+      "acceptedReadings": [
+        "せいかく"
+      ]
+    },
+    {
+      "id": "975f8ce4b3f9231a",
+      "word": "性質",
+      "reading": "せいしつ",
+      "readings": [
+        "せいしつ"
+      ],
+      "meanings": [
+        "sifat; watak"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "性"
+      ],
+      "pages": [
+        193
+      ],
+      "acceptedReadings": [
+        "せいしつ"
+      ]
+    },
+    {
+      "id": "cfd6c2840fe4ec46",
+      "word": "理性",
+      "reading": "りせい",
+      "readings": [
+        "りせい"
+      ],
+      "meanings": [
+        "akal; nalar"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "性"
+      ],
+      "pages": [
+        193
+      ],
+      "acceptedReadings": [
+        "りせい"
+      ]
+    },
+    {
+      "id": "821241041376a1e7",
+      "word": "酸性",
+      "reading": "さんせい",
+      "readings": [
+        "さんせい"
+      ],
+      "meanings": [
+        "sifat asam"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "性"
+      ],
+      "pages": [
+        193
+      ],
+      "acceptedReadings": [
+        "さんせい"
+      ]
+    },
+    {
+      "id": "051d96f85c56abd2",
+      "word": "相性",
+      "reading": "あいしょう",
+      "readings": [
+        "あいしょう"
+      ],
+      "meanings": [
+        "kecocokan"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "性"
+      ],
+      "pages": [
+        193
+      ],
+      "acceptedReadings": [
+        "あいしょう"
+      ]
+    },
+    {
+      "id": "481b72408d43c00a",
+      "word": "招待する",
+      "reading": "しょうたいする",
+      "readings": [
+        "しょうたいする"
+      ],
+      "meanings": [
+        "mengundang"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "招"
+      ],
+      "pages": [
+        193
+      ],
+      "acceptedReadings": [
+        "しょうたいする"
+      ]
+    },
+    {
+      "id": "0bff49d6cf81a0b1",
+      "word": "招く",
+      "reading": "まねく",
+      "readings": [
+        "まねく"
+      ],
+      "meanings": [
+        "mengundang"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "招"
+      ],
+      "pages": [
+        193
+      ],
+      "acceptedReadings": [
+        "まねく"
+      ]
+    },
+    {
+      "id": "1fcdd17d50eb548b",
+      "word": "招き",
+      "reading": "まねき",
+      "readings": [
+        "まねき"
+      ],
+      "meanings": [
+        "undangan"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "招"
+      ],
+      "pages": [
+        193
+      ],
+      "acceptedReadings": [
+        "まねき"
+      ]
+    },
+    {
+      "id": "efab683661d1f09b",
+      "word": "招待状",
+      "reading": "しょうたいじょう",
+      "readings": [
+        "しょうたいじょう"
+      ],
+      "meanings": [
+        "surat undangan"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "招"
+      ],
+      "pages": [
+        193
+      ],
+      "acceptedReadings": [
+        "しょうたいじょう"
+      ]
+    },
+    {
+      "id": "9ed3b36956458152",
+      "word": "取る",
+      "reading": "とる",
+      "readings": [
+        "とる"
+      ],
+      "meanings": [
+        "mengambil"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "取"
+      ],
+      "pages": [
+        194
+      ],
+      "acceptedReadings": [
+        "とる"
+      ]
+    },
+    {
+      "id": "520384abc462a58e",
+      "word": "受け取る",
+      "reading": "うけとる",
+      "readings": [
+        "うけとる"
+      ],
+      "meanings": [
+        "menerima"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "取"
+      ],
+      "pages": [
+        194
+      ],
+      "acceptedReadings": [
+        "うけとる"
+      ]
+    },
+    {
+      "id": "f9e4b7f249f9c2e6",
+      "word": "取り出す",
+      "reading": "とりだす",
+      "readings": [
+        "とりだす"
+      ],
+      "meanings": [
+        "mengeluarkan"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "取"
+      ],
+      "pages": [
+        194
+      ],
+      "acceptedReadings": [
+        "とりだす"
+      ]
+    },
+    {
+      "id": "92b09c82daa335e6",
+      "word": "取り消す",
+      "reading": "とりけす",
+      "readings": [
+        "とりけす"
+      ],
+      "meanings": [
+        "membatalkan"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "取"
+      ],
+      "pages": [
+        194
+      ],
+      "acceptedReadings": [
+        "とりけす"
+      ]
+    },
+    {
+      "id": "3e2039d989705b60",
+      "word": "取り替える",
+      "reading": "とりかえる",
+      "readings": [
+        "とりかえる"
+      ],
+      "meanings": [
+        "menukar; mengganti"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "取"
+      ],
+      "pages": [
+        194
+      ],
+      "acceptedReadings": [
+        "とりかえる"
+      ]
+    },
+    {
+      "id": "7f93b5e5224de1b6",
+      "word": "聞き取り",
+      "reading": "ききとり",
+      "readings": [
+        "ききとり"
+      ],
+      "meanings": [
+        "menyimak; pemahaman lisan"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "取"
+      ],
+      "pages": [
+        194
+      ],
+      "acceptedReadings": [
+        "ききとり"
+      ]
+    },
+    {
+      "id": "74c12ff9c2bf4a49",
+      "word": "取材する",
+      "reading": "しゅざいする",
+      "readings": [
+        "しゅざいする"
+      ],
+      "meanings": [
+        "meliput berita"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "取"
+      ],
+      "pages": [
+        194
+      ],
+      "acceptedReadings": [
+        "しゅざいする"
+      ]
+    },
+    {
+      "id": "04838489b04f02dc",
+      "word": "最初",
+      "reading": "さいしょ",
+      "readings": [
+        "さいしょ"
+      ],
+      "meanings": [
+        "pertama; awal"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "最",
+        "初"
+      ],
+      "pages": [
+        194,
+        195
+      ],
+      "acceptedReadings": [
+        "さいしょ"
+      ]
+    },
+    {
+      "id": "d7b583086e09c91a",
+      "word": "最後",
+      "reading": "さいご",
+      "readings": [
+        "さいご"
+      ],
+      "meanings": [
+        "terakhir; akhir"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "最"
+      ],
+      "pages": [
+        194
+      ],
+      "acceptedReadings": [
+        "さいご"
+      ]
+    },
+    {
+      "id": "127859f347982617",
+      "word": "最近",
+      "reading": "さいきん",
+      "readings": [
+        "さいきん"
+      ],
+      "meanings": [
+        "akhir-akhir ini"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "最"
+      ],
+      "pages": [
+        194
+      ],
+      "acceptedReadings": [
+        "さいきん"
+      ]
+    },
+    {
+      "id": "843d547c146cf151",
+      "word": "最高",
+      "reading": "さいこう",
+      "readings": [
+        "さいこう"
+      ],
+      "meanings": [
+        "terbaik; tertinggi"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "最"
+      ],
+      "pages": [
+        194
+      ],
+      "acceptedReadings": [
+        "さいこう"
+      ]
+    },
+    {
+      "id": "b1e68382b0d98a49",
+      "word": "最低",
+      "reading": "さいてい",
+      "readings": [
+        "さいてい"
+      ],
+      "meanings": [
+        "terendah"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "最"
+      ],
+      "pages": [
+        194
+      ],
+      "acceptedReadings": [
+        "さいてい"
+      ]
+    },
+    {
+      "id": "9ed22aa9752163e0",
+      "word": "最新",
+      "reading": "さいしん",
+      "readings": [
+        "さいしん"
+      ],
+      "meanings": [
+        "terbaru"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "最"
+      ],
+      "pages": [
+        194
+      ],
+      "acceptedReadings": [
+        "さいしん"
+      ]
+    },
+    {
+      "id": "09c4f84f1846fdf3",
+      "word": "最も",
+      "reading": "もっとも",
+      "readings": [
+        "もっとも"
+      ],
+      "meanings": [
+        "paling"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "最"
+      ],
+      "pages": [
+        194
+      ],
+      "acceptedReadings": [
+        "もっとも"
+      ]
+    },
+    {
+      "id": "43b85073db555abe",
+      "word": "最終電車",
+      "reading": "さいしゅうでんしゃ",
+      "readings": [
+        "さいしゅうでんしゃ"
+      ],
+      "meanings": [
+        "kereta terakhir pada hari itu"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "最"
+      ],
+      "pages": [
+        194
+      ],
+      "acceptedReadings": [
+        "さいしゅうでんしゃ"
+      ]
+    },
+    {
+      "id": "f3880e575298adbd",
+      "word": "初めは",
+      "reading": "はじめは",
+      "readings": [
+        "はじめは"
+      ],
+      "meanings": [
+        "pada awalnya"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "初"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "はじめは"
+      ]
+    },
+    {
+      "id": "575d784f07481de5",
+      "word": "初めて",
+      "reading": "はじめて",
+      "readings": [
+        "はじめて"
+      ],
+      "meanings": [
+        "untuk pertama kali"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "初"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "はじめて"
+      ]
+    },
+    {
+      "id": "68145937e6b16a40",
+      "word": "初級",
+      "reading": "しょきゅう",
+      "readings": [
+        "しょきゅう"
+      ],
+      "meanings": [
+        "tingkat dasar; tingkat pemula"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "初"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "しょきゅう"
+      ]
+    },
+    {
+      "id": "0f2cffe314b10134",
+      "word": "初恋",
+      "reading": "はつこい",
+      "readings": [
+        "はつこい"
+      ],
+      "meanings": [
+        "cinta pertama"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "初"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "はつこい"
+      ]
+    },
+    {
+      "id": "3389d988e8408d9e",
+      "word": "初心者",
+      "reading": "しょしんしゃ",
+      "readings": [
+        "しょしんしゃ"
+      ],
+      "meanings": [
+        "pemula"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "初"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "しょしんしゃ"
+      ]
+    },
+    {
+      "id": "143c4f83df252afb",
+      "word": "初夏",
+      "reading": "しょか",
+      "readings": [
+        "しょか"
+      ],
+      "meanings": [
+        "awal musim panas"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "初"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "しょか"
+      ]
+    },
+    {
+      "id": "903892c5fe0a9a5e",
+      "word": "初々しい",
+      "reading": "ういういしい",
+      "readings": [
+        "ういういしい"
+      ],
+      "meanings": [
+        "polos; lugu"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "初"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "ういういしい"
+      ]
+    },
+    {
+      "id": "8a98a8e471f7b294",
+      "word": "一番",
+      "reading": "いちばん",
+      "readings": [
+        "いちばん"
+      ],
+      "meanings": [
+        "nomor satu"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "番"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "いちばん"
+      ]
+    },
+    {
+      "id": "0977b731878cdabf",
+      "word": "番号",
+      "reading": "ばんごう",
+      "readings": [
+        "ばんごう"
+      ],
+      "meanings": [
+        "nomor"
+      ],
+      "tms": [
+        4,
+        5
+      ],
+      "roots": [
+        "番",
+        "号"
+      ],
+      "pages": [
+        195,
+        198
+      ],
+      "acceptedReadings": [
+        "ばんごう"
+      ]
+    },
+    {
+      "id": "f5587efeb986a36f",
+      "word": "二番目",
+      "reading": "にばんめ",
+      "readings": [
+        "にばんめ"
+      ],
+      "meanings": [
+        "urutan kedua"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "番"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "にばんめ"
+      ]
+    },
+    {
+      "id": "f198df451bc46c62",
+      "word": "当番",
+      "reading": "とうばん",
+      "readings": [
+        "とうばん"
+      ],
+      "meanings": [
+        "orang yang mendapat giliran bertugas"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "番"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "とうばん"
+      ]
+    },
+    {
+      "id": "ce4488f51ebc8e12",
+      "word": "交番",
+      "reading": "こうばん",
+      "readings": [
+        "こうばん"
+      ],
+      "meanings": [
+        "pos polisi"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "番"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "こうばん"
+      ]
+    },
+    {
+      "id": "238d8325791a5cfb",
+      "word": "番組",
+      "reading": "ばんぐみ",
+      "readings": [
+        "ばんぐみ"
+      ],
+      "meanings": [
+        "program siaran"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "番"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "ばんぐみ"
+      ]
+    },
+    {
+      "id": "cf640895d9aef10f",
+      "word": "留守番電話",
+      "reading": "るすばんでんわ",
+      "readings": [
+        "るすばんでんわ"
+      ],
+      "meanings": [
+        "mesin penjawab telepon"
+      ],
+      "tms": [
+        4,
+        6
+      ],
+      "roots": [
+        "番",
+        "守"
+      ],
+      "pages": [
+        195,
+        204
+      ],
+      "acceptedReadings": [
+        "るすばんでんわ"
+      ]
+    },
+    {
+      "id": "d21218cc422ed4e1",
+      "word": "順番",
+      "reading": "じゅんばん",
+      "readings": [
+        "じゅんばん"
+      ],
+      "meanings": [
+        "urutan; giliran"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "番"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "じゅんばん"
+      ]
+    },
+    {
+      "id": "657f7125bec786f5",
+      "word": "五歳",
+      "reading": "ごさい",
+      "readings": [
+        "ごさい"
+      ],
+      "meanings": [
+        "berusia lima tahun"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "歳"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "ごさい"
+      ]
+    },
+    {
+      "id": "41e2285c199085d9",
+      "word": "二十歳",
+      "reading": "はたち／にじゅっさい",
+      "readings": [
+        "はたち",
+        "にじゅっさい"
+      ],
+      "meanings": [
+        "berusia dua puluh tahun"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "歳"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "にじゅっさい",
+        "はたち"
+      ]
+    },
+    {
+      "id": "c49ee0fd567a6a89",
+      "word": "万歳",
+      "reading": "ばんざい",
+      "readings": [
+        "ばんざい"
+      ],
+      "meanings": [
+        "hore!; seruan banzai"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "歳"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "ばんざい"
+      ]
+    },
+    {
+      "id": "147999c1bf203f85",
+      "word": "お歳暮",
+      "reading": "おせいぼ",
+      "readings": [
+        "おせいぼ"
+      ],
+      "meanings": [
+        "hadiah akhir tahun"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "歳"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "おせいぼ"
+      ]
+    },
+    {
+      "id": "37e749055cc39e99",
+      "word": "歳月",
+      "reading": "さいげつ",
+      "readings": [
+        "さいげつ"
+      ],
+      "meanings": [
+        "tahun-tahun; perjalanan waktu"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "歳"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "さいげつ"
+      ]
+    },
+    {
+      "id": "4b91841b48851b64",
+      "word": "歳入",
+      "reading": "さいにゅう",
+      "readings": [
+        "さいにゅう"
+      ],
+      "meanings": [
+        "pendapatan; penerimaan"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "歳"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "さいにゅう"
+      ]
+    },
+    {
+      "id": "3cba0d9028ac5ebb",
+      "word": "歳出",
+      "reading": "さいしゅつ",
+      "readings": [
+        "さいしゅつ"
+      ],
+      "meanings": [
+        "pengeluaran"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "歳"
+      ],
+      "pages": [
+        195
+      ],
+      "acceptedReadings": [
+        "さいしゅつ"
+      ]
+    },
+    {
+      "id": "cf5572f30e60fbef",
+      "word": "一枚",
+      "reading": "いちまい",
+      "readings": [
+        "いちまい"
+      ],
+      "meanings": [
+        "satu lembar"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "枚"
+      ],
+      "pages": [
+        196
+      ],
+      "acceptedReadings": [
+        "いちまい"
+      ]
+    },
+    {
+      "id": "62816a00683e3885",
+      "word": "枚数",
+      "reading": "まいすう",
+      "readings": [
+        "まいすう"
+      ],
+      "meanings": [
+        "jumlah lembar; jumlah benda tipis"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "枚"
+      ],
+      "pages": [
+        196
+      ],
+      "acceptedReadings": [
+        "まいすう"
+      ]
+    },
+    {
+      "id": "a2eeaba579d9eeb8",
+      "word": "二枚目",
+      "reading": "にまいめ",
+      "readings": [
+        "にまいめ"
+      ],
+      "meanings": [
+        "pria tampan"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "枚"
+      ],
+      "pages": [
+        196
+      ],
+      "acceptedReadings": [
+        "にまいめ"
+      ]
+    },
+    {
+      "id": "c5418036fb07dde9",
+      "word": "一冊",
+      "reading": "いっさつ",
+      "readings": [
+        "いっさつ"
+      ],
+      "meanings": [
+        "satu buku"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "冊"
+      ],
+      "pages": [
+        196
+      ],
+      "acceptedReadings": [
+        "いっさつ"
+      ]
+    },
+    {
+      "id": "a819732bd8ad0267",
+      "word": "小冊子",
+      "reading": "しょうさつし",
+      "readings": [
+        "しょうさつし"
+      ],
+      "meanings": [
+        "buku kecil; buklet"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "冊"
+      ],
+      "pages": [
+        196
+      ],
+      "acceptedReadings": [
+        "しょうさつし"
+      ]
+    },
+    {
+      "id": "b118a58bf58aa5b2",
+      "word": "別冊",
+      "reading": "べっさつ",
+      "readings": [
+        "べっさつ"
+      ],
+      "meanings": [
+        "jilid terpisah"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "冊"
+      ],
+      "pages": [
+        196
+      ],
+      "acceptedReadings": [
+        "べっさつ"
+      ]
+    },
+    {
+      "id": "e1d1eb6831bdcff3",
+      "word": "短冊",
+      "reading": "たんざく",
+      "readings": [
+        "たんざく"
+      ],
+      "meanings": [
+        "lembar kertas panjang dan sempit untuk menulis"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "冊"
+      ],
+      "pages": [
+        196
+      ],
+      "acceptedReadings": [
+        "たんざく"
+      ]
+    },
+    {
+      "id": "5f49a50d46818293",
+      "word": "冊数",
+      "reading": "さっすう",
+      "readings": [
+        "さっすう"
+      ],
+      "meanings": [
+        "jumlah buku"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "冊"
+      ],
+      "pages": [
+        196
+      ],
+      "acceptedReadings": [
+        "さっすう"
+      ]
+    },
+    {
+      "id": "413fc956a093a8b3",
+      "word": "一億",
+      "reading": "いちおく",
+      "readings": [
+        "いちおく"
+      ],
+      "meanings": [
+        "seratus juta"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "億"
+      ],
+      "pages": [
+        196
+      ],
+      "acceptedReadings": [
+        "いちおく"
+      ]
+    },
+    {
+      "id": "11df27c7ed0c6238",
+      "word": "十億",
+      "reading": "じゅうおく",
+      "readings": [
+        "じゅうおく"
+      ],
+      "meanings": [
+        "satu miliar"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "億"
+      ],
+      "pages": [
+        196
+      ],
+      "acceptedReadings": [
+        "じゅうおく"
+      ]
+    },
+    {
+      "id": "54737cd2d9f88720",
+      "word": "億万長者",
+      "reading": "おくまんちょうじゃ",
+      "readings": [
+        "おくまんちょうじゃ"
+      ],
+      "meanings": [
+        "miliarder; orang sangat kaya"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "億"
+      ],
+      "pages": [
+        196
+      ],
+      "acceptedReadings": [
+        "おくまんちょうじゃ"
+      ]
+    },
+    {
+      "id": "1b0f2a3c8cc61c95",
+      "word": "点",
+      "reading": "てん",
+      "readings": [
+        "てん"
+      ],
+      "meanings": [
+        "titik; poin"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "点"
+      ],
+      "pages": [
+        197
+      ],
+      "acceptedReadings": [
+        "てん"
+      ]
+    },
+    {
+      "id": "1f51aa2d271d76b1",
+      "word": "弱点",
+      "reading": "じゃくてん",
+      "readings": [
+        "じゃくてん"
+      ],
+      "meanings": [
+        "kelemahan"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "点"
+      ],
+      "pages": [
+        197
+      ],
+      "acceptedReadings": [
+        "じゃくてん"
+      ]
+    },
+    {
+      "id": "73fc24d6d3cbc3ea",
+      "word": "交差点",
+      "reading": "こうさてん",
+      "readings": [
+        "こうさてん"
+      ],
+      "meanings": [
+        "persimpangan"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "点"
+      ],
+      "pages": [
+        197
+      ],
+      "acceptedReadings": [
+        "こうさてん"
+      ]
+    },
+    {
+      "id": "501ada97b4d98539",
+      "word": "点数",
+      "reading": "てんすう",
+      "readings": [
+        "てんすう"
+      ],
+      "meanings": [
+        "nilai; skor"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "点"
+      ],
+      "pages": [
+        197
+      ],
+      "acceptedReadings": [
+        "てんすう"
+      ]
+    },
+    {
+      "id": "eb6f6bd3faa9ca5d",
+      "word": "欠点",
+      "reading": "けってん",
+      "readings": [
+        "けってん"
+      ],
+      "meanings": [
+        "kekurangan; cacat"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "点"
+      ],
+      "pages": [
+        197
+      ],
+      "acceptedReadings": [
+        "けってん"
+      ]
+    },
+    {
+      "id": "c2f01246c977a7ee",
+      "word": "百点",
+      "reading": "ひゃくてん",
+      "readings": [
+        "ひゃくてん"
+      ],
+      "meanings": [
+        "seratus poin; nilai seratus"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "点"
+      ],
+      "pages": [
+        197
+      ],
+      "acceptedReadings": [
+        "ひゃくてん"
+      ]
+    },
+    {
+      "id": "989bca63f2e0a489",
+      "word": "句読点",
+      "reading": "くとうてん",
+      "readings": [
+        "くとうてん"
+      ],
+      "meanings": [
+        "tanda baca"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "点"
+      ],
+      "pages": [
+        197
+      ],
+      "acceptedReadings": [
+        "くとうてん"
+      ]
+    },
+    {
+      "id": "e17fa848a131cee2",
+      "word": "要点",
+      "reading": "ようてん",
+      "readings": [
+        "ようてん"
+      ],
+      "meanings": [
+        "poin penting; inti"
+      ],
+      "tms": [
+        4
+      ],
+      "roots": [
+        "点"
+      ],
+      "pages": [
+        197
+      ],
+      "acceptedReadings": [
+        "ようてん"
+      ]
+    },
+    {
+      "id": "ee6117de8a916afa",
+      "word": "二階",
+      "reading": "にかい",
+      "readings": [
+        "にかい"
+      ],
+      "meanings": [
+        "lantai dua"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "階"
+      ],
+      "pages": [
+        197
+      ],
+      "acceptedReadings": [
+        "にかい"
+      ]
+    },
+    {
+      "id": "fd12aa0d572456f2",
+      "word": "階段",
+      "reading": "かいだん",
+      "readings": [
+        "かいだん"
+      ],
+      "meanings": [
+        "tangga"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "階",
+        "段"
+      ],
+      "pages": [
+        197
+      ],
+      "acceptedReadings": [
+        "かいだん"
+      ]
+    },
+    {
+      "id": "fbf71890b2e802fe",
+      "word": "段階",
+      "reading": "だんかい",
+      "readings": [
+        "だんかい"
+      ],
+      "meanings": [
+        "tahap; tingkatan"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "階",
+        "段"
+      ],
+      "pages": [
+        197
+      ],
+      "acceptedReadings": [
+        "だんかい"
+      ]
+    },
+    {
+      "id": "cf07a13f271b02ad",
+      "word": "階級",
+      "reading": "かいきゅう",
+      "readings": [
+        "かいきゅう"
+      ],
+      "meanings": [
+        "kelas; pangkat"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "階"
+      ],
+      "pages": [
+        197
+      ],
+      "acceptedReadings": [
+        "かいきゅう"
+      ]
+    },
+    {
+      "id": "4109a57a2cb71ff5",
+      "word": "一段",
+      "reading": "いちだん",
+      "readings": [
+        "いちだん"
+      ],
+      "meanings": [
+        "satu anak tangga; satu tingkat"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "段"
+      ],
+      "pages": [
+        197
+      ],
+      "acceptedReadings": [
+        "いちだん"
+      ]
+    },
+    {
+      "id": "5f2567109f06a677",
+      "word": "一段と",
+      "reading": "いちだんと",
+      "readings": [
+        "いちだんと"
+      ],
+      "meanings": [
+        "semakin; lebih lagi"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "段"
+      ],
+      "pages": [
+        197
+      ],
+      "acceptedReadings": [
+        "いちだんと"
+      ]
+    },
+    {
+      "id": "033749ffc2abd7c2",
+      "word": "手段",
+      "reading": "しゅだん",
+      "readings": [
+        "しゅだん"
+      ],
+      "meanings": [
+        "cara; sarana"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "段"
+      ],
+      "pages": [
+        197
+      ],
+      "acceptedReadings": [
+        "しゅだん"
+      ]
+    },
+    {
+      "id": "2ca110c8da0e55cb",
+      "word": "値段",
+      "reading": "ねだん",
+      "readings": [
+        "ねだん"
+      ],
+      "meanings": [
+        "harga"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "段"
+      ],
+      "pages": [
+        197
+      ],
+      "acceptedReadings": [
+        "ねだん"
+      ]
+    },
+    {
+      "id": "afc5db3642ff2d43",
+      "word": "普段",
+      "reading": "ふだん",
+      "readings": [
+        "ふだん"
+      ],
+      "meanings": [
+        "biasanya; sehari-hari"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "段"
+      ],
+      "pages": [
+        197
+      ],
+      "acceptedReadings": [
+        "ふだん"
+      ]
+    },
+    {
+      "id": "7d1c1851cf2c0c8e",
+      "word": "記号",
+      "reading": "きごう",
+      "readings": [
+        "きごう"
+      ],
+      "meanings": [
+        "simbol; tanda"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "号"
+      ],
+      "pages": [
+        198
+      ],
+      "acceptedReadings": [
+        "きごう"
+      ]
+    },
+    {
+      "id": "160dac215fa01ca8",
+      "word": "一号車",
+      "reading": "いちごうしゃ",
+      "readings": [
+        "いちごうしゃ"
+      ],
+      "meanings": [
+        "gerbong nomor satu"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "号"
+      ],
+      "pages": [
+        198
+      ],
+      "acceptedReadings": [
+        "いちごうしゃ"
+      ]
+    },
+    {
+      "id": "0324562d9bb3110c",
+      "word": "信号",
+      "reading": "しんごう",
+      "readings": [
+        "しんごう"
+      ],
+      "meanings": [
+        "lampu lalu lintas"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "号"
+      ],
+      "pages": [
+        198
+      ],
+      "acceptedReadings": [
+        "しんごう"
+      ]
+    },
+    {
+      "id": "4d58311f6aeb4476",
+      "word": "第三号",
+      "reading": "だいさんごう",
+      "readings": [
+        "だいさんごう"
+      ],
+      "meanings": [
+        "edisi ketiga; nomor ketiga"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "号"
+      ],
+      "pages": [
+        198
+      ],
+      "acceptedReadings": [
+        "だいさんごう"
+      ]
+    },
+    {
+      "id": "83b46e82b48ff7b6",
+      "word": "年号",
+      "reading": "ねんごう",
+      "readings": [
+        "ねんごう"
+      ],
+      "meanings": [
+        "nama era pemerintahan"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "号"
+      ],
+      "pages": [
+        198
+      ],
+      "acceptedReadings": [
+        "ねんごう"
+      ]
+    },
+    {
+      "id": "e74b7d05ad953439",
+      "word": "暗号",
+      "reading": "あんごう",
+      "readings": [
+        "あんごう"
+      ],
+      "meanings": [
+        "kode; sandi"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "号"
+      ],
+      "pages": [
+        198
+      ],
+      "acceptedReadings": [
+        "あんごう"
+      ]
+    },
+    {
+      "id": "ad242e994ed05969",
+      "word": "三倍",
+      "reading": "さんばい",
+      "readings": [
+        "さんばい"
+      ],
+      "meanings": [
+        "tiga kali lipat"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "倍"
+      ],
+      "pages": [
+        198
+      ],
+      "acceptedReadings": [
+        "さんばい"
+      ]
+    },
+    {
+      "id": "e5c91d54a9a1502d",
+      "word": "倍数",
+      "reading": "ばいすう",
+      "readings": [
+        "ばいすう"
+      ],
+      "meanings": [
+        "bilangan kelipatan"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "倍"
+      ],
+      "pages": [
+        198
+      ],
+      "acceptedReadings": [
+        "ばいすう"
+      ]
+    },
+    {
+      "id": "c4572e658588fae4",
+      "word": "倍率",
+      "reading": "ばいりつ",
+      "readings": [
+        "ばいりつ"
+      ],
+      "meanings": [
+        "faktor pembesaran"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "倍"
+      ],
+      "pages": [
+        198
+      ],
+      "acceptedReadings": [
+        "ばいりつ"
+      ]
+    },
+    {
+      "id": "6bc51e8ecc178c08",
+      "word": "倍増する",
+      "reading": "ばいぞうする",
+      "readings": [
+        "ばいぞうする"
+      ],
+      "meanings": [
+        "bertambah menjadi dua kali lipat"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "倍"
+      ],
+      "pages": [
+        198
+      ],
+      "acceptedReadings": [
+        "ばいぞうする"
+      ]
+    },
+    {
+      "id": "067744fe8e467246",
+      "word": "人一倍",
+      "reading": "ひといちばい",
+      "readings": [
+        "ひといちばい"
+      ],
+      "meanings": [
+        "lebih daripada orang lain"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "倍"
+      ],
+      "pages": [
+        198
+      ],
+      "acceptedReadings": [
+        "ひといちばい"
+      ]
+    },
+    {
+      "id": "c97677d187f5b165",
+      "word": "次",
+      "reading": "つぎ",
+      "readings": [
+        "つぎ"
+      ],
+      "meanings": [
+        "berikutnya"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "次"
+      ],
+      "pages": [
+        198
+      ],
+      "acceptedReadings": [
+        "つぎ"
+      ]
+    },
+    {
+      "id": "9b222bdbee429261",
+      "word": "次々",
+      "reading": "つぎつぎ",
+      "readings": [
+        "つぎつぎ"
+      ],
+      "meanings": [
+        "satu demi satu"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "次"
+      ],
+      "pages": [
+        198
+      ],
+      "acceptedReadings": [
+        "つぎつぎ"
+      ]
+    },
+    {
+      "id": "7168ea7b6ca99d23",
+      "word": "目次",
+      "reading": "もくじ",
+      "readings": [
+        "もくじ"
+      ],
+      "meanings": [
+        "daftar isi"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "次"
+      ],
+      "pages": [
+        198
+      ],
+      "acceptedReadings": [
+        "もくじ"
+      ]
+    },
+    {
+      "id": "ee63017bcfbc6c98",
+      "word": "次第に",
+      "reading": "しだいに",
+      "readings": [
+        "しだいに"
+      ],
+      "meanings": [
+        "berangsur-angsur"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "次"
+      ],
+      "pages": [
+        198
+      ],
+      "acceptedReadings": [
+        "しだいに"
+      ]
+    },
+    {
+      "id": "eac59ecfabcb121c",
+      "word": "次いで",
+      "reading": "ついで",
+      "readings": [
+        "ついで"
+      ],
+      "meanings": [
+        "selanjutnya; kemudian"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "次"
+      ],
+      "pages": [
+        198
+      ],
+      "acceptedReadings": [
+        "ついで"
+      ]
+    },
+    {
+      "id": "c186d37cd0f96c0b",
+      "word": "次女",
+      "reading": "じじょ",
+      "readings": [
+        "じじょ"
+      ],
+      "meanings": [
+        "anak perempuan kedua"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "次"
+      ],
+      "pages": [
+        198
+      ],
+      "acceptedReadings": [
+        "じじょ"
+      ]
+    },
+    {
+      "id": "2b76ca4ae2c4c7b5",
+      "word": "次男",
+      "reading": "じなん",
+      "readings": [
+        "じなん"
+      ],
+      "meanings": [
+        "anak laki-laki kedua"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "次"
+      ],
+      "pages": [
+        198
+      ],
+      "acceptedReadings": [
+        "じなん"
+      ]
+    },
+    {
+      "id": "1f117f975a8ad3c1",
+      "word": "次回",
+      "reading": "じかい",
+      "readings": [
+        "じかい"
+      ],
+      "meanings": [
+        "kali berikutnya"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "次"
+      ],
+      "pages": [
+        198
+      ],
+      "acceptedReadings": [
+        "じかい"
+      ]
+    },
+    {
+      "id": "3bcce8de9d043085",
+      "word": "人々",
+      "reading": "ひとびと",
+      "readings": [
+        "ひとびと"
+      ],
+      "meanings": [
+        "orang-orang"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "々"
+      ],
+      "pages": [
+        199
+      ],
+      "acceptedReadings": [
+        "ひとびと"
+      ]
+    },
+    {
+      "id": "1f7cebec0b981ae7",
+      "word": "色々な",
+      "reading": "いろいろな",
+      "readings": [
+        "いろいろな"
+      ],
+      "meanings": [
+        "bermacam-macam"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "々"
+      ],
+      "pages": [
+        199
+      ],
+      "acceptedReadings": [
+        "いろいろな"
+      ]
+    },
+    {
+      "id": "47b8d594eff32010",
+      "word": "時々",
+      "reading": "ときどき",
+      "readings": [
+        "ときどき"
+      ],
+      "meanings": [
+        "kadang-kadang"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "々"
+      ],
+      "pages": [
+        199
+      ],
+      "acceptedReadings": [
+        "ときどき"
+      ]
+    },
+    {
+      "id": "6cb07fcea260a6b8",
+      "word": "少々",
+      "reading": "しょうしょう",
+      "readings": [
+        "しょうしょう"
+      ],
+      "meanings": [
+        "sedikit"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "々"
+      ],
+      "pages": [
+        199
+      ],
+      "acceptedReadings": [
+        "しょうしょう"
+      ]
+    },
+    {
+      "id": "05a86c982ca6ec45",
+      "word": "先々週",
+      "reading": "せんせんしゅう",
+      "readings": [
+        "せんせんしゅう"
+      ],
+      "meanings": [
+        "dua minggu lalu"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "々"
+      ],
+      "pages": [
+        199
+      ],
+      "acceptedReadings": [
+        "せんせんしゅう"
+      ]
+    },
+    {
+      "id": "6daacf0c28f748a7",
+      "word": "別々に",
+      "reading": "べつべつに",
+      "readings": [
+        "べつべつに"
+      ],
+      "meanings": [
+        "secara terpisah"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "々"
+      ],
+      "pages": [
+        199
+      ],
+      "acceptedReadings": [
+        "べつべつに"
+      ]
+    },
+    {
+      "id": "e9f4ceaf8cf3442c",
+      "word": "昔々",
+      "reading": "むかしむかし",
+      "readings": [
+        "むかしむかし"
+      ],
+      "meanings": [
+        "pada zaman dahulu"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "々"
+      ],
+      "pages": [
+        199
+      ],
+      "acceptedReadings": [
+        "むかしむかし"
+      ]
+    },
+    {
+      "id": "1a585577d9509df7",
+      "word": "その他",
+      "reading": "そのた／そのほか",
+      "readings": [
+        "そのた",
+        "そのほか"
+      ],
+      "meanings": [
+        "lainnya"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "他"
+      ],
+      "pages": [
+        199
+      ],
+      "acceptedReadings": [
+        "そのた",
+        "そのほか"
+      ]
+    },
+    {
+      "id": "4280edf0951f10e9",
+      "word": "他の",
+      "reading": "たの／ほかの",
+      "readings": [
+        "たの",
+        "ほかの"
+      ],
+      "meanings": [
+        "yang lain"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "他"
+      ],
+      "pages": [
+        199
+      ],
+      "acceptedReadings": [
+        "たの",
+        "ほかの"
+      ]
+    },
+    {
+      "id": "edbe60bbb7e3ca20",
+      "word": "他人",
+      "reading": "たにん",
+      "readings": [
+        "たにん"
+      ],
+      "meanings": [
+        "orang lain; orang tak dikenal"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "他"
+      ],
+      "pages": [
+        199
+      ],
+      "acceptedReadings": [
+        "たにん"
+      ]
+    },
+    {
+      "id": "c124e20e1a8c86bd",
+      "word": "他動詞",
+      "reading": "たどうし",
+      "readings": [
+        "たどうし"
+      ],
+      "meanings": [
+        "kata kerja transitif"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "他"
+      ],
+      "pages": [
+        199
+      ],
+      "acceptedReadings": [
+        "たどうし"
+      ]
+    },
+    {
+      "id": "37f3edcecbb49f96",
+      "word": "勝つ",
+      "reading": "かつ",
+      "readings": [
+        "かつ"
+      ],
+      "meanings": [
+        "menang"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "勝"
+      ],
+      "pages": [
+        200
+      ],
+      "acceptedReadings": [
+        "かつ"
+      ]
+    },
+    {
+      "id": "7764362b36fc01e5",
+      "word": "勝負",
+      "reading": "しょうぶ",
+      "readings": [
+        "しょうぶ"
+      ],
+      "meanings": [
+        "pertandingan; menang atau kalah"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "勝",
+        "負"
+      ],
+      "pages": [
+        200
+      ],
+      "acceptedReadings": [
+        "しょうぶ"
+      ]
+    },
+    {
+      "id": "1a827c49740f3ae9",
+      "word": "勝手に",
+      "reading": "かってに",
+      "readings": [
+        "かってに"
+      ],
+      "meanings": [
+        "sesuka hati; sewenang-wenang"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "勝"
+      ],
+      "pages": [
+        200
+      ],
+      "acceptedReadings": [
+        "かってに"
+      ]
+    },
+    {
+      "id": "0e9520e793d4a344",
+      "word": "一勝",
+      "reading": "いっしょう",
+      "readings": [
+        "いっしょう"
+      ],
+      "meanings": [
+        "satu kemenangan"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "勝"
+      ],
+      "pages": [
+        200
+      ],
+      "acceptedReadings": [
+        "いっしょう"
+      ]
+    },
+    {
+      "id": "2a08f98544bd4448",
+      "word": "優勝する",
+      "reading": "ゆうしょうする",
+      "readings": [
+        "ゆうしょうする"
+      ],
+      "meanings": [
+        "menjadi juara"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "勝"
+      ],
+      "pages": [
+        200
+      ],
+      "acceptedReadings": [
+        "ゆうしょうする"
+      ]
+    },
+    {
+      "id": "660c4ab3f4ef7449",
+      "word": "決勝",
+      "reading": "けっしょう",
+      "readings": [
+        "けっしょう"
+      ],
+      "meanings": [
+        "pertandingan final"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "勝"
+      ],
+      "pages": [
+        200
+      ],
+      "acceptedReadings": [
+        "けっしょう"
+      ]
+    },
+    {
+      "id": "366cd930d5673392",
+      "word": "勝る",
+      "reading": "まさる",
+      "readings": [
+        "まさる"
+      ],
+      "meanings": [
+        "mengungguli"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "勝"
+      ],
+      "pages": [
+        200
+      ],
+      "acceptedReadings": [
+        "まさる"
+      ]
+    },
+    {
+      "id": "8c52920802b4703d",
+      "word": "負ける",
+      "reading": "まける",
+      "readings": [
+        "まける"
+      ],
+      "meanings": [
+        "kalah"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "負"
+      ],
+      "pages": [
+        200
+      ],
+      "acceptedReadings": [
+        "まける"
+      ]
+    },
+    {
+      "id": "cabc311039cb9dee",
+      "word": "勝ち負け",
+      "reading": "かちまけ",
+      "readings": [
+        "かちまけ"
+      ],
+      "meanings": [
+        "menang dan kalah"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "負"
+      ],
+      "pages": [
+        200
+      ],
+      "acceptedReadings": [
+        "かちまけ"
+      ]
+    },
+    {
+      "id": "f7db0c34589b7f9a",
+      "word": "負担",
+      "reading": "ふたん",
+      "readings": [
+        "ふたん"
+      ],
+      "meanings": [
+        "beban; tanggungan"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "負"
+      ],
+      "pages": [
+        200
+      ],
+      "acceptedReadings": [
+        "ふたん"
+      ]
+    },
+    {
+      "id": "62e4516102dbb165",
+      "word": "背負う",
+      "reading": "せおう",
+      "readings": [
+        "せおう"
+      ],
+      "meanings": [
+        "memikul di punggung"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "負"
+      ],
+      "pages": [
+        200
+      ],
+      "acceptedReadings": [
+        "せおう"
+      ]
+    },
+    {
+      "id": "6327081d27415528",
+      "word": "負傷",
+      "reading": "ふしょう",
+      "readings": [
+        "ふしょう"
+      ],
+      "meanings": [
+        "luka; cedera"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "負"
+      ],
+      "pages": [
+        200
+      ],
+      "acceptedReadings": [
+        "ふしょう"
+      ]
+    },
+    {
+      "id": "97ca78c33c1abae5",
+      "word": "抱負",
+      "reading": "ほうふ",
+      "readings": [
+        "ほうふ"
+      ],
+      "meanings": [
+        "cita-cita; ambisi"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "負"
+      ],
+      "pages": [
+        200
+      ],
+      "acceptedReadings": [
+        "ほうふ"
+      ]
+    },
+    {
+      "id": "50ec04441a75a648",
+      "word": "負かす",
+      "reading": "まかす",
+      "readings": [
+        "まかす"
+      ],
+      "meanings": [
+        "mengalahkan"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "負"
+      ],
+      "pages": [
+        200
+      ],
+      "acceptedReadings": [
+        "まかす"
+      ]
+    },
+    {
+      "id": "7ce91109da4bd11d",
+      "word": "賛成する",
+      "reading": "さんせいする",
+      "readings": [
+        "さんせいする"
+      ],
+      "meanings": [
+        "menyetujui"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "賛",
+        "成"
+      ],
+      "pages": [
+        201
+      ],
+      "acceptedReadings": [
+        "さんせいする"
+      ]
+    },
+    {
+      "id": "30342940bfc94ad2",
+      "word": "賞賛する",
+      "reading": "しょうさんする",
+      "readings": [
+        "しょうさんする"
+      ],
+      "meanings": [
+        "memuji"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "賛"
+      ],
+      "pages": [
+        201
+      ],
+      "acceptedReadings": [
+        "しょうさんする"
+      ]
+    },
+    {
+      "id": "6f10218cb0c2a621",
+      "word": "賛否",
+      "reading": "さんぴ",
+      "readings": [
+        "さんぴ"
+      ],
+      "meanings": [
+        "persetujuan dan penolakan; pro dan kontra"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "賛"
+      ],
+      "pages": [
+        201
+      ],
+      "acceptedReadings": [
+        "さんぴ"
+      ]
+    },
+    {
+      "id": "03bf1bb6e4e57a47",
+      "word": "絶賛",
+      "reading": "ぜっさん",
+      "readings": [
+        "ぜっさん"
+      ],
+      "meanings": [
+        "pujian besar; pujian setinggi-tingginya"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "賛"
+      ],
+      "pages": [
+        201
+      ],
+      "acceptedReadings": [
+        "ぜっさん"
+      ]
+    },
+    {
+      "id": "49ef83d0a7c2a318",
+      "word": "成長",
+      "reading": "せいちょう",
+      "readings": [
+        "せいちょう"
+      ],
+      "meanings": [
+        "pertumbuhan"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "成"
+      ],
+      "pages": [
+        201
+      ],
+      "acceptedReadings": [
+        "せいちょう"
+      ]
+    },
+    {
+      "id": "133586daa2954e7f",
+      "word": "成人",
+      "reading": "せいじん",
+      "readings": [
+        "せいじん"
+      ],
+      "meanings": [
+        "orang dewasa"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "成"
+      ],
+      "pages": [
+        201
+      ],
+      "acceptedReadings": [
+        "せいじん"
+      ]
+    },
+    {
+      "id": "d2f7f562c4b1fb17",
+      "word": "成る",
+      "reading": "なる",
+      "readings": [
+        "なる"
+      ],
+      "meanings": [
+        "menjadi; terdiri atas"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "成"
+      ],
+      "pages": [
+        201
+      ],
+      "acceptedReadings": [
+        "なる"
+      ]
+    },
+    {
+      "id": "cacca53eddaefd74",
+      "word": "成績",
+      "reading": "せいせき",
+      "readings": [
+        "せいせき"
+      ],
+      "meanings": [
+        "nilai; prestasi"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "成"
+      ],
+      "pages": [
+        201
+      ],
+      "acceptedReadings": [
+        "せいせき"
+      ]
+    },
+    {
+      "id": "1d3a64d00f88fee1",
+      "word": "完成",
+      "reading": "かんせい",
+      "readings": [
+        "かんせい"
+      ],
+      "meanings": [
+        "penyelesaian; keadaan selesai"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "成"
+      ],
+      "pages": [
+        201
+      ],
+      "acceptedReadings": [
+        "かんせい"
+      ]
+    },
+    {
+      "id": "6e33c8c7b4fa7777",
+      "word": "成功",
+      "reading": "せいこう",
+      "readings": [
+        "せいこう"
+      ],
+      "meanings": [
+        "keberhasilan"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "成"
+      ],
+      "pages": [
+        201
+      ],
+      "acceptedReadings": [
+        "せいこう"
+      ]
+    },
+    {
+      "id": "3e78c7802d21ef7b",
+      "word": "成就する",
+      "reading": "じょうじゅする",
+      "readings": [
+        "じょうじゅする"
+      ],
+      "meanings": [
+        "mewujudkan; mencapai"
+      ],
+      "tms": [
+        5
+      ],
+      "roots": [
+        "成"
+      ],
+      "pages": [
+        201
+      ],
+      "acceptedReadings": [
+        "じょうじゅする"
+      ]
+    },
+    {
+      "id": "ef4606be11aef9dc",
+      "word": "絶対に",
+      "reading": "ぜったいに",
+      "readings": [
+        "ぜったいに"
+      ],
+      "meanings": [
+        "pasti; mutlak"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "絶",
+        "対"
+      ],
+      "pages": [
+        201,
+        202
+      ],
+      "acceptedReadings": [
+        "ぜったいに"
+      ]
+    },
+    {
+      "id": "7906e1832d3bfd35",
+      "word": "絶滅",
+      "reading": "ぜつめつ",
+      "readings": [
+        "ぜつめつ"
+      ],
+      "meanings": [
+        "kepunahan"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "絶"
+      ],
+      "pages": [
+        201
+      ],
+      "acceptedReadings": [
+        "ぜつめつ"
+      ]
+    },
+    {
+      "id": "6d6f19212be7f955",
+      "word": "絶えず",
+      "reading": "たえず",
+      "readings": [
+        "たえず"
+      ],
+      "meanings": [
+        "terus-menerus"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "絶"
+      ],
+      "pages": [
+        201
+      ],
+      "acceptedReadings": [
+        "たえず"
+      ]
+    },
+    {
+      "id": "a308f90c562a7d2d",
+      "word": "気絶する",
+      "reading": "きぜつする",
+      "readings": [
+        "きぜつする"
+      ],
+      "meanings": [
+        "pingsan"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "絶"
+      ],
+      "pages": [
+        201
+      ],
+      "acceptedReadings": [
+        "きぜつする"
+      ]
+    },
+    {
+      "id": "2cfa1d1de9ffbeca",
+      "word": "絶望",
+      "reading": "ぜつぼう",
+      "readings": [
+        "ぜつぼう"
+      ],
+      "meanings": [
+        "keputusasaan"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "絶"
+      ],
+      "pages": [
+        201
+      ],
+      "acceptedReadings": [
+        "ぜつぼう"
+      ]
+    },
+    {
+      "id": "220fb270bf654227",
+      "word": "絶える",
+      "reading": "たえる",
+      "readings": [
+        "たえる"
+      ],
+      "meanings": [
+        "lenyap; terputus"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "絶"
+      ],
+      "pages": [
+        201
+      ],
+      "acceptedReadings": [
+        "たえる"
+      ]
+    },
+    {
+      "id": "fc6a08344090fda3",
+      "word": "反対する",
+      "reading": "はんたいする",
+      "readings": [
+        "はんたいする"
+      ],
+      "meanings": [
+        "menentang"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "対"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "はんたいする"
+      ]
+    },
+    {
+      "id": "a01fc6a1c0440f21",
+      "word": "日本対スペイン",
+      "reading": "にほんたいスペイン",
+      "readings": [
+        "にほんたいスペイン"
+      ],
+      "meanings": [
+        "Jepang melawan Spanyol"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "対"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "にほんたいスペイン"
+      ]
+    },
+    {
+      "id": "1d9ac12024fa1a3e",
+      "word": "対象",
+      "reading": "たいしょう",
+      "readings": [
+        "たいしょう"
+      ],
+      "meanings": [
+        "sasaran; objek"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "対"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "たいしょう"
+      ]
+    },
+    {
+      "id": "a8fe4298c53cd8b7",
+      "word": "～に対して",
+      "reading": "～にたいして",
+      "readings": [
+        "～にたいして"
+      ],
+      "meanings": [
+        "terhadap; dibandingkan dengan; melawan"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "対"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "～にたいして"
+      ]
+    },
+    {
+      "id": "abd63760ec313009",
+      "word": "一対",
+      "reading": "いっつい",
+      "readings": [
+        "いっつい"
+      ],
+      "meanings": [
+        "sepasang"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "対"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "いっつい"
+      ]
+    },
+    {
+      "id": "84b5d7bf8dd374ef",
+      "word": "相対的に",
+      "reading": "そうたいてきに",
+      "readings": [
+        "そうたいてきに"
+      ],
+      "meanings": [
+        "secara relatif"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "対"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "そうたいてきに"
+      ]
+    },
+    {
+      "id": "536e42da8b8453a7",
+      "word": "続ける",
+      "reading": "つづける",
+      "readings": [
+        "つづける"
+      ],
+      "meanings": [
+        "melanjutkan sesuatu"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "続"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "つづける"
+      ]
+    },
+    {
+      "id": "3d6696481a373074",
+      "word": "続く",
+      "reading": "つづく",
+      "readings": [
+        "つづく"
+      ],
+      "meanings": [
+        "berlanjut"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "続"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "つづく"
+      ]
+    },
+    {
+      "id": "6bc9dc25fb84b12c",
+      "word": "続き",
+      "reading": "つづき",
+      "readings": [
+        "つづき"
+      ],
+      "meanings": [
+        "kelanjutan"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "続"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "つづき"
+      ]
+    },
+    {
+      "id": "7ccffb2bc3807179",
+      "word": "手続き",
+      "reading": "てつづき",
+      "readings": [
+        "てつづき"
+      ],
+      "meanings": [
+        "prosedur"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "続"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "てつづき"
+      ]
+    },
+    {
+      "id": "fb21a22b8a2c9364",
+      "word": "相続",
+      "reading": "そうぞく",
+      "readings": [
+        "そうぞく"
+      ],
+      "meanings": [
+        "warisan; pewarisan"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "続"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "そうぞく"
+      ]
+    },
+    {
+      "id": "673c6788356439a7",
+      "word": "続々",
+      "reading": "ぞくぞく",
+      "readings": [
+        "ぞくぞく"
+      ],
+      "meanings": [
+        "satu demi satu; berturut-turut"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "続"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "ぞくぞく"
+      ]
+    },
+    {
+      "id": "a7ec6576106a500c",
+      "word": "接続詞",
+      "reading": "せつぞくし",
+      "readings": [
+        "せつぞくし"
+      ],
+      "meanings": [
+        "kata sambung; konjungsi"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "続"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "せつぞくし"
+      ]
+    },
+    {
+      "id": "67ab907b4d960be1",
+      "word": "辞書",
+      "reading": "じしょ",
+      "readings": [
+        "じしょ"
+      ],
+      "meanings": [
+        "kamus"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "辞"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "じしょ"
+      ]
+    },
+    {
+      "id": "69198125f2cd59ee",
+      "word": "辞める",
+      "reading": "やめる",
+      "readings": [
+        "やめる"
+      ],
+      "meanings": [
+        "mengundurkan diri; berhenti bekerja"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "辞"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "やめる"
+      ]
+    },
+    {
+      "id": "f45c71f6f3d74c95",
+      "word": "辞典",
+      "reading": "じてん",
+      "readings": [
+        "じてん"
+      ],
+      "meanings": [
+        "kamus"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "辞"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "じてん"
+      ]
+    },
+    {
+      "id": "f1b45740cc347517",
+      "word": "辞職する",
+      "reading": "じしょくする",
+      "readings": [
+        "じしょくする"
+      ],
+      "meanings": [
+        "mengundurkan diri dari jabatan"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "辞"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "じしょくする"
+      ]
+    },
+    {
+      "id": "08a4c234123ac5f5",
+      "word": "辞退する",
+      "reading": "じたいする",
+      "readings": [
+        "じたいする"
+      ],
+      "meanings": [
+        "menolak; mengundurkan diri dari suatu tawaran"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "辞"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "じたいする"
+      ]
+    },
+    {
+      "id": "83902b50f0751f5c",
+      "word": "お世辞",
+      "reading": "おせじ",
+      "readings": [
+        "おせじ"
+      ],
+      "meanings": [
+        "pujian basa-basi; sanjungan"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "辞"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "おせじ"
+      ]
+    },
+    {
+      "id": "8523786fb287b328",
+      "word": "辞表",
+      "reading": "じひょう",
+      "readings": [
+        "じひょう"
+      ],
+      "meanings": [
+        "surat pengunduran diri"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "辞"
+      ],
+      "pages": [
+        202
+      ],
+      "acceptedReadings": [
+        "じひょう"
+      ]
+    },
+    {
+      "id": "5ca5913441a0f664",
+      "word": "投げる",
+      "reading": "なげる",
+      "readings": [
+        "なげる"
+      ],
+      "meanings": [
+        "melempar"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "投"
+      ],
+      "pages": [
+        203
+      ],
+      "acceptedReadings": [
+        "なげる"
+      ]
+    },
+    {
+      "id": "f1cd88d458347f15",
+      "word": "投票する",
+      "reading": "とうひょうする",
+      "readings": [
+        "とうひょうする"
+      ],
+      "meanings": [
+        "memberikan suara dalam pemilihan"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "投"
+      ],
+      "pages": [
+        203
+      ],
+      "acceptedReadings": [
+        "とうひょうする"
+      ]
+    },
+    {
+      "id": "4e5733987991fe91",
+      "word": "投書",
+      "reading": "とうしょ",
+      "readings": [
+        "とうしょ"
+      ],
+      "meanings": [
+        "surat pembaca"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "投"
+      ],
+      "pages": [
+        203
+      ],
+      "acceptedReadings": [
+        "とうしょ"
+      ]
+    },
+    {
+      "id": "665854fcc9119791",
+      "word": "投資",
+      "reading": "とうし",
+      "readings": [
+        "とうし"
+      ],
+      "meanings": [
+        "investasi"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "投"
+      ],
+      "pages": [
+        203
+      ],
+      "acceptedReadings": [
+        "とうし"
+      ]
+    },
+    {
+      "id": "0851cfa8cdb11d51",
+      "word": "投手",
+      "reading": "とうしゅ",
+      "readings": [
+        "とうしゅ"
+      ],
+      "meanings": [
+        "pelempar bola dalam bisbol"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "投"
+      ],
+      "pages": [
+        203
+      ],
+      "acceptedReadings": [
+        "とうしゅ"
+      ]
+    },
+    {
+      "id": "cbc44d67ceca5022",
+      "word": "選ぶ",
+      "reading": "えらぶ",
+      "readings": [
+        "えらぶ"
+      ],
+      "meanings": [
+        "memilih"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "選"
+      ],
+      "pages": [
+        203
+      ],
+      "acceptedReadings": [
+        "えらぶ"
+      ]
+    },
+    {
+      "id": "985dac25afec2a7c",
+      "word": "選手",
+      "reading": "せんしゅ",
+      "readings": [
+        "せんしゅ"
+      ],
+      "meanings": [
+        "pemain; atlet"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "選"
+      ],
+      "pages": [
+        203
+      ],
+      "acceptedReadings": [
+        "せんしゅ"
+      ]
+    },
+    {
+      "id": "c64286616e22636d",
+      "word": "選択する",
+      "reading": "せんたくする",
+      "readings": [
+        "せんたくする"
+      ],
+      "meanings": [
+        "memilih"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "選"
+      ],
+      "pages": [
+        203
+      ],
+      "acceptedReadings": [
+        "せんたくする"
+      ]
+    },
+    {
+      "id": "6c970db5e437f4f9",
+      "word": "選挙",
+      "reading": "せんきょ",
+      "readings": [
+        "せんきょ"
+      ],
+      "meanings": [
+        "pemilihan umum"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "選"
+      ],
+      "pages": [
+        203
+      ],
+      "acceptedReadings": [
+        "せんきょ"
+      ]
+    },
+    {
+      "id": "7d956497b4da4e44",
+      "word": "抽選",
+      "reading": "ちゅうせん",
+      "readings": [
+        "ちゅうせん"
+      ],
+      "meanings": [
+        "undian"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "選"
+      ],
+      "pages": [
+        203
+      ],
+      "acceptedReadings": [
+        "ちゅうせん"
+      ]
+    },
+    {
+      "id": "6dd7b04a92cd157d",
+      "word": "当選する",
+      "reading": "とうせんする",
+      "readings": [
+        "とうせんする"
+      ],
+      "meanings": [
+        "terpilih dalam pemilihan"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "選"
+      ],
+      "pages": [
+        203
+      ],
+      "acceptedReadings": [
+        "とうせんする"
+      ]
+    },
+    {
+      "id": "772dd0570c648c02",
+      "word": "選挙権",
+      "reading": "せんきょけん",
+      "readings": [
+        "せんきょけん"
+      ],
+      "meanings": [
+        "hak pilih"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "選"
+      ],
+      "pages": [
+        203
+      ],
+      "acceptedReadings": [
+        "せんきょけん"
+      ]
+    },
+    {
+      "id": "c8b78a5bde6ae651",
+      "word": "約束",
+      "reading": "やくそく",
+      "readings": [
+        "やくそく"
+      ],
+      "meanings": [
+        "janji"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "約",
+        "束"
+      ],
+      "pages": [
+        203,
+        204
+      ],
+      "acceptedReadings": [
+        "やくそく"
+      ]
+    },
+    {
+      "id": "b7d9c4f1e563d0a0",
+      "word": "予約",
+      "reading": "よやく",
+      "readings": [
+        "よやく"
+      ],
+      "meanings": [
+        "reservasi; pemesanan"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "約"
+      ],
+      "pages": [
+        203
+      ],
+      "acceptedReadings": [
+        "よやく"
+      ]
+    },
+    {
+      "id": "e9fadd4948b34d44",
+      "word": "約百人",
+      "reading": "やくひゃくにん",
+      "readings": [
+        "やくひゃくにん"
+      ],
+      "meanings": [
+        "sekitar seratus orang"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "約"
+      ],
+      "pages": [
+        203
+      ],
+      "acceptedReadings": [
+        "やくひゃくにん"
+      ]
+    },
+    {
+      "id": "de3a56413cd01331",
+      "word": "節約する",
+      "reading": "せつやくする",
+      "readings": [
+        "せつやくする"
+      ],
+      "meanings": [
+        "menghemat"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "約"
+      ],
+      "pages": [
+        203
+      ],
+      "acceptedReadings": [
+        "せつやくする"
+      ]
+    },
+    {
+      "id": "c781c92d5cc4fe66",
+      "word": "契約",
+      "reading": "けいやく",
+      "readings": [
+        "けいやく"
+      ],
+      "meanings": [
+        "kontrak; perjanjian"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "約"
+      ],
+      "pages": [
+        203
+      ],
+      "acceptedReadings": [
+        "けいやく"
+      ]
+    },
+    {
+      "id": "e050518e84f8991b",
+      "word": "要約",
+      "reading": "ようやく",
+      "readings": [
+        "ようやく"
+      ],
+      "meanings": [
+        "ringkasan"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "約"
+      ],
+      "pages": [
+        203
+      ],
+      "acceptedReadings": [
+        "ようやく"
+      ]
+    },
+    {
+      "id": "355de00f058216aa",
+      "word": "花束",
+      "reading": "はなたば",
+      "readings": [
+        "はなたば"
+      ],
+      "meanings": [
+        "buket bunga"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "束"
+      ],
+      "pages": [
+        204
+      ],
+      "acceptedReadings": [
+        "はなたば"
+      ]
+    },
+    {
+      "id": "0bbe58fe74044cd3",
+      "word": "束",
+      "reading": "たば",
+      "readings": [
+        "たば"
+      ],
+      "meanings": [
+        "ikatan; bundel"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "束"
+      ],
+      "pages": [
+        204
+      ],
+      "acceptedReadings": [
+        "たば"
+      ]
+    },
+    {
+      "id": "5cc081c23a5818d0",
+      "word": "束ねる",
+      "reading": "たばねる",
+      "readings": [
+        "たばねる"
+      ],
+      "meanings": [
+        "mengikat menjadi satu"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "束"
+      ],
+      "pages": [
+        204
+      ],
+      "acceptedReadings": [
+        "たばねる"
+      ]
+    },
+    {
+      "id": "1e18c458660cd2b7",
+      "word": "束縛",
+      "reading": "そくばく",
+      "readings": [
+        "そくばく"
+      ],
+      "meanings": [
+        "pengekangan; pembatasan"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "束"
+      ],
+      "pages": [
+        204
+      ],
+      "acceptedReadings": [
+        "そくばく"
+      ]
+    },
+    {
+      "id": "9493412fc88d4601",
+      "word": "留守",
+      "reading": "るす",
+      "readings": [
+        "るす"
+      ],
+      "meanings": [
+        "tidak berada di rumah"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "守"
+      ],
+      "pages": [
+        204
+      ],
+      "acceptedReadings": [
+        "るす"
+      ]
+    },
+    {
+      "id": "7df42cbdaf8e86d8",
+      "word": "守る",
+      "reading": "まもる",
+      "readings": [
+        "まもる"
+      ],
+      "meanings": [
+        "menjaga; melindungi"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "守"
+      ],
+      "pages": [
+        204
+      ],
+      "acceptedReadings": [
+        "まもる"
+      ]
+    },
+    {
+      "id": "f44f0a5f299e7e63",
+      "word": "保守的",
+      "reading": "ほしゅてき",
+      "readings": [
+        "ほしゅてき"
+      ],
+      "meanings": [
+        "konservatif"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "守"
+      ],
+      "pages": [
+        204
+      ],
+      "acceptedReadings": [
+        "ほしゅてき"
+      ]
+    },
+    {
+      "id": "183faddc52051b4f",
+      "word": "子守歌",
+      "reading": "こもりうた",
+      "readings": [
+        "こもりうた"
+      ],
+      "meanings": [
+        "lagu pengantar tidur"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "守"
+      ],
+      "pages": [
+        204
+      ],
+      "acceptedReadings": [
+        "こもりうた"
+      ]
+    },
+    {
+      "id": "d1e37d400f3a8926",
+      "word": "お守り",
+      "reading": "おまもり",
+      "readings": [
+        "おまもり"
+      ],
+      "meanings": [
+        "jimat keberuntungan"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "守"
+      ],
+      "pages": [
+        204
+      ],
+      "acceptedReadings": [
+        "おまもり"
+      ]
+    },
+    {
+      "id": "9da3d8813e1beacf",
+      "word": "守衛",
+      "reading": "しゅえい",
+      "readings": [
+        "しゅえい"
+      ],
+      "meanings": [
+        "penjaga"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "守"
+      ],
+      "pages": [
+        204
+      ],
+      "acceptedReadings": [
+        "しゅえい"
+      ]
+    },
+    {
+      "id": "b66fe8ea9325e395",
+      "word": "過去",
+      "reading": "かこ",
+      "readings": [
+        "かこ"
+      ],
+      "meanings": [
+        "masa lalu"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "過"
+      ],
+      "pages": [
+        204
+      ],
+      "acceptedReadings": [
+        "かこ"
+      ]
+    },
+    {
+      "id": "61776abbc5699c91",
+      "word": "過ぎる",
+      "reading": "すぎる",
+      "readings": [
+        "すぎる"
+      ],
+      "meanings": [
+        "melewati; berlalu"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "過"
+      ],
+      "pages": [
+        204
+      ],
+      "acceptedReadings": [
+        "すぎる"
+      ]
+    },
+    {
+      "id": "e81a2f8a700abb5d",
+      "word": "三時過ぎ",
+      "reading": "さんじすぎ",
+      "readings": [
+        "さんじすぎ"
+      ],
+      "meanings": [
+        "beberapa menit lewat pukul tiga"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "過"
+      ],
+      "pages": [
+        204
+      ],
+      "acceptedReadings": [
+        "さんじすぎ"
+      ]
+    },
+    {
+      "id": "89cdb8caf3218f1a",
+      "word": "過ごす",
+      "reading": "すごす",
+      "readings": [
+        "すごす"
+      ],
+      "meanings": [
+        "menghabiskan waktu"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "過"
+      ],
+      "pages": [
+        204
+      ],
+      "acceptedReadings": [
+        "すごす"
+      ]
+    },
+    {
+      "id": "88ac7a31ac8f0a23",
+      "word": "過半数",
+      "reading": "かはんすう",
+      "readings": [
+        "かはんすう"
+      ],
+      "meanings": [
+        "mayoritas; lebih dari separuh"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "過"
+      ],
+      "pages": [
+        204
+      ],
+      "acceptedReadings": [
+        "かはんすう"
+      ]
+    },
+    {
+      "id": "3b0691fcecc3c50a",
+      "word": "通り過ぎる",
+      "reading": "とおりすぎる",
+      "readings": [
+        "とおりすぎる"
+      ],
+      "meanings": [
+        "melewati"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "過"
+      ],
+      "pages": [
+        204
+      ],
+      "acceptedReadings": [
+        "とおりすぎる"
+      ]
+    },
+    {
+      "id": "d9f1bd4d991ae55b",
+      "word": "過ち",
+      "reading": "あやまち",
+      "readings": [
+        "あやまち"
+      ],
+      "meanings": [
+        "kesalahan"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "過"
+      ],
+      "pages": [
+        204
+      ],
+      "acceptedReadings": [
+        "あやまち"
+      ]
+    },
+    {
+      "id": "13804b9c251f9ea9",
+      "word": "夢",
+      "reading": "ゆめ",
+      "readings": [
+        "ゆめ"
+      ],
+      "meanings": [
+        "mimpi"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "夢"
+      ],
+      "pages": [
+        205
+      ],
+      "acceptedReadings": [
+        "ゆめ"
+      ]
+    },
+    {
+      "id": "df849a7d68a26a4c",
+      "word": "夢中",
+      "reading": "むちゅう",
+      "readings": [
+        "むちゅう"
+      ],
+      "meanings": [
+        "asyik; larut dalam sesuatu"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "夢"
+      ],
+      "pages": [
+        205
+      ],
+      "acceptedReadings": [
+        "むちゅう"
+      ]
+    },
+    {
+      "id": "129ef68db4d63712",
+      "word": "悪夢",
+      "reading": "あくむ",
+      "readings": [
+        "あくむ"
+      ],
+      "meanings": [
+        "mimpi buruk"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "夢"
+      ],
+      "pages": [
+        205
+      ],
+      "acceptedReadings": [
+        "あくむ"
+      ]
+    },
+    {
+      "id": "9a5da0e09488def5",
+      "word": "初夢",
+      "reading": "はつゆめ",
+      "readings": [
+        "はつゆめ"
+      ],
+      "meanings": [
+        "mimpi pertama pada tahun baru"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "夢"
+      ],
+      "pages": [
+        205
+      ],
+      "acceptedReadings": [
+        "はつゆめ"
+      ]
+    },
+    {
+      "id": "eed0416e5a8dc653",
+      "word": "無我夢中",
+      "reading": "むがむちゅう",
+      "readings": [
+        "むがむちゅう"
+      ],
+      "meanings": [
+        "larut sepenuhnya hingga lupa diri"
+      ],
+      "tms": [
+        6
+      ],
+      "roots": [
+        "夢"
+      ],
+      "pages": [
+        205
+      ],
+      "acceptedReadings": [
+        "むがむちゅう"
+      ]
+    },
+    {
+      "id": "734172c9a66cd9e1",
+      "word": "目的",
+      "reading": "もくてき",
+      "readings": [
+        "もくてき"
+      ],
+      "meanings": [
+        "tujuan"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "的"
+      ],
+      "pages": [
+        205
+      ],
+      "acceptedReadings": [
+        "もくてき"
+      ]
+    },
+    {
+      "id": "f7edfc043f481d25",
+      "word": "民主的",
+      "reading": "みんしゅてき",
+      "readings": [
+        "みんしゅてき"
+      ],
+      "meanings": [
+        "demokratis"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "的"
+      ],
+      "pages": [
+        205
+      ],
+      "acceptedReadings": [
+        "みんしゅてき"
+      ]
+    },
+    {
+      "id": "168ff4134f61b138",
+      "word": "社会的",
+      "reading": "しゃかいてき",
+      "readings": [
+        "しゃかいてき"
+      ],
+      "meanings": [
+        "bersifat sosial"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "的"
+      ],
+      "pages": [
+        205
+      ],
+      "acceptedReadings": [
+        "しゃかいてき"
+      ]
+    },
+    {
+      "id": "112ca76a11cd487d",
+      "word": "国際的",
+      "reading": "こくさいてき",
+      "readings": [
+        "こくさいてき"
+      ],
+      "meanings": [
+        "internasional"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "的"
+      ],
+      "pages": [
+        205
+      ],
+      "acceptedReadings": [
+        "こくさいてき"
+      ]
+    },
+    {
+      "id": "5294c95e9013ef48",
+      "word": "積極的",
+      "reading": "せっきょくてき",
+      "readings": [
+        "せっきょくてき"
+      ],
+      "meanings": [
+        "aktif; berinisiatif"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "的"
+      ],
+      "pages": [
+        205
+      ],
+      "acceptedReadings": [
+        "せっきょくてき"
+      ]
+    },
+    {
+      "id": "5ff30fc6f9853f62",
+      "word": "消極的",
+      "reading": "しょうきょくてき",
+      "readings": [
+        "しょうきょくてき"
+      ],
+      "meanings": [
+        "pasif"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "的"
+      ],
+      "pages": [
+        205
+      ],
+      "acceptedReadings": [
+        "しょうきょくてき"
+      ]
+    },
+    {
+      "id": "932dec33a7884429",
+      "word": "比較的",
+      "reading": "ひかくてき",
+      "readings": [
+        "ひかくてき"
+      ],
+      "meanings": [
+        "relatif; secara perbandingan"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "的"
+      ],
+      "pages": [
+        205
+      ],
+      "acceptedReadings": [
+        "ひかくてき"
+      ]
+    },
+    {
+      "id": "599a51867b458c65",
+      "word": "的",
+      "reading": "まと",
+      "readings": [
+        "まと"
+      ],
+      "meanings": [
+        "sasaran"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "的"
+      ],
+      "pages": [
+        205
+      ],
+      "acceptedReadings": [
+        "まと"
+      ]
+    },
+    {
+      "id": "bfe63a77332b9c5c",
+      "word": "飛ぶ",
+      "reading": "とぶ",
+      "readings": [
+        "とぶ"
+      ],
+      "meanings": [
+        "terbang"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "飛"
+      ],
+      "pages": [
+        206
+      ],
+      "acceptedReadings": [
+        "とぶ"
+      ]
+    },
+    {
+      "id": "505a4fc8629ac406",
+      "word": "飛行機",
+      "reading": "ひこうき",
+      "readings": [
+        "ひこうき"
+      ],
+      "meanings": [
+        "pesawat terbang"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "飛",
+        "機"
+      ],
+      "pages": [
+        206
+      ],
+      "acceptedReadings": [
+        "ひこうき"
+      ]
+    },
+    {
+      "id": "8db538b1bd581631",
+      "word": "飛び出す",
+      "reading": "とびだす",
+      "readings": [
+        "とびだす"
+      ],
+      "meanings": [
+        "melompat keluar"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "飛"
+      ],
+      "pages": [
+        206
+      ],
+      "acceptedReadings": [
+        "とびだす"
+      ]
+    },
+    {
+      "id": "65b6fd7f54e3a224",
+      "word": "飛ばす",
+      "reading": "とばす",
+      "readings": [
+        "とばす"
+      ],
+      "meanings": [
+        "menerbangkan sesuatu"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "飛"
+      ],
+      "pages": [
+        206
+      ],
+      "acceptedReadings": [
+        "とばす"
+      ]
+    },
+    {
+      "id": "b7b3c6fe86c463f0",
+      "word": "飛行場",
+      "reading": "ひこうじょう",
+      "readings": [
+        "ひこうじょう"
+      ],
+      "meanings": [
+        "lapangan terbang; bandara"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "飛"
+      ],
+      "pages": [
+        206
+      ],
+      "acceptedReadings": [
+        "ひこうじょう"
+      ]
+    },
+    {
+      "id": "04bd3abf69b762b8",
+      "word": "飛び起きる",
+      "reading": "とびおきる",
+      "readings": [
+        "とびおきる"
+      ],
+      "meanings": [
+        "melompat bangun dari tempat tidur"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "飛"
+      ],
+      "pages": [
+        206
+      ],
+      "acceptedReadings": [
+        "とびおきる"
+      ]
+    },
+    {
+      "id": "a426f5da152dad6f",
+      "word": "機会",
+      "reading": "きかい",
+      "readings": [
+        "きかい"
+      ],
+      "meanings": [
+        "kesempatan"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "機"
+      ],
+      "pages": [
+        206
+      ],
+      "acceptedReadings": [
+        "きかい"
+      ]
+    },
+    {
+      "id": "0be5690e08d2e4c8",
+      "word": "洗濯機",
+      "reading": "せんたくき",
+      "readings": [
+        "せんたくき"
+      ],
+      "meanings": [
+        "mesin cuci"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "機"
+      ],
+      "pages": [
+        206
+      ],
+      "acceptedReadings": [
+        "せんたくき"
+      ]
+    },
+    {
+      "id": "20945f08f8e10d0e",
+      "word": "機械",
+      "reading": "きかい",
+      "readings": [
+        "きかい"
+      ],
+      "meanings": [
+        "mesin"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "機"
+      ],
+      "pages": [
+        206
+      ],
+      "acceptedReadings": [
+        "きかい"
+      ]
+    },
+    {
+      "id": "d7f896405f7fe0a6",
+      "word": "機能",
+      "reading": "きのう",
+      "readings": [
+        "きのう"
+      ],
+      "meanings": [
+        "fungsi"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "機"
+      ],
+      "pages": [
+        206
+      ],
+      "acceptedReadings": [
+        "きのう"
+      ]
+    },
+    {
+      "id": "4061c224bd88689e",
+      "word": "機嫌",
+      "reading": "きげん",
+      "readings": [
+        "きげん"
+      ],
+      "meanings": [
+        "suasana hati"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "機"
+      ],
+      "pages": [
+        206
+      ],
+      "acceptedReadings": [
+        "きげん"
+      ]
+    },
+    {
+      "id": "0691e943365c76a2",
+      "word": "機関",
+      "reading": "きかん",
+      "readings": [
+        "きかん"
+      ],
+      "meanings": [
+        "lembaga; organisasi"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "機"
+      ],
+      "pages": [
+        206
+      ],
+      "acceptedReadings": [
+        "きかん"
+      ]
+    },
+    {
+      "id": "b82f4442234b8acb",
+      "word": "危機",
+      "reading": "きき",
+      "readings": [
+        "きき"
+      ],
+      "meanings": [
+        "krisis"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "機"
+      ],
+      "pages": [
+        206
+      ],
+      "acceptedReadings": [
+        "きき"
+      ]
+    },
+    {
+      "id": "db477bafaaa19f52",
+      "word": "機織り機",
+      "reading": "はたおりき",
+      "readings": [
+        "はたおりき"
+      ],
+      "meanings": [
+        "alat tenun"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "機"
+      ],
+      "pages": [
+        206
+      ],
+      "acceptedReadings": [
+        "はたおりき"
+      ]
+    },
+    {
+      "id": "00d8db646ec75cf1",
+      "word": "失う",
+      "reading": "うしなう",
+      "readings": [
+        "うしなう"
+      ],
+      "meanings": [
+        "kehilangan"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "失"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "うしなう"
+      ]
+    },
+    {
+      "id": "29f0c8eca618ce23",
+      "word": "失業",
+      "reading": "しつぎょう",
+      "readings": [
+        "しつぎょう"
+      ],
+      "meanings": [
+        "pengangguran"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "失"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "しつぎょう"
+      ]
+    },
+    {
+      "id": "c754824203f425a9",
+      "word": "失礼な",
+      "reading": "しつれいな",
+      "readings": [
+        "しつれいな"
+      ],
+      "meanings": [
+        "tidak sopan"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "失"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "しつれいな"
+      ]
+    },
+    {
+      "id": "5c1c8431b77110dc",
+      "word": "失敗する",
+      "reading": "しっぱいする",
+      "readings": [
+        "しっぱいする"
+      ],
+      "meanings": [
+        "gagal"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "失"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "しっぱいする"
+      ]
+    },
+    {
+      "id": "0697a274d516fa2b",
+      "word": "失恋する",
+      "reading": "しつれんする",
+      "readings": [
+        "しつれんする"
+      ],
+      "meanings": [
+        "patah hati karena cinta"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "失"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "しつれんする"
+      ]
+    },
+    {
+      "id": "25edc96ec99e41d5",
+      "word": "失望",
+      "reading": "しつぼう",
+      "readings": [
+        "しつぼう"
+      ],
+      "meanings": [
+        "kekecewaan"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "失"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "しつぼう"
+      ]
+    },
+    {
+      "id": "68a7d6be029f9fd1",
+      "word": "失神する",
+      "reading": "しっしんする",
+      "readings": [
+        "しっしんする"
+      ],
+      "meanings": [
+        "pingsan"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "失"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "しっしんする"
+      ]
+    },
+    {
+      "id": "f0bea3272626beb5",
+      "word": "地下鉄",
+      "reading": "ちかてつ",
+      "readings": [
+        "ちかてつ"
+      ],
+      "meanings": [
+        "kereta bawah tanah"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "鉄"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "ちかてつ"
+      ]
+    },
+    {
+      "id": "e936eef36f3940cd",
+      "word": "鉄",
+      "reading": "てつ",
+      "readings": [
+        "てつ"
+      ],
+      "meanings": [
+        "besi"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "鉄"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "てつ"
+      ]
+    },
+    {
+      "id": "990cc6ab44344c2b",
+      "word": "鉄道",
+      "reading": "てつどう",
+      "readings": [
+        "てつどう"
+      ],
+      "meanings": [
+        "jalur kereta api; perkeretaapian"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "鉄"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "てつどう"
+      ]
+    },
+    {
+      "id": "43979f356fae805c",
+      "word": "私鉄",
+      "reading": "してつ",
+      "readings": [
+        "してつ"
+      ],
+      "meanings": [
+        "kereta api swasta"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "鉄"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "してつ"
+      ]
+    },
+    {
+      "id": "72ca8929bf70d11c",
+      "word": "鉄板焼",
+      "reading": "てっぱんやき",
+      "readings": [
+        "てっぱんやき"
+      ],
+      "meanings": [
+        "masakan yang dipanggang di atas pelat besi panas"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "鉄"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "てっぱんやき"
+      ]
+    },
+    {
+      "id": "9e1877542c0501b7",
+      "word": "鉄筋コンクリート",
+      "reading": "てっきんコンクリート",
+      "readings": [
+        "てっきんコンクリート"
+      ],
+      "meanings": [
+        "beton bertulang"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "鉄"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "てっきんコンクリート"
+      ]
+    },
+    {
+      "id": "42f608e946a62d90",
+      "word": "速い",
+      "reading": "はやい",
+      "readings": [
+        "はやい"
+      ],
+      "meanings": [
+        "cepat"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "速"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "はやい"
+      ]
+    },
+    {
+      "id": "3948517ca7f3a169",
+      "word": "早速",
+      "reading": "さっそく",
+      "readings": [
+        "さっそく"
+      ],
+      "meanings": [
+        "segera"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "速"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "さっそく"
+      ]
+    },
+    {
+      "id": "dc98cbb0cebd71f5",
+      "word": "速達",
+      "reading": "そくたつ",
+      "readings": [
+        "そくたつ"
+      ],
+      "meanings": [
+        "pos kilat"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "速"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "そくたつ"
+      ]
+    },
+    {
+      "id": "b0e3effc24dba503",
+      "word": "快速電車",
+      "reading": "かいそくでんしゃ",
+      "readings": [
+        "かいそくでんしゃ"
+      ],
+      "meanings": [
+        "kereta cepat"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "速"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "かいそくでんしゃ"
+      ]
+    },
+    {
+      "id": "7bb2ebee43cf0564",
+      "word": "高速道路",
+      "reading": "こうそくどうろ",
+      "readings": [
+        "こうそくどうろ"
+      ],
+      "meanings": [
+        "jalan bebas hambatan"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "速"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "こうそくどうろ"
+      ]
+    },
+    {
+      "id": "cd99fb39408a4094",
+      "word": "時速",
+      "reading": "じそく",
+      "readings": [
+        "じそく"
+      ],
+      "meanings": [
+        "kecepatan per jam"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "速"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "じそく"
+      ]
+    },
+    {
+      "id": "cf513b5789a26cdd",
+      "word": "速やかな",
+      "reading": "すみやかな",
+      "readings": [
+        "すみやかな"
+      ],
+      "meanings": [
+        "cepat; segera"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "速"
+      ],
+      "pages": [
+        207
+      ],
+      "acceptedReadings": [
+        "すみやかな"
+      ]
+    },
+    {
+      "id": "f19598f8742b6a5c",
+      "word": "遅い",
+      "reading": "おそい",
+      "readings": [
+        "おそい"
+      ],
+      "meanings": [
+        "lambat; terlambat"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "遅"
+      ],
+      "pages": [
+        208
+      ],
+      "acceptedReadings": [
+        "おそい"
+      ]
+    },
+    {
+      "id": "6762b46e5f559822",
+      "word": "遅れる",
+      "reading": "おくれる",
+      "readings": [
+        "おくれる"
+      ],
+      "meanings": [
+        "terlambat"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "遅"
+      ],
+      "pages": [
+        208
+      ],
+      "acceptedReadings": [
+        "おくれる"
+      ]
+    },
+    {
+      "id": "e591b42aa5789aab",
+      "word": "遅刻する",
+      "reading": "ちこくする",
+      "readings": [
+        "ちこくする"
+      ],
+      "meanings": [
+        "datang terlambat"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "遅"
+      ],
+      "pages": [
+        208
+      ],
+      "acceptedReadings": [
+        "ちこくする"
+      ]
+    },
+    {
+      "id": "b436449612ff2adf",
+      "word": "乗り遅れる",
+      "reading": "のりおくれる",
+      "readings": [
+        "のりおくれる"
+      ],
+      "meanings": [
+        "tertinggal kendaraan"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "遅"
+      ],
+      "pages": [
+        208
+      ],
+      "acceptedReadings": [
+        "のりおくれる"
+      ]
+    },
+    {
+      "id": "cb14ed2bebbc2fdd",
+      "word": "遅れ",
+      "reading": "おくれ",
+      "readings": [
+        "おくれ"
+      ],
+      "meanings": [
+        "keterlambatan; penundaan"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "遅"
+      ],
+      "pages": [
+        208
+      ],
+      "acceptedReadings": [
+        "おくれ"
+      ]
+    },
+    {
+      "id": "94fa81de4ed111eb",
+      "word": "駐車する",
+      "reading": "ちゅうしゃする",
+      "readings": [
+        "ちゅうしゃする"
+      ],
+      "meanings": [
+        "memarkir kendaraan"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "駐"
+      ],
+      "pages": [
+        208
+      ],
+      "acceptedReadings": [
+        "ちゅうしゃする"
+      ]
+    },
+    {
+      "id": "52e891db1cfcc6d8",
+      "word": "駐車場",
+      "reading": "ちゅうしゃじょう",
+      "readings": [
+        "ちゅうしゃじょう"
+      ],
+      "meanings": [
+        "tempat parkir"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "駐"
+      ],
+      "pages": [
+        208
+      ],
+      "acceptedReadings": [
+        "ちゅうしゃじょう"
+      ]
+    },
+    {
+      "id": "30f5aa0ab41471b1",
+      "word": "駐日大使",
+      "reading": "ちゅうにちたいし",
+      "readings": [
+        "ちゅうにちたいし"
+      ],
+      "meanings": [
+        "duta besar untuk Jepang"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "駐"
+      ],
+      "pages": [
+        208
+      ],
+      "acceptedReadings": [
+        "ちゅうにちたいし"
+      ]
+    },
+    {
+      "id": "80c590a2952c0db5",
+      "word": "二泊三日",
+      "reading": "にはくみっか",
+      "readings": [
+        "にはくみっか"
+      ],
+      "meanings": [
+        "dua malam tiga hari"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "泊"
+      ],
+      "pages": [
+        208
+      ],
+      "acceptedReadings": [
+        "にはくみっか"
+      ]
+    },
+    {
+      "id": "6bf441ff1ce4dee0",
+      "word": "一泊する",
+      "reading": "いっぱくする",
+      "readings": [
+        "いっぱくする"
+      ],
+      "meanings": [
+        "menginap satu malam"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "泊"
+      ],
+      "pages": [
+        208
+      ],
+      "acceptedReadings": [
+        "いっぱくする"
+      ]
+    },
+    {
+      "id": "6609da9af02cc1ce",
+      "word": "泊まる",
+      "reading": "とまる",
+      "readings": [
+        "とまる"
+      ],
+      "meanings": [
+        "menginap"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "泊"
+      ],
+      "pages": [
+        208
+      ],
+      "acceptedReadings": [
+        "とまる"
+      ]
+    },
+    {
+      "id": "b65b29549b4392a4",
+      "word": "泊める",
+      "reading": "とめる",
+      "readings": [
+        "とめる"
+      ],
+      "meanings": [
+        "mengizinkan seseorang menginap"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "泊"
+      ],
+      "pages": [
+        208
+      ],
+      "acceptedReadings": [
+        "とめる"
+      ]
+    },
+    {
+      "id": "a9a95c38453ae62f",
+      "word": "宿泊",
+      "reading": "しゅくはく",
+      "readings": [
+        "しゅくはく"
+      ],
+      "meanings": [
+        "menginap; penginapan"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "泊"
+      ],
+      "pages": [
+        208
+      ],
+      "acceptedReadings": [
+        "しゅくはく"
+      ]
+    },
+    {
+      "id": "fbd5edfcdaefc6c6",
+      "word": "船",
+      "reading": "ふね",
+      "readings": [
+        "ふね"
+      ],
+      "meanings": [
+        "kapal"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "船"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "ふね"
+      ]
+    },
+    {
+      "id": "fc3e7580f57e7276",
+      "word": "船便",
+      "reading": "ふなびん",
+      "readings": [
+        "ふなびん"
+      ],
+      "meanings": [
+        "pengiriman lewat laut"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "船"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "ふなびん"
+      ]
+    },
+    {
+      "id": "ddf049206973a68b",
+      "word": "風船",
+      "reading": "ふうせん",
+      "readings": [
+        "ふうせん"
+      ],
+      "meanings": [
+        "balon"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "船"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "ふうせん"
+      ]
+    },
+    {
+      "id": "309ccb4d37b90f97",
+      "word": "造船",
+      "reading": "ぞうせん",
+      "readings": [
+        "ぞうせん"
+      ],
+      "meanings": [
+        "pembuatan kapal"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "船"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "ぞうせん"
+      ]
+    },
+    {
+      "id": "d7fe09ee607d4b4c",
+      "word": "客船",
+      "reading": "きゃくせん",
+      "readings": [
+        "きゃくせん"
+      ],
+      "meanings": [
+        "kapal penumpang"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "船"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "きゃくせん"
+      ]
+    },
+    {
+      "id": "7538a8ece7a47f4f",
+      "word": "貨物船",
+      "reading": "かもつせん",
+      "readings": [
+        "かもつせん"
+      ],
+      "meanings": [
+        "kapal barang"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "船"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "かもつせん"
+      ]
+    },
+    {
+      "id": "f3838a39874902ae",
+      "word": "船長",
+      "reading": "せんちょう",
+      "readings": [
+        "せんちょう"
+      ],
+      "meanings": [
+        "kapten kapal"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "船"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "せんちょう"
+      ]
+    },
+    {
+      "id": "31d951dfea384717",
+      "word": "船旅",
+      "reading": "ふなたび",
+      "readings": [
+        "ふなたび"
+      ],
+      "meanings": [
+        "perjalanan dengan kapal"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "船"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "ふなたび"
+      ]
+    },
+    {
+      "id": "1920bee7857b4a82",
+      "word": "座る",
+      "reading": "すわる",
+      "readings": [
+        "すわる"
+      ],
+      "meanings": [
+        "duduk"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "座"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "すわる"
+      ]
+    },
+    {
+      "id": "8ccb8205b7c44fac",
+      "word": "口座",
+      "reading": "こうざ",
+      "readings": [
+        "こうざ"
+      ],
+      "meanings": [
+        "rekening bank"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "座"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "こうざ"
+      ]
+    },
+    {
+      "id": "7448fee3521e0217",
+      "word": "座席",
+      "reading": "ざせき",
+      "readings": [
+        "ざせき"
+      ],
+      "meanings": [
+        "tempat duduk"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "座"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "ざせき"
+      ]
+    },
+    {
+      "id": "379f4e631a1f5a0a",
+      "word": "座布団",
+      "reading": "ざぶとん",
+      "readings": [
+        "ざぶとん"
+      ],
+      "meanings": [
+        "bantal duduk bergaya Jepang"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "座"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "ざぶとん"
+      ]
+    },
+    {
+      "id": "f1f9566acb347bae",
+      "word": "座談会",
+      "reading": "ざだんかい",
+      "readings": [
+        "ざだんかい"
+      ],
+      "meanings": [
+        "diskusi meja bundar"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "座"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "ざだんかい"
+      ]
+    },
+    {
+      "id": "c13369d5c5ff3ab4",
+      "word": "座敷",
+      "reading": "ざしき",
+      "readings": [
+        "ざしき"
+      ],
+      "meanings": [
+        "ruangan bergaya Jepang"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "座"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "ざしき"
+      ]
+    },
+    {
+      "id": "b48cb8a41332169d",
+      "word": "席",
+      "reading": "せき",
+      "readings": [
+        "せき"
+      ],
+      "meanings": [
+        "tempat duduk"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "席"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "せき"
+      ]
+    },
+    {
+      "id": "3e101d9e890d5413",
+      "word": "出席",
+      "reading": "しゅっせき",
+      "readings": [
+        "しゅっせき"
+      ],
+      "meanings": [
+        "kehadiran"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "席"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "しゅっせき"
+      ]
+    },
+    {
+      "id": "c2e8813b532a9258",
+      "word": "空席",
+      "reading": "くうせき",
+      "readings": [
+        "くうせき"
+      ],
+      "meanings": [
+        "tempat duduk kosong"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "席"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "くうせき"
+      ]
+    },
+    {
+      "id": "c07d68b11a7f8e90",
+      "word": "欠席",
+      "reading": "けっせき",
+      "readings": [
+        "けっせき"
+      ],
+      "meanings": [
+        "ketidakhadiran"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "席"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "けっせき"
+      ]
+    },
+    {
+      "id": "dd02b32ef9e3b201",
+      "word": "客席",
+      "reading": "きゃくせき",
+      "readings": [
+        "きゃくせき"
+      ],
+      "meanings": [
+        "tempat duduk penumpang atau penonton"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "席"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "きゃくせき"
+      ]
+    },
+    {
+      "id": "784f6add41c0307b",
+      "word": "着席する",
+      "reading": "ちゃくせきする",
+      "readings": [
+        "ちゃくせきする"
+      ],
+      "meanings": [
+        "duduk; mengambil tempat duduk"
+      ],
+      "tms": [
+        7
+      ],
+      "roots": [
+        "席"
+      ],
+      "pages": [
+        209
+      ],
+      "acceptedReadings": [
+        "ちゃくせきする"
+      ]
+    }
+  ],
+  "sourceCount": 431
+}

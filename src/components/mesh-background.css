@@ -1,0 +1,29 @@
+.mesh-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: #10002B;
+  /* A static approximation remains visible when WebGL is unavailable/lost. */
+  background-image:
+    radial-gradient(ellipse at 68% 65%, #33AEB9A6, transparent 65%),
+    radial-gradient(ellipse at 30% 35%, #7F00FFB3, transparent 60%),
+    radial-gradient(ellipse at 85% 18%, #0920F4B3, transparent 60%);
+}
+.mesh-background canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.mesh-background[data-renderer="webgl"] canvas { opacity: 1; }
+.mesh-background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* Preserve the exported shader recipe under a readable night treatment. */
+  background: rgba(9, 15, 26, .6);
+}
+@media print { .mesh-background { display: none; } }

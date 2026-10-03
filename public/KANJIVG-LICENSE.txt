@@ -1,0 +1,6 @@
+KanjiVG copyright (c) 2009-2026 Ulrich Apel.
+Stroke path data distributed under Creative Commons Attribution-ShareAlike 3.0.
+https://creativecommons.org/licenses/by-sa/3.0/
+https://kanjivg.tagaini.net/
+Source revision: 70a0b7ae0c18ceb5cb358274b029cce0234a43bc
+Local JSON conversion preserves stroke geometry and order.
