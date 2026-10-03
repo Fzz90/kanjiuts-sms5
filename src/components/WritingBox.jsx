@@ -3,7 +3,7 @@ import { RotateCcw, Undo2 } from 'lucide-react';
 
 const pathData = points => points.map((p, i) => `${i ? 'L' : 'M'}${(p.x * 109).toFixed(2)},${(p.y * 109).toFixed(2)}`).join(' ');
 
-export default function WritingBox({ number, strokes, onChange, onActivity, asset, showAnswer, replay, delay, failed, disabled, correctAnswer }) {
+export default function WritingBox({ number, strokes, onChange, onActivity, asset, showAnswer, replay, delay, failed, disabled, correctAnswer, onAnswerAnimationEnd }) {
   const [liveStroke, setLiveStroke] = useState([]);
   const pointer = useRef(null);
   const active = useRef([]);
@@ -30,13 +30,13 @@ export default function WritingBox({ number, strokes, onChange, onActivity, asse
     cancelFrame();
     setLiveStroke([]);
     onActivity?.(token.current, false);
-    if (!cancelled && points.length > 1) onChange([...strokes, points]);
+    if (!cancelled && !disabled && points.length > 1) onChange([...strokes, points]);
     if (event.currentTarget.hasPointerCapture?.(event.pointerId)) event.currentTarget.releasePointerCapture?.(event.pointerId);
   };
 
   return <div className={`writing-cell ${failed ? 'shake invalid' : ''}`}>
     <div className="cell-meta"><span>Kanji {number}</span><span>{strokes.length} stroke</span></div>
-    <svg className="writing-box" viewBox="0 0 109 109" role="img" aria-label={`Kotak tulis kanji ${number}`} aria-describedby="writing-instruction"
+    <svg className="writing-box" viewBox="0 0 109 109" role="img" aria-label={`Kotak tulis kanji ${number}`} aria-describedby="writing-instruction" aria-disabled={Boolean(disabled)}
       onPointerDown={event => {
         if (disabled || pointer.current !== null || (event.pointerType === 'mouse' && event.button !== 0)) return;
         event.preventDefault();
@@ -68,7 +68,9 @@ export default function WritingBox({ number, strokes, onChange, onActivity, asse
       <path className="guide-line" d="M54.5 0V109 M0 54.5H109" />
       {showAnswer && asset && <g className="answer-shadow">{asset.paths.map((d, i) => <path key={i} d={d} />)}</g>}
       <g className="user-ink">{strokes.map((stroke, i) => <path key={i} d={pathData(stroke)} />)}{liveStroke.length > 0 && <path d={pathData(liveStroke)} />}</g>
-      {showAnswer && asset && <g key={replay} className="answer-animation">{asset.paths.map((d, i) => <path key={i} d={d} pathLength="1" style={{ '--stroke-delay': `${.5 + delay + i * .58}s` }} />)}</g>}
+      {showAnswer && asset && <g key={replay} className="answer-animation" onAnimationEnd={event => {
+        if (event.animationName === 'write-stroke' && event.target === event.currentTarget.lastElementChild) onAnswerAnimationEnd?.();
+      }}>{asset.paths.map((d, i) => <path key={i} d={d} pathLength="1" style={{ '--stroke-delay': `${.5 + delay + i * .58}s` }} />)}</g>}
     </svg>
     {correctAnswer && <div className="writing-correct-answer" role="status"><span>Jawaban kanji</span><strong className="japanese" lang="ja">{correctAnswer}</strong></div>}
     <div className="cell-actions">

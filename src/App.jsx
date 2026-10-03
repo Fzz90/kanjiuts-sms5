@@ -35,6 +35,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
   const [drawings, setDrawings] = useState(() => kanji.map(() => []));
   const [reading, setReading] = useState('');
   const [showAnswer, setShowAnswer] = useState(false);
+  const [answerAnimating, setAnswerAnimating] = useState(false);
   const [replay, setReplay] = useState(0);
   const [drawingReset, setDrawingReset] = useState(0);
   const [feedback, setFeedback] = useState(null);
@@ -70,7 +71,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
 
   const check = event => {
     event?.preventDefault();
-    if (correct || loading || assetError) return;
+    if (correct || answerAnimating || loading || assetError) return;
     if (mode === 'reading' && !reading.trim()) { input.current?.focus(); return; }
     let result;
     if (mode === 'reading') {
@@ -92,6 +93,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
     void playSound('reveal');
     if (!showAnswer) onHelp();
     if (mode === 'writing') {
+      setAnswerAnimating(true);
       setDrawings(kanji.map(() => []));
       setDrawingReset(previous => previous + 1);
       setFailedBoxes([]);
@@ -123,7 +125,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
       <button className="primary-button check-reading" type="submit" disabled={!reading.trim() || correct}>Periksa jawaban <ArrowRight size={18} /></button>
     </form> : <>
       <p className="writing-instruction" id="writing-instruction">Tulis dengan jari, stylus, atau mouse. Satu garis dihitung satu stroke.</p>
-      {loading ? <div className="asset-status" role="status">Menyiapkan kotak tulis…</div> : assetError ? <div className="asset-status error" role="alert">Contoh stroke gagal dimuat. <button className="text-button" onClick={() => setReload(value => value + 1)}>Coba lagi</button></div> : <div className="writing-word" aria-label="Area latihan menulis">
+      {loading ? <div className="asset-status" role="status">Menyiapkan kotak tulis…</div> : assetError ? <div className="asset-status error" role="alert">Contoh stroke gagal dimuat. <button className="text-button" onClick={() => setReload(value => value + 1)}>Coba lagi</button></div> : <div className="writing-word" aria-label="Area latihan menulis" aria-busy={answerAnimating}>
         {writingUnits.map(({ character, index, kana }) => {
           if (!character) return <span className="okurigana japanese" lang="ja" key={index}>{kana}</span>;
           const number = ++boxIndex, delay = animationOffset;
@@ -132,11 +134,11 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
             setDrawings(previous => previous.map((drawing, i) => i === number ? strokes : drawing));
             setFeedback(null);
             setFailedBoxes(previous => previous.filter(i => i !== number));
-          }} onActivity={onWritingActivity} asset={assets[number]} showAnswer={showAnswer} replay={replay} delay={delay} failed={failedBoxes.includes(number)} disabled={correct} correctAnswer={correct ? character : null} />{kana && <span className="okurigana japanese" lang="ja">{kana}</span>}</div>;
+          }} onActivity={onWritingActivity} asset={assets[number]} showAnswer={showAnswer} replay={replay} delay={delay} failed={failedBoxes.includes(number)} disabled={correct || answerAnimating} onAnswerAnimationEnd={number === kanji.length - 1 ? () => setAnswerAnimating(false) : undefined} correctAnswer={correct ? character : null} />{kana && <span className="okurigana japanese" lang="ja">{kana}</span>}</div>;
         })}
       </div>}
       <div className="writing-tools">
-        <button className="text-button" disabled={correct || drawings.every(d => !d.length)} onClick={() => { setDrawings(kanji.map(() => [])); setFeedback(null); setFailedBoxes([]); }}><RotateCcw size={16} /> Hapus semua</button>
+        <button className="text-button" disabled={correct || answerAnimating || drawings.every(d => !d.length)} onClick={() => { setDrawings(kanji.map(() => [])); setFeedback(null); setFailedBoxes([]); }}><RotateCcw size={16} /> Hapus semua</button>
         <label className="sensitivity">Toleransi bentuk <select value={sensitivity} onChange={event => onSensitivity(event.target.value)} disabled={correct}><option value="relaxed">Longgar</option><option value="normal">Normal</option><option value="strict">Ketat</option></select></label>
       </div>
     </>}
@@ -150,7 +152,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
     <div className="practice-actions">
       {mode === 'writing' && correct ? <button ref={advanceButton} type="button" className="primary-button next-button" onClick={onAdvance}>Selanjutnya <ArrowRight size={18} /></button> : <>
       <button className="secondary-button" onClick={reveal} disabled={correct || loading || assetError}>{showAnswer && mode === 'writing' ? <RefreshCw size={17} /> : <Eye size={17} />}{showAnswer && mode === 'writing' ? 'Ulangi animasi' : 'Show answer'}</button>
-      {mode === 'writing' && <button className="primary-button" onClick={check} disabled={correct || loading || assetError || drawings.every(d => !d.length)}>Periksa tulisan <Check size={17} /></button>}
+      {mode === 'writing' && <button className="primary-button" onClick={check} disabled={correct || answerAnimating || loading || assetError || drawings.every(d => !d.length)}>Periksa tulisan <Check size={17} /></button>}
       {correct ? <button className="text-button next-button" onClick={onAdvance}>Lanjut <ArrowRight size={16} /></button> : <button className="text-button skip-button" onClick={onSkip}>Lewati <ArrowRight size={16} /></button>}
       </>}
     </div>

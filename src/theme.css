@@ -140,6 +140,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .writing-unit > .okurigana { align-self: flex-end; overflow-wrap: anywhere; max-width: 100%; }
 .writing-unit > .writing-cell { width: 100%; flex: none; min-width: 0; border-color: var(--control-border); border-radius: 14px; background: var(--canvas-surface); color: var(--text); }
 .writing-box { aspect-ratio: 1; }
+.writing-box[aria-disabled="true"] { cursor: default; touch-action: pan-y; }
 .writing-tools { gap: 12px; flex-wrap: wrap; }
 .cell-meta { color: var(--muted); font-size: 12px; border-bottom-color: var(--line); background: var(--accent-wash); padding: 8px 9px; }
 .guide-line { stroke: var(--guide); }

@@ -1,5 +1,11 @@
 # Verifikasi, 3 Oktober 2026
 
+## Kunci kotak selama Show answer
+
+- Show answer dan Ulangi animasi membersihkan coretan lalu mengunci semua kotak sampai event CSS `animationend` pada stroke terakhir seluruh kata. Selesainya kanji pertama tidak membuka kotak lain. Setelah pemutaran selesai, input kembali aktif; tidak memakai timeout perkiraan.
+- `tests/browser-animation-lock.js` melalui gstack `/browse` lulus pada 1280×720 dan 375×812: input mouse/sentuhan/stylus ditolak selama pemutaran, coretan aktif/tersimpan dibersihkan, lock berakhir setelah seluruh kata, replay mengunci lagi, navigasi soal/TM membatalkan lock, serta CSS reduced motion tetap membuka kotak. Fixture mempercepat playback lewat Web Animations API sambil mempertahankan event akhir CSS asli dan memeriksa delay/urutan sumber.
+- Regresi `tests/browser-writing-next.js` dan `tests/browser-writing-reset.js` lulus pada 375×812: tulisan setelah bantuan tetap dapat dinilai benar, tombol Selanjutnya tetap manual, reset error/coretan dan replay tetap bekerja. Semua 26 pengujian Node lulus.
+
 ## Tombol Selanjutnya pada Renshuu dan kanji putih pada pilihan TM
 
 - Setelah jawaban Renshuu benar, soal/coretan/jawaban kanji tetap tampil. Show answer/ulangi animasi, Periksa tulisan, dan Lewati diganti satu tombol primer **Selanjutnya**; fokus keyboard berpindah ke tombol tersebut. Soal baru dan hasil pada soal terakhir dibuka hanya setelah tombol ditekan. Yomikata tetap menggunakan auto-advance sebelumnya.
