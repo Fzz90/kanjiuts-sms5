@@ -4,6 +4,7 @@ import { RotateCcw, Undo2 } from 'lucide-react';
 const pathData = points => points.map((p, i) => `${i ? 'L' : 'M'}${(p.x * 109).toFixed(2)},${(p.y * 109).toFixed(2)}`).join(' ');
 
 export default function WritingBox({ number, strokes, onChange, onActivity, asset, showAnswer, replay, delay, failed, disabled, correctAnswer, onAnswerAnimationEnd }) {
+  const readOnly = disabled || showAnswer;
   const [liveStroke, setLiveStroke] = useState([]);
   const pointer = useRef(null);
   const active = useRef([]);
@@ -30,15 +31,15 @@ export default function WritingBox({ number, strokes, onChange, onActivity, asse
     cancelFrame();
     setLiveStroke([]);
     onActivity?.(token.current, false);
-    if (!cancelled && !disabled && points.length > 1) onChange([...strokes, points]);
+    if (!cancelled && !readOnly && points.length > 1) onChange([...strokes, points]);
     if (event.currentTarget.hasPointerCapture?.(event.pointerId)) event.currentTarget.releasePointerCapture?.(event.pointerId);
   };
 
   return <div className={`writing-cell ${failed ? 'shake invalid' : ''}`}>
     <div className="cell-meta"><span>Kanji {number}</span><span>{strokes.length} stroke</span></div>
-    <svg className="writing-box" viewBox="0 0 109 109" role="img" aria-label={`Kotak tulis kanji ${number}`} aria-describedby="writing-instruction" aria-disabled={Boolean(disabled)}
+    <svg className="writing-box" viewBox="0 0 109 109" role="img" aria-label={`Kotak tulis kanji ${number}`} aria-describedby="writing-instruction" aria-disabled={Boolean(readOnly)}
       onPointerDown={event => {
-        if (disabled || pointer.current !== null || (event.pointerType === 'mouse' && event.button !== 0)) return;
+        if (readOnly || pointer.current !== null || (event.pointerType === 'mouse' && event.button !== 0)) return;
         event.preventDefault();
         pointer.current = event.pointerId;
         active.current = [position(event)];
@@ -47,7 +48,7 @@ export default function WritingBox({ number, strokes, onChange, onActivity, asse
         try { event.currentTarget.setPointerCapture?.(event.pointerId); } catch { /* Synthetic or already-ended pointer. */ }
       }}
       onPointerMove={event => {
-        if (disabled || pointer.current !== event.pointerId) return;
+        if (readOnly || pointer.current !== event.pointerId) return;
         const box = event.currentTarget.getBoundingClientRect();
         const events = event.nativeEvent.getCoalescedEvents?.() ?? [event.nativeEvent];
         const next = active.current;
@@ -74,8 +75,8 @@ export default function WritingBox({ number, strokes, onChange, onActivity, asse
     </svg>
     {correctAnswer && <div className="writing-correct-answer" role="status"><span>Jawaban kanji</span><strong className="japanese" lang="ja">{correctAnswer}</strong></div>}
     <div className="cell-actions">
-      <button className="icon-button" aria-label={`Undo stroke kanji ${number}`} title="Undo stroke" disabled={disabled || !strokes.length} onClick={() => onChange(strokes.slice(0, -1))}><Undo2 size={15} /></button>
-      <button className="icon-button" aria-label={`Hapus kanji ${number}`} title="Hapus kotak" disabled={disabled || !strokes.length} onClick={() => onChange([])}><RotateCcw size={15} /></button>
+      <button className="icon-button" aria-label={`Undo stroke kanji ${number}`} title="Undo stroke" disabled={readOnly || !strokes.length} onClick={() => onChange(strokes.slice(0, -1))}><Undo2 size={15} /></button>
+      <button className="icon-button" aria-label={`Hapus kanji ${number}`} title="Hapus kotak" disabled={readOnly || !strokes.length} onClick={() => onChange([])}><RotateCcw size={15} /></button>
     </div>
   </div>;
 }

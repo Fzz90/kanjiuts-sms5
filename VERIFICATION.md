@@ -1,10 +1,10 @@
 # Verifikasi, 3 Oktober 2026
 
-## Kunci kotak selama Show answer
+## Kunci kotak setelah Show answer
 
-- Show answer dan Ulangi animasi membersihkan coretan lalu mengunci semua kotak sampai event CSS `animationend` pada stroke terakhir seluruh kata. Selesainya kanji pertama tidak membuka kotak lain. Setelah pemutaran selesai, input kembali aktif; tidak memakai timeout perkiraan.
-- `tests/browser-animation-lock.js` melalui gstack `/browse` lulus pada 1280×720 dan 375×812: input mouse/sentuhan/stylus ditolak selama pemutaran, coretan aktif/tersimpan dibersihkan, lock berakhir setelah seluruh kata, replay mengunci lagi, navigasi soal/TM membatalkan lock, serta CSS reduced motion tetap membuka kotak. Fixture mempercepat playback lewat Web Animations API sambil mempertahankan event akhir CSS asli dan memeriksa delay/urutan sumber.
-- Regresi `tests/browser-writing-next.js` dan `tests/browser-writing-reset.js` lulus pada 375×812: tulisan setelah bantuan tetap dapat dinilai benar, tombol Selanjutnya tetap manual, reset error/coretan dan replay tetap bekerja. Semua 26 pengujian Node lulus.
+- Show answer menghapus coretan lalu menjadikan seluruh kotak read-only untuk soal itu. Selesainya animasi hanya menghapus status busy; input tetap terkunci. Ulangi animasi tetap tersedia, Periksa tulisan/undo/hapus tidak dapat dipakai, dan Lewati membuka soal baru yang bisa ditulis. Jawaban yang sudah ditampilkan tidak dapat dinilai sebagai tulisan benar.
+- `tests/browser-animation-lock.js` melalui gstack `/browse` lulus pada 375×812 dan 1440×900. Mouse/sentuhan/stylus ditolak selama dan setelah animasi, coretan aktif/tersimpan dibersihkan, replay mempertahankan lock, soal baru/TM membuka input, dan reduced motion tetap read-only. Fixture mempercepat playback lewat Web Animations API sambil menunggu event akhir CSS asli dan memeriksa delay/urutan sumber.
+- Regresi Selanjutnya dan reset tulisan lulus pada 375×812; lima suara, jawaban benar/salah, reveal/replay, skip, hasil sesi, dan pergantian TM lulus pada 1440×900. Semua 26 pengujian Node dan build produksi dengan prefix Pages lulus.
 
 ## Tombol Selanjutnya pada Renshuu dan kanji putih pada pilihan TM
 

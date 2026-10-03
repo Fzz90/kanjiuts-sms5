@@ -38,13 +38,14 @@ return (async () => {
   await draw(document.querySelector('.writing-box'));
   assert(!document.querySelector('.user-ink path'), 'Writing must be blocked during the answer animation');
   animation.forEach(path => path.getAnimations().forEach(animation => { animation.playbackRate = 20; }));
-  for (let i = 0; document.querySelector('.writing-box').getAttribute('aria-disabled') === 'true' && i < 180; i++) await tick();
-  assert(document.querySelector('.writing-box').getAttribute('aria-disabled') === 'false', 'Writing must unlock after animation');
+  for (let i = 0; document.querySelector('.writing-word').getAttribute('aria-busy') === 'true' && i < 180; i++) await tick();
+  assert(document.querySelector('.writing-word').getAttribute('aria-busy') === 'false', 'Animation must finish');
+  assert(document.querySelector('.writing-box').getAttribute('aria-disabled') === 'true', 'Revealed writing must stay read-only after animation');
   await draw(document.querySelector('.writing-box'));
-  assert(document.querySelector('.user-ink path'), 'Writing must resume after animation');
+  assert(!document.querySelector('.user-ink path'), 'Drawing remains blocked after animation');
   document.querySelector('.practice-actions .secondary-button').click(); await tick();
-  assert(!document.querySelector('.user-ink path'), 'Replay must also clear new strokes');
+  assert(!document.querySelector('.user-ink path'), 'Replay must keep revealed answer free of user ink');
   assert([...document.querySelectorAll('.writing-box')].every(box => box.getAttribute('aria-disabled') === 'true'), 'Replay must lock every box again');
   assert(document.documentElement.scrollWidth <= innerWidth, 'Page must not overflow horizontally');
-  return { resetCommittedAndLiveInk: 'passed', clearedErrorState: 'passed', shadowAndAnimation: 'passed', replay: 'passed', boxWidth: document.querySelector('.writing-box').getBoundingClientRect().width, viewport: `${innerWidth}x${innerHeight}` };
+  return { resetCommittedAndLiveInk: 'passed', clearedErrorState: 'passed', shadowAndAnimation: 'passed', readOnlyAfterReveal: 'passed', replay: 'passed', boxWidth: document.querySelector('.writing-box').getBoundingClientRect().width, viewport: `${innerWidth}x${innerHeight}` };
 })()

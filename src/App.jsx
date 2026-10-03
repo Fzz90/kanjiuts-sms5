@@ -45,6 +45,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
   const input = useRef(null);
   const advanceButton = useRef(null);
   const correct = feedback?.correct;
+  const writingRevealed = mode === 'writing' && showAnswer;
 
   useEffect(() => { if (mode === 'reading' && shake > 0) input.current?.focus(); }, [shake, mode]);
 
@@ -71,7 +72,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
 
   const check = event => {
     event?.preventDefault();
-    if (correct || answerAnimating || loading || assetError) return;
+    if (correct || writingRevealed || loading || assetError) return;
     if (mode === 'reading' && !reading.trim()) { input.current?.focus(); return; }
     let result;
     if (mode === 'reading') {
@@ -134,11 +135,11 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
             setDrawings(previous => previous.map((drawing, i) => i === number ? strokes : drawing));
             setFeedback(null);
             setFailedBoxes(previous => previous.filter(i => i !== number));
-          }} onActivity={onWritingActivity} asset={assets[number]} showAnswer={showAnswer} replay={replay} delay={delay} failed={failedBoxes.includes(number)} disabled={correct || answerAnimating} onAnswerAnimationEnd={number === kanji.length - 1 ? () => setAnswerAnimating(false) : undefined} correctAnswer={correct ? character : null} />{kana && <span className="okurigana japanese" lang="ja">{kana}</span>}</div>;
+          }} onActivity={onWritingActivity} asset={assets[number]} showAnswer={showAnswer} replay={replay} delay={delay} failed={failedBoxes.includes(number)} disabled={correct || writingRevealed} onAnswerAnimationEnd={number === kanji.length - 1 ? () => setAnswerAnimating(false) : undefined} correctAnswer={correct ? character : null} />{kana && <span className="okurigana japanese" lang="ja">{kana}</span>}</div>;
         })}
       </div>}
       <div className="writing-tools">
-        <button className="text-button" disabled={correct || answerAnimating || drawings.every(d => !d.length)} onClick={() => { setDrawings(kanji.map(() => [])); setFeedback(null); setFailedBoxes([]); }}><RotateCcw size={16} /> Hapus semua</button>
+        <button className="text-button" disabled={correct || writingRevealed || drawings.every(d => !d.length)} onClick={() => { setDrawings(kanji.map(() => [])); setFeedback(null); setFailedBoxes([]); }}><RotateCcw size={16} /> Hapus semua</button>
         <label className="sensitivity">Toleransi bentuk <select value={sensitivity} onChange={event => onSensitivity(event.target.value)} disabled={correct}><option value="relaxed">Longgar</option><option value="normal">Normal</option><option value="strict">Ketat</option></select></label>
       </div>
     </>}
@@ -152,7 +153,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
     <div className="practice-actions">
       {mode === 'writing' && correct ? <button ref={advanceButton} type="button" className="primary-button next-button" onClick={onAdvance}>Selanjutnya <ArrowRight size={18} /></button> : <>
       <button className="secondary-button" onClick={reveal} disabled={correct || loading || assetError}>{showAnswer && mode === 'writing' ? <RefreshCw size={17} /> : <Eye size={17} />}{showAnswer && mode === 'writing' ? 'Ulangi animasi' : 'Show answer'}</button>
-      {mode === 'writing' && <button className="primary-button" onClick={check} disabled={correct || answerAnimating || loading || assetError || drawings.every(d => !d.length)}>Periksa tulisan <Check size={17} /></button>}
+      {mode === 'writing' && <button className="primary-button" onClick={check} disabled={correct || writingRevealed || loading || assetError || drawings.every(d => !d.length)}>Periksa tulisan <Check size={17} /></button>}
       {correct ? <button className="text-button next-button" onClick={onAdvance}>Lanjut <ArrowRight size={16} /></button> : <button className="text-button skip-button" onClick={onSkip}>Lewati <ArrowRight size={16} /></button>}
       </>}
     </div>

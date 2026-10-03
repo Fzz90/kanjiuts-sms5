@@ -27,13 +27,13 @@ return (async () => {
     if (complete) send('pointerup', .9);
     await pause(0);
   };
-  const checkBlocked = async () => {
-    assert(locked(), 'All boxes stay locked during whole-word animation');
-    assert(document.querySelector('.writing-word').getAttribute('aria-busy') === 'true', 'Animation exposes busy state');
+  const checkBlocked = async (animating = true) => {
+    assert(locked(), 'All boxes stay read-only after Show answer');
+    assert(document.querySelector('.writing-word').getAttribute('aria-busy') === String(animating), 'Busy state tracks animation separately from lock');
     for (const box of boxes()) for (const type of ['touch', 'pen', 'mouse']) await draw(box, type);
     assert(!document.querySelector('.user-ink path'), 'No committed or live strokes from touch, pen or mouse');
-    assert(document.querySelector('.practice-actions .primary-button').disabled, 'Cannot grade during playback');
-    assert([...document.querySelectorAll('.cell-actions button')].every(button => button.disabled), 'Undo and erase unavailable during playback');
+    assert(document.querySelector('.practice-actions .primary-button').disabled, 'Cannot grade a revealed answer');
+    assert([...document.querySelectorAll('.cell-actions button')].every(button => button.disabled), 'Undo and erase unavailable on revealed answer');
   };
 
   await click('.mode-nav [data-mode="writing"]');
@@ -57,18 +57,21 @@ return (async () => {
   await firstBoxEnd.finished;
   assert(locked(), 'Finishing first kanji does not unlock other boxes');
   await wordEnd.finished;
-  await wait(unlocked, 'Last actual CSS animationend unlocks all boxes');
-  assert(document.querySelector('.writing-word').getAttribute('aria-busy') === 'false', 'Busy state clears');
-  await draw(boxes()[0]);
-  assert(document.querySelector('.user-ink path'), 'Can write again after last stroke');
+  await wait(() => document.querySelector('.writing-word').getAttribute('aria-busy') === 'false', 'Last actual CSS animationend clears busy state');
+  await checkBlocked(false);
+  await pause(1400);
+  await checkBlocked(false);
+  assert(!document.querySelector('.feedback.success'), 'Revealed answer cannot count as correct writing');
 
   await click('.practice-actions .secondary-button');
   await checkBlocked();
   const oldId = document.querySelector('.practice-sheet').dataset.entryId;
   await click('.skip-button'); await ready();
   assert(document.querySelector('.practice-sheet').dataset.entryId !== oldId && unlocked(), 'Skipping playback opens an unlocked question');
+  await draw(boxes()[0]);
+  assert(document.querySelector('.user-ink path'), 'New question accepts writing');
   await click('.practice-actions .secondary-button');
-  assert(locked(), 'New question can lock');
+  assert(locked() && !document.querySelector('.user-ink path'), 'New question reveal locks and clears writing');
   await click('.tm-pills [data-tm="3"]'); await ready();
   assert(unlocked() && !document.querySelector('.answer-animation'), 'Switching TM cancels playback without leaking lock');
 
@@ -77,11 +80,10 @@ return (async () => {
   document.head.append(reduced);
   try {
     await click('.practice-actions .secondary-button');
-    await wait(unlocked, 'Reduced-motion CSS animation still unlocks');
-    await draw(boxes()[0]);
-    assert(document.querySelector('.user-ink path'), 'Reduced-motion users can continue writing');
+    await wait(() => document.querySelector('.writing-word').getAttribute('aria-busy') === 'false', 'Reduced-motion animation completes');
+    await checkBlocked(false);
     await click('.mode-nav [data-mode="writing"]');
   } finally { reduced.remove(); }
   assert(document.documentElement.scrollWidth <= innerWidth, 'No horizontal overflow');
-  return { viewport: `${innerWidth}x${innerHeight}`, blockedAllPointers: 'passed', clearedCommittedAndLiveInk: 'passed', unlockAfterWholeWord: 'passed', replayLocksAgain: 'passed', navigationCancelsLock: 'passed', reducedMotionUnlock: 'passed' };
+  return { viewport: `${innerWidth}x${innerHeight}`, blockedAllPointers: 'passed', clearedCommittedAndLiveInk: 'passed', lockedAfterAnimation: 'passed', replayStaysLocked: 'passed', newQuestionAcceptsWriting: 'passed', navigationResetsLock: 'passed', reducedMotionStaysLocked: 'passed' };
 })()

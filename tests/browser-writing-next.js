@@ -78,9 +78,6 @@ return (async () => {
   const count = meetingEntries(2, 'writing', '窓').length;
   for (let index = 2; index < count; index++) await click('.skip-button');
   await waitForBoxes();
-  await click('.practice-actions .secondary-button'); // Also cover helped/replay state.
-  document.querySelectorAll('.answer-animation path').forEach(path => path.getAnimations().forEach(animation => { animation.playbackRate = 20; }));
-  await wait(() => [...document.querySelectorAll('.writing-box')].every(box => box.getAttribute('aria-disabled') === 'false'), 'Help animation must finish before writing');
   await checkHeldAnswer(await answerCorrectly());
   await click('.practice-actions .next-button');
   await wait(() => !!document.querySelector('.result-screen'), 'Last Selanjutnya must open session results');

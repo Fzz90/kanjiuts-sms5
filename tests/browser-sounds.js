@@ -74,6 +74,9 @@ return (async () => {
     assert(document.querySelector('.writing-cell.invalid'), 'Incorrect writing must shake and show error');
     await expectSound('reveal.mp3', () => click('.practice-actions .secondary-button'));
     assert(!document.querySelector('.user-ink path'), 'Show answer still clears wrong strokes');
+    assert([...document.querySelectorAll('.writing-box')].every(svg => svg.getAttribute('aria-disabled') === 'true'), 'Revealed answer stays read-only');
+    await expectSound('skip.mp3', () => click('.skip-button'));
+    await wait(() => document.querySelector('.writing-box') && !document.querySelector('.asset-status'), 'Next writing assets must load before answering');
     const writtenItem = entries.find(entry => entry.id === document.querySelector('.practice-sheet').dataset.entryId);
     const characters = [...writtenItem.word].filter(isKanji);
     for (const [index, svg] of [...document.querySelectorAll('.writing-box')].entries()) {
