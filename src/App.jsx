@@ -35,7 +35,8 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
   const [drawings, setDrawings] = useState(() => kanji.map(() => []));
   const [reading, setReading] = useState('');
   const [showAnswer, setShowAnswer] = useState(false);
-  const [answerAnimating, setAnswerAnimating] = useState(false);
+  const [answerAnimations, setAnswerAnimations] = useState(() => new Set());
+  const answerAnimating = answerAnimations.size > 0;
   const [replay, setReplay] = useState(0);
   const [drawingReset, setDrawingReset] = useState(0);
   const [feedback, setFeedback] = useState(null);
@@ -96,7 +97,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
     void playSound('reveal');
     if (!showAnswer) onHelp();
     if (mode === 'writing') {
-      setAnswerAnimating(true);
+      setAnswerAnimations(new Set(kanji.map((_, number) => number)));
       setDrawings(kanji.map(() => []));
       setDrawingReset(previous => previous + 1);
       setFailedBoxes([]);
@@ -139,7 +140,14 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
             setFeedback(null);
             setFailedBoxes(previous => previous.filter(i => i !== number));
             setFailedStrokes(previous => previous.map((stroke, i) => i === number ? null : stroke));
-          }} onActivity={onWritingActivity} asset={assets[number]} showAnswer={showAnswer} replay={replay} delay={delay} failed={failedBoxes.includes(number)} failedStroke={failedStrokes[number] ?? null} disabled={correct || writingRevealed} onAnswerAnimationEnd={number === kanji.length - 1 ? () => setAnswerAnimating(false) : undefined} correctAnswer={correct ? character : null} />{kana && <span className="okurigana japanese" lang="ja">{kana}</span>}</div>;
+          }} onActivity={onWritingActivity} asset={assets[number]} showAnswer={showAnswer} replay={replay} delay={delay} failed={failedBoxes.includes(number)} failedStroke={failedStrokes[number] ?? null} disabled={correct || writingRevealed} onAnswerAnimationStart={() => {
+            void playSound('reveal');
+            setAnswerAnimations(previous => new Set(previous).add(number));
+          }} onAnswerAnimationEnd={() => setAnswerAnimations(previous => {
+            const active = new Set(previous);
+            active.delete(number);
+            return active;
+          })} correctAnswer={correct ? character : null} />{kana && <span className="okurigana japanese" lang="ja">{kana}</span>}</div>;
         })}
       </div>}
       <div className="writing-tools">

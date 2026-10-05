@@ -33,13 +33,15 @@ return (async () => {
     for (const box of boxes()) for (const type of ['touch', 'pen', 'mouse']) await draw(box, type);
     assert(!document.querySelector('.user-ink path'), 'No committed or live strokes from touch, pen or mouse');
     assert(document.querySelector('.practice-actions .primary-button').disabled, 'Cannot grade a revealed answer');
-    assert([...document.querySelectorAll('.cell-actions button')].every(button => button.disabled), 'Undo and erase unavailable on revealed answer');
+    assert(!document.querySelector('.cell-actions .icon-button'), 'Undo and erase are replaced after reveal');
+    assert([...document.querySelectorAll('.cell-replay')].length === boxes().length && [...document.querySelectorAll('.cell-replay')].every(button => !button.disabled), 'Each revealed kanji has an enabled replay button');
   };
 
   await click('.mode-nav [data-mode="writing"]');
   await click('.meeting-card[data-tm="2"]');
   await click('.root-grid [aria-label="Latih kanji 窓"]');
   await ready();
+  assert(!document.querySelector('.cell-replay'), 'Per-box replay is only available after reveal');
   for (let i = 0; boxes().length < 2 && i < 4; i++) { await click('.skip-button'); await ready(); }
   assert(boxes().length >= 2, 'Fixture exercises multiple kanji');
   for (const box of boxes()) await draw(box);
@@ -63,6 +65,23 @@ return (async () => {
   await checkBlocked(false);
   assert(!document.querySelector('.feedback.success'), 'Revealed answer cannot count as correct writing');
 
+  const originalGroups = boxes().map(box => box.querySelector('.answer-animation'));
+  const lastBox = boxes().length - 1;
+  await click(`.writing-unit:nth-child(${lastBox + 1}) .cell-replay`);
+  const localGroup = boxes()[lastBox].querySelector('.answer-animation');
+  assert(localGroup !== originalGroups[lastBox] && boxes().slice(0, -1).every((box, i) => box.querySelector('.answer-animation') === originalGroups[i]), 'Local replay only restarts selected kanji');
+  assert(parseFloat(getComputedStyle(localGroup.firstElementChild).animationDelay) === .5, 'Local replay starts without waiting for previous kanji');
+  await checkBlocked();
+  await click(`.writing-unit:nth-child(${lastBox + 1}) .cell-replay`);
+  assert(boxes()[lastBox].querySelector('.answer-animation') !== localGroup, 'Repeated local clicks restart playback');
+  await click('.writing-unit:first-child .cell-replay');
+  boxes()[lastBox].querySelectorAll('.answer-animation path').forEach(path => path.getAnimations().forEach(animation => animation.finish()));
+  await pause(60);
+  assert(document.querySelector('.writing-word').getAttribute('aria-busy') === 'true', 'Finishing one local replay preserves other active kanji');
+  boxes()[0].querySelectorAll('.answer-animation path').forEach(path => path.getAnimations().forEach(animation => animation.finish()));
+  await wait(() => document.querySelector('.writing-word').getAttribute('aria-busy') === 'false', 'Busy clears after all overlapping local replays end');
+  await checkBlocked(false);
+
   await click('.practice-actions .secondary-button');
   await checkBlocked();
   const oldId = document.querySelector('.practice-sheet').dataset.entryId;
@@ -85,5 +104,5 @@ return (async () => {
     await click('.mode-nav [data-mode="writing"]');
   } finally { reduced.remove(); }
   assert(document.documentElement.scrollWidth <= innerWidth, 'No horizontal overflow');
-  return { viewport: `${innerWidth}x${innerHeight}`, blockedAllPointers: 'passed', clearedCommittedAndLiveInk: 'passed', lockedAfterAnimation: 'passed', replayStaysLocked: 'passed', newQuestionAcceptsWriting: 'passed', navigationResetsLock: 'passed', reducedMotionStaysLocked: 'passed' };
+  return { viewport: `${innerWidth}x${innerHeight}`, blockedAllPointers: 'passed', clearedCommittedAndLiveInk: 'passed', lockedAfterAnimation: 'passed', perKanjiReplay: 'passed', overlappingLocalReplays: 'passed', replayStaysLocked: 'passed', newQuestionAcceptsWriting: 'passed', navigationResetsLock: 'passed', reducedMotionStaysLocked: 'passed' };
 })()

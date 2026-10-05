@@ -168,6 +168,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .writing-correct-answer > span { font-size: 12px; }
 .writing-correct-answer > strong { font-size: 40px; font-weight: 500; line-height: 1.3; }
 .cell-actions { padding: 2px 5px 5px; gap: 5px; }
+.cell-actions .cell-replay { width: 100%; min-height: 44px; justify-content: center; padding: 8px 10px; border-radius: 9px; font-size: 14px; }
+.cell-actions .cell-replay:hover:not(:disabled) { background: var(--accent-soft); }
 .icon-button { width: 44px; height: 44px; border-radius: 9px; color: var(--muted); }
 .icon-button:hover:not(:disabled) { background: var(--accent-soft); color: var(--accent); }
 .okurigana { color: var(--accent); }

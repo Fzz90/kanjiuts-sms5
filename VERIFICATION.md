@@ -1,5 +1,11 @@
 # Verifikasi
 
+## Ulangi animasi per kotak, 5 Oktober 2026
+
+- Setelah Show answer, setiap kotak mengganti alat undo/hapus dengan tombol Ulangi Animasi. Replay lokal hanya memulai ulang kanji yang dipilih, dengan jeda awal 0,5 detik; tombol replay seluruh kata mempertahankan urutan antar-kanji. Kotak tetap terkunci dan jawaban bantuan tidak dianggap benar. Status aria-busy melacak seluruh kanji yang masih beranimasi, termasuk replay lokal bersamaan.
+- `tests/browser-animation-lock.js` lulus melalui gstack `/browse` pada 375×812 dan 1440×900: replay lokal berulang, kotak lain tidak diulang, replay bersamaan, seluruh replay, input mouse/touch/pen diblokir, navigasi soal/TM, dan reduced motion. `tests/browser-writing-reset.js` lulus pada 1440×900 untuk pembersihan coretan aktif/tersimpan serta error setelah reveal.
+- Tombol replay muat dan memiliki target minimum 44px pada viewport 280×720, 375×812, dan 768×1024; screenshot desktop dan HP diperiksa. 28 tes Node dan build produksi dengan prefix GitHub Pages lulus. Verifikasi browser memakai Chromium dan viewport sintetis.
+
 ## Semua TM dan viewport foldable, 5 Oktober 2026
 
 - Semua TM tersedia pada pemilihan sesi dan panel kedua mode. Gabungan mencakup 67 kelompok kanji: 415 soal Yomikata dan 416 soal Renshuu. Kosakata bersama antar-TM tidak digandakan; variasi bacaan yang diterima dan keanggotaan kelompok sumber tetap berlaku. Soal menampilkan asal TM, sedangkan daftar 67 kanji dalam panel memakai disclosure native.
