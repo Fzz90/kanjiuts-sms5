@@ -84,6 +84,11 @@ return (async () => {
 
   await click('.practice-actions .secondary-button');
   await checkBlocked();
+  const replayPaths = [...document.querySelectorAll('.answer-animation path')];
+  const replayDelays = replayPaths.map(path => parseFloat(getComputedStyle(path).animationDelay));
+  assert(replayDelays[0] === 0 && replayDelays.every((delay, i) => !i || delay > replayDelays[i - 1]), 'Whole-word replay starts immediately and preserves stroke order');
+  assert(parseFloat(getComputedStyle(replayPaths[0]).strokeDashoffset) < 1, 'First replay stroke is already moving after click');
+  assert(Math.abs(parseFloat(getComputedStyle(boxes()[1].querySelector('.answer-animation path')).animationDelay) - boxes()[0].querySelectorAll('.answer-animation path').length * .58) < .00001, 'Following kanji retains sequential timing without initial pause');
   const oldId = document.querySelector('.practice-sheet').dataset.entryId;
   await click('.skip-button'); await ready();
   assert(document.querySelector('.practice-sheet').dataset.entryId !== oldId && unlocked(), 'Skipping playback opens an unlocked question');
@@ -104,5 +109,5 @@ return (async () => {
     await click('.mode-nav [data-mode="writing"]');
   } finally { reduced.remove(); }
   assert(document.documentElement.scrollWidth <= innerWidth, 'No horizontal overflow');
-  return { viewport: `${innerWidth}x${innerHeight}`, blockedAllPointers: 'passed', clearedCommittedAndLiveInk: 'passed', lockedAfterAnimation: 'passed', perKanjiReplay: 'passed', overlappingLocalReplays: 'passed', replayStaysLocked: 'passed', newQuestionAcceptsWriting: 'passed', navigationResetsLock: 'passed', reducedMotionStaysLocked: 'passed' };
+  return { viewport: `${innerWidth}x${innerHeight}`, blockedAllPointers: 'passed', clearedCommittedAndLiveInk: 'passed', lockedAfterAnimation: 'passed', perKanjiReplay: 'passed', overlappingLocalReplays: 'passed', wholeWordReplayStartsImmediately: 'passed', replayStaysLocked: 'passed', newQuestionAcceptsWriting: 'passed', navigationResetsLock: 'passed', reducedMotionStaysLocked: 'passed' };
 })()

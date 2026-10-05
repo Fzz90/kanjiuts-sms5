@@ -1,5 +1,10 @@
 # Verifikasi
 
+## Replay seluruh kata tanpa jeda awal, 6 Oktober 2026
+
+- Ulangi animasi seluruh kata kini memulai stroke pertama dengan animation-delay 0 detik; urutan antar-stroke dan antar-kanji tetap sesuai. Show answer pertama dan replay per kotak mempertahankan jeda shadow 0,5 detik.
+- `tests/browser-animation-lock.js` melalui gstack `/browse` lulus pada 375×812, termasuk delay awal nol, stroke pertama sudah bergerak setelah klik, urutan kanji berikutnya, replay per kotak, penguncian input, navigasi, dan reduced motion. 28 tes Node serta build produksi GitHub Pages lulus.
+
 ## Ulangi animasi per kotak, 5 Oktober 2026
 
 - Setelah Show answer, setiap kotak mengganti alat undo/hapus dengan tombol Ulangi Animasi. Replay lokal hanya memulai ulang kanji yang dipilih, dengan jeda awal 0,5 detik; tombol replay seluruh kata mempertahankan urutan antar-kanji. Kotak tetap terkunci dan jawaban bantuan tidak dianggap benar. Status aria-busy melacak seluruh kanji yang masih beranimasi, termasuk replay lokal bersamaan.
