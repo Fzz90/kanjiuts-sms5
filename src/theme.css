@@ -184,6 +184,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .answer-note { background: var(--accent-wash); border: 1px solid var(--accent-border); border-left: 3px solid var(--accent); border-radius: 12px; }
 .answer-note span, .answer-note p, .grading-note { font-size: 14px; }
 .answer-note strong { color: var(--accent); }
+.writing-sheet .answer-note { background: #E5639926; border-color: #E5639973; border-left-color: #E56399; }
+.writing-sheet .answer-note strong { color: #FFFFFF; }
 .study-sidebar { position: sticky; top: 24px; border: 1px solid var(--line); border-radius: 22px; background: var(--panel); box-shadow: var(--shadow); padding: 25px; margin-top: 103px; }
 .sidebar-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 18px; }
 .sidebar-heading h2 { font-size: 21px; font-weight: 600; margin: 0; }
