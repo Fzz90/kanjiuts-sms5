@@ -94,7 +94,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .meeting-progress span { background: var(--tm-accent); }
 .meeting-count { font-size: 14px; }
 .meeting-card small, .save-note { font-size: 13px; }
-.all-tm-card { grid-column: 1 / -1; }
+.all-tm-card {
+  grid-column: 1 / -1;
+  --all-tm-inset: inset 0 1px 0 #C7B9FF66, inset 0 0 32px #C7B9FF2E, inset 0 -18px 26px #070B1480;
+  box-shadow: var(--all-tm-inset), var(--shadow);
+  transition: border-color .2s, box-shadow .2s;
+}
+.all-tm-card:hover { box-shadow: var(--all-tm-inset), 0 0 0 2px var(--tm-soft), var(--shadow); }
 .all-tm-card .meeting-title h2 { display: inline-flex; align-items: center; gap: 8px; }
 .all-tm-description { color: var(--text); font-size: 16px; line-height: 1.6; margin: 15px 0 18px; }
 .all-kanji-card { display: flex; align-items: center; gap: 16px; width: 100%; padding: 22px 24px; margin: 0 0 28px; border: 1px solid var(--tm-accent); border-radius: 18px; background: var(--panel); text-align: left; box-shadow: var(--shadow); }
