@@ -41,6 +41,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
   const [feedback, setFeedback] = useState(null);
   const [shake, setShake] = useState(0);
   const [failedBoxes, setFailedBoxes] = useState([]);
+  const [failedStrokes, setFailedStrokes] = useState([]);
   const [hadMistake, setHadMistake] = useState(false);
   const input = useRef(null);
   const advanceButton = useRef(null);
@@ -83,6 +84,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
       const checked = drawings.map((strokes, i) => gradeDrawing(strokes, assets[i]?.reference, sensitivity));
       const failures = checked.flatMap((grade, i) => grade.correct ? [] : [i]);
       setFailedBoxes(failures);
+      setFailedStrokes(checked.map(grade => grade.correct ? null : grade.stroke ?? null));
       result = failures.length ? { ...checked[failures[0]], message: `Kotak ${failures[0] + 1}: ${checked[failures[0]].message}` } : { correct: true, message: 'Bentuk dan urutan stroke sesuai. Tekan Selanjutnya untuk melanjutkan.' };
     }
     setFeedback(result);
@@ -98,6 +100,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
       setDrawings(kanji.map(() => []));
       setDrawingReset(previous => previous + 1);
       setFailedBoxes([]);
+      setFailedStrokes([]);
       setFeedback(null);
     }
     setShowAnswer(true);
@@ -135,11 +138,12 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
             setDrawings(previous => previous.map((drawing, i) => i === number ? strokes : drawing));
             setFeedback(null);
             setFailedBoxes(previous => previous.filter(i => i !== number));
-          }} onActivity={onWritingActivity} asset={assets[number]} showAnswer={showAnswer} replay={replay} delay={delay} failed={failedBoxes.includes(number)} disabled={correct || writingRevealed} onAnswerAnimationEnd={number === kanji.length - 1 ? () => setAnswerAnimating(false) : undefined} correctAnswer={correct ? character : null} />{kana && <span className="okurigana japanese" lang="ja">{kana}</span>}</div>;
+            setFailedStrokes(previous => previous.map((stroke, i) => i === number ? null : stroke));
+          }} onActivity={onWritingActivity} asset={assets[number]} showAnswer={showAnswer} replay={replay} delay={delay} failed={failedBoxes.includes(number)} failedStroke={failedStrokes[number] ?? null} disabled={correct || writingRevealed} onAnswerAnimationEnd={number === kanji.length - 1 ? () => setAnswerAnimating(false) : undefined} correctAnswer={correct ? character : null} />{kana && <span className="okurigana japanese" lang="ja">{kana}</span>}</div>;
         })}
       </div>}
       <div className="writing-tools">
-        <button className="text-button" disabled={correct || writingRevealed || drawings.every(d => !d.length)} onClick={() => { setDrawings(kanji.map(() => [])); setFeedback(null); setFailedBoxes([]); }}><RotateCcw size={16} /> Hapus semua</button>
+        <button className="text-button" disabled={correct || writingRevealed || drawings.every(d => !d.length)} onClick={() => { setDrawings(kanji.map(() => [])); setFeedback(null); setFailedBoxes([]); setFailedStrokes([]); }}><RotateCcw size={16} /> Hapus semua</button>
         <label className="sensitivity">Toleransi bentuk <select value={sensitivity} onChange={event => onSensitivity(event.target.value)} disabled={correct}><option value="relaxed">Longgar</option><option value="normal">Normal</option><option value="strict">Ketat</option></select></label>
       </div>
     </>}

@@ -150,6 +150,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .guide-line { stroke: var(--guide); }
 .answer-shadow path { stroke: var(--guide); }
 .user-ink path { stroke: var(--text); }
+.user-ink path.stroke-error { stroke: var(--red); animation: wrong-stroke-blink .6s ease-in-out 3; }
+@keyframes wrong-stroke-blink { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
 .answer-animation path { stroke: var(--accent-stroke); }
 .writing-correct-answer { display: flex; justify-content: center; align-items: center; gap: 14px; padding: 10px 12px; border-top: 1px solid var(--accent-border); background: var(--accent-wash); color: var(--accent); }
 .writing-correct-answer > span { font-size: 12px; }
