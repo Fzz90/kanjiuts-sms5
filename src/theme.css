@@ -64,7 +64,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .reading-preview .japanese { font-size: 65px; color: var(--accent); letter-spacing: 7px; margin-left: 7px; }
 .preview-reading { color: var(--accent-deep); letter-spacing: 4px; }
 .preview-square { width: 116px; height: 116px; border-color: var(--accent-border); color: var(--accent-border); font-size: 88px; background: linear-gradient(90deg, transparent calc(50% - .5px), var(--accent-border) 50%, transparent calc(50% + .5px)), linear-gradient(transparent calc(50% - .5px), var(--accent-border) 50%, transparent calc(50% + .5px)), var(--accent-wash); }
-.preview-word { font-size: .52em; line-height: 1; white-space: nowrap; }
+.preview-writing-word { display: flex; align-items: center; gap: 10px; }
+.preview-writing-word .preview-square { flex-shrink: 0; }
+.preview-kanji { line-height: 1; }
+.preview-kana { color: var(--accent-border); font-size: 44px; line-height: 1; flex-shrink: 0; }
 .preview-pen { right: -16px; bottom: -11px; width: 44px; height: 44px; background: var(--accent); color: var(--on-accent); border: 3px solid var(--accent-soft); border-radius: 13px; transform: none; }
 .book-preview img { width: 120px; height: 164px; object-fit: cover; object-position: top; margin-top: 24px; border-radius: 5px 5px 0 0; box-shadow: 8px 5px 0 var(--accent-border), 0 8px 22px #482e201a; }
 .book-preview > span { position: absolute; bottom: 14px; right: 15px; display: flex; align-items: center; gap: 7px; border: 1px solid var(--accent-border); border-radius: 999px; background: var(--panel); color: var(--accent); padding: 8px 12px; font-size: 13px; z-index: 1; }
@@ -282,6 +285,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .reading-preview .japanese { font-size: 46px; letter-spacing: 3px; margin-left: 3px; }
   .preview-reading { font-size: 14px; letter-spacing: 2px; }
   .preview-square { width: 86px; height: 86px; font-size: 66px; }
+  .preview-writing-word { gap: 8px; }
+  .preview-kana { font-size: 34px; }
   .preview-pen { width: 36px; height: 36px; right: -10px; border-radius: 11px; }
   .preview-pen svg { width: 20px; }
   .mode-content { padding: 23px; }
@@ -320,6 +325,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .reading-preview .japanese { font-size: 37px; letter-spacing: 1px; }
   .preview-reading { font-size: 12px; letter-spacing: 1px; }
   .preview-square { width: 69px; height: 77px; font-size: 56px; }
+  .preview-writing-word { gap: 6px; }
+  .preview-writing-word .preview-square { width: 56px; height: 64px; font-size: 48px; }
+  .preview-kana { font-size: 24px; }
   .mode-content { padding: 19px 15px; }
   .mode-content h2 { font-size: 22px; margin-bottom: 9px; padding-right: 0; }
   .mode-content p { font-size: 15px; margin-bottom: 15px; min-height: 0; }
