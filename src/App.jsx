@@ -349,6 +349,6 @@ export default function App() {
       </section>}
       {storageError && <p className="storage-warning" role="status">Browser tidak bisa menyimpan progres. Sesi latihan tetap bisa dilanjutkan.</p>}
     </main>
-    <footer className="site-footer">{screen === 'home' ? <span>Faiz Syihab © 2026</span> : <><span>Latihan Kanji UTS</span><a href="https://kanjivg.tagaini.net/" target="_blank" rel="noreferrer">Stroke: KanjiVG / Ulrich Apel</a><a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a></>}</footer>
+    <footer className="site-footer"><span>Faiz Syihab © 2026</span></footer>
   </div></>;
 }

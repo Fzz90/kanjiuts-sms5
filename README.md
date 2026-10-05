@@ -69,6 +69,6 @@ Kosakata: file PDF pengguna *KANJI LOOK AND LEARN (Halaman PDF 185-209)*; transk
 
 Terjemahan Inggris tambahan disimpan lokal di `src/data/english-meanings.json`, meliputi seluruh 416 pasangan tulisan/bacaan. Kunci menggabungkan tulisan dan bacaan agar homograf seperti 紅葉 memiliki arti yang sesuai. Rebuild bank tetap memakai transkripsi sumber; terjemahan Inggris digabungkan saat bank dimuat aplikasi.
 
-Stroke: [KanjiVG](https://kanjivg.tagaini.net/), copyright Ulrich Apel, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). JSON lokal merupakan konversi SVG yang mempertahankan path dan urutan; atribusi ditampilkan pada aplikasi dan `public/KANJIVG-LICENSE.txt`. Revisi sumber dikunci di `public/strokes/manifest.json`. Seluruh 314 karakter pada kosakata memiliki asset lokal, termasuk 々.
+Stroke: [KanjiVG](https://kanjivg.tagaini.net/), copyright Ulrich Apel, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). JSON lokal merupakan konversi SVG yang mempertahankan path dan urutan; atribusi tersedia di `public/KANJIVG-LICENSE.txt`, yang ditautkan melalui `rel="license"` pada halaman aplikasi. Revisi sumber dikunci di `public/strokes/manifest.json`. Seluruh 314 karakter pada kosakata memiliki asset lokal, termasuk 々.
 
 Tidak memerlukan layanan pengenal tulisan eksternal. Data tulisan tidak dikirim ke server. `scripts/prepare_data.py` membangun ulang bank dari transkripsi dan mengunduh asset KanjiVG pada revisi yang dikunci.
