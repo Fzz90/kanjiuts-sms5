@@ -60,7 +60,7 @@ return (async () => {
   const colorProbe = document.createElement('span');
   colorProbe.style.color = css.getPropertyValue('--red').trim(); document.body.append(colorProbe);
   const errorRed = getComputedStyle(colorProbe).color; colorProbe.remove();
-  assert(css.stroke === errorRed && css.animationIterationCount === '3', 'Incorrect stroke uses the error red for three blinks');
+  assert(css.stroke === errorRed && css.animationIterationCount === '5', 'Incorrect stroke uses the error red for five blinks');
   if (reducedMotion) {
     assert(parseFloat(css.animationDuration) < .001 && Number(css.opacity) === 1, 'Reduced motion keeps a static visible red stroke');
   } else {
@@ -69,8 +69,8 @@ return (async () => {
     const opaque = Number(getComputedStyle(failed).opacity);
     animation.currentTime = 300;
     assert(Number(getComputedStyle(failed).opacity) < opaque, 'Blink visibly fades the incorrect stroke');
-    animation.currentTime = 1800;
-    assert(Number(getComputedStyle(failed).opacity) === 1, 'Stroke stays visible after three blinks');
+    animation.currentTime = 3000;
+    assert(Number(getComputedStyle(failed).opacity) === 1, 'Stroke stays visible after five blinks');
   }
 
   await click('.practice-actions .primary-button');
