@@ -261,7 +261,7 @@ export default function App() {
             <div className="mode-content"><span className="mode-icon"><BookOpen size={23} /></span><h2>Yomikata</h2><p>Lihat jukugo.<br />Tebak bacaan hiragananya.</p><span className="mode-start">Latihan membaca <ArrowRight size={20} /></span></div>
           </button>
           <button className="mode-card writing-card" data-mode="writing" style={themeStyle('writing')} onClick={() => chooseMode('writing')}>
-            <div className="mode-preview writing-preview" aria-hidden="true"><div className="preview-square japanese" lang="ja">記<span className="preview-pen"><PenLine size={26} /></span></div></div>
+            <div className="mode-preview writing-preview" aria-hidden="true"><div className="preview-square japanese" lang="ja"><span className="preview-word">好き</span><span className="preview-pen"><PenLine size={26} /></span></div></div>
             <div className="mode-content"><span className="mode-icon"><PenLine size={23} /></span><h2>Kanji Renshuu</h2><p>Lihat hiragana.<br />Tulis kanji, periksa bentuk dan stroke.</p><span className="mode-start">Latihan menulis <ArrowRight size={20} /></span></div>
           </button>
           <button className="mode-card book-card" data-mode="book" style={themeStyle('book')} onClick={() => chooseMode('book')}>
