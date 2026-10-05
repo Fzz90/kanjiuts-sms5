@@ -5,7 +5,7 @@ import WritingBox from './components/WritingBox.jsx';
 import BookReader from './components/BookReader.jsx';
 import MeshBackground from './components/MeshBackground.jsx';
 import { themeStyle, meetingStyle } from './lib/study-themes.js';
-import { meetings, meetingEntries, shuffle, checkReading, isKanji, loadCharacter } from './lib/bank.js';
+import { ALL_TM, meetingOptions, meetingLabel, meetingEntries, shuffle, checkReading, isKanji, loadCharacter } from './lib/bank.js';
 import { gradeDrawing } from './lib/grading.js';
 import { prepareSounds, playSound, stopSounds } from './lib/sounds.js';
 import { assetUrl } from './lib/assets.js';
@@ -236,7 +236,10 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'auto' });
   };
   const addReview = (list, item) => list.some(value => value.id === item.id) ? list : [...list, item];
-  const meeting = meetings.find(value => value.id === tm);
+  const meeting = meetingOptions.find(value => value.id === tm);
+  const allTm = tm === ALL_TM;
+  const tmLabel = meetingLabel(tm);
+  const rootButtons = <div className="root-grid">{meeting.kanji.map(character => <button key={character} className={`japanese ${selectedKanji === character ? 'active' : ''}`} lang="ja" aria-label={`Latih kanji ${character}`} aria-pressed={selectedKanji === character} onClick={() => start(tm, character)}>{character}</button>)}</div>;
   const chooseMode = selected => {
     stopSounds();
     if (selected !== 'book') prepareSounds();
@@ -279,13 +282,13 @@ export default function App() {
 
       {screen === 'select' && <section className="meeting-screen">
         <button className="back-link text-button" onClick={() => setScreen('home')}><ArrowLeft size={17} /> Ganti latihan</button>
-        <div className="section-heading"><span className="mode-badge">{mode === 'reading' ? <BookOpen size={17} /> : <PenLine size={17} />}{modeNames[mode]}</span><h1>Pilih pertemuan</h1><p>Latih satu TM dulu, lalu lanjut ke pertemuan berikutnya.</p></div>
-        <div className="meeting-grid">{meetings.map(value => {
+        <div className="section-heading"><span className="mode-badge">{mode === 'reading' ? <BookOpen size={17} /> : <PenLine size={17} />}{modeNames[mode]}</span><h1>Pilih pertemuan</h1><p>Pilih satu TM, atau gabungkan seluruh TM dalam satu latihan.</p></div>
+        <div className="meeting-grid">{meetingOptions.map(value => {
           const list = meetingEntries(value.id, mode);
           const studied = list.filter(item => progress[`${mode}:${item.id}`]?.correct > 0).length;
-          return <button className="meeting-card" key={value.id} data-tm={value.id} style={meetingStyle(value.id)} onClick={() => start(value.id)}>
-            <div className="meeting-title"><h2>TM {value.id}</h2><ArrowRight size={21} /></div>
-            <p className="meeting-kanji japanese" lang="ja">{value.kanji.join(' ')}</p>
+          return <button className={`meeting-card ${value.id === ALL_TM ? 'all-tm-card' : ''}`} key={value.id} data-tm={value.id} style={meetingStyle(value.id)} onClick={() => start(value.id)}>
+            <div className="meeting-title"><h2>{value.id === ALL_TM && <Library size={20} />}{meetingLabel(value.id)}</h2><ArrowRight size={21} /></div>
+            {value.id === ALL_TM ? <p className="all-tm-description">Campur seluruh kanji TM 2–7. Soal diacak dalam satu sesi.</p> : <p className="meeting-kanji japanese" lang="ja">{value.kanji.join(' ')}</p>}
             <div className="meeting-count"><span>{list.length} soal</span><span>{value.kanji.length} kanji</span></div>
             <div className="meeting-progress"><span style={{ width: `${studied / list.length * 100}%` }} /></div>
             <small>{studied ? `${studied} pernah dijawab benar` : 'Siap mulai latihan'}</small>
@@ -296,10 +299,10 @@ export default function App() {
 
       {screen === 'kanji' && <section className="meeting-screen kanji-screen" data-tm={tm} style={meetingStyle(tm)}>
         <button className="back-link text-button" onClick={() => setScreen('select')}><ArrowLeft size={17} /> Ganti TM</button>
-        <div className="section-heading"><span className="mode-badge">{modeNames[mode]} · TM {tm}</span><h1>Mau latihan kanji yang mana?</h1><p>Pilih satu kanji, atau latih semua kanji dalam pertemuan ini.</p></div>
+        <div className="section-heading"><span className="mode-badge">{modeNames[mode]} · {tmLabel}</span><h1>Mau latihan kanji yang mana?</h1><p>{allTm ? 'Pilih satu kanji dari TM 2–7, atau latih seluruh kanji.' : 'Pilih satu kanji, atau latih semua kanji dalam pertemuan ini.'}</p></div>
         <button className="all-kanji-card" onClick={() => start(tm)}>
           <span className="all-kanji-icon"><Library size={25} /></span>
-          <span><strong>Semua kanji TM {tm}</strong><small>{meetingEntries(tm, mode).length} soal · {meeting.kanji.length} kanji</small></span>
+          <span><strong>{allTm ? 'Semua kanji · Semua TM' : `Semua kanji TM ${tm}`}</strong><small>{meetingEntries(tm, mode).length} soal · {meeting.kanji.length} kanji</small></span>
           <ArrowRight size={22} />
         </button>
         <h2 className="kanji-grid-title">Latihan per kanji</h2>
@@ -317,8 +320,9 @@ export default function App() {
 
       {screen === 'practice' && queue[index] && <section className="practice-screen" data-tm={tm} data-kanji={selectedKanji ?? 'all'} data-mode={mode} style={meetingStyle(tm)}>
         <div className="practice-main">
-        <div className="session-nav"><button className="text-button" onClick={() => chooseMeeting(tm)}><ArrowLeft size={17} /> Pilih kanji</button><span>{modeNames[mode]} <strong>TM {tm} · {selectedKanji ? <span className="japanese" lang="ja">{selectedKanji}</span> : 'Semua kanji'}</strong></span></div>
+        <div className="session-nav"><button className="text-button" onClick={() => chooseMeeting(tm)}><ArrowLeft size={17} /> Pilih kanji</button><span>{modeNames[mode]} <strong>{tmLabel} · {selectedKanji ? <span className="japanese" lang="ja">{selectedKanji}</span> : 'Semua kanji'}</strong></span></div>
         <div className="session-progress"><div><span>Soal {index + 1} <span className="muted">/ {queue.length}</span></span><span><CheckCircle2 size={15} /> {results.correct} benar</span></div><div className="progress-track"><span style={{ width: `${index / queue.length * 100}%` }} /></div></div>
+        {allTm && <div className="question-origins" aria-label="Asal pertemuan soal"><span>Asal soal</span>{queue[index].tms.map(value => <span className="origin-tm" key={value} style={meetingStyle(value)}>TM {value}</span>)}</div>}
         <Practice key={`${session}:${index}`} mode={mode} item={queue[index]} sensitivity={sensitivity} onSensitivity={setSensitivity} onWritingActivity={writingActivity} onAdvance={next} onSkip={() => {
           void playSound('skip');
           record(queue[index], 'skipped');
@@ -334,21 +338,21 @@ export default function App() {
         </div>
         <aside className="study-sidebar" aria-label="Materi pertemuan">
           <div className="sidebar-heading"><h2>Pertemuan</h2><span>{modeNames[mode]}</span></div>
-          <div className="tm-pills">{meetings.map(value => <button key={value.id} data-tm={value.id} style={meetingStyle(value.id)} className={value.id === tm ? 'active' : ''} aria-pressed={value.id === tm} onClick={() => { if (value.id !== tm) start(value.id); }}>TM {value.id}</button>)}</div>
-          <div className="sidebar-subtitle"><span>Kanji TM {tm}</span><span>{meeting.kanji.length} kanji</span></div>
-          <div className="root-grid">{meeting.kanji.map(character => <button key={character} className={`japanese ${selectedKanji === character ? 'active' : ''}`} lang="ja" aria-label={`Latih kanji ${character}`} aria-pressed={selectedKanji === character} onClick={() => start(tm, character)}>{character}</button>)}</div>
-          <button className={`text-button sidebar-all ${selectedKanji === null ? 'active' : ''}`} onClick={() => start(tm)}>Latih semua kanji TM {tm} <ArrowRight size={16} /></button>
-          <p className="sidebar-note">{selectedKanji ? `Jukugo dari bagian kanji ${selectedKanji}.` : 'Jukugo dari seluruh kanji dalam pertemuan ini.'}</p>
+          <div className="tm-pills">{meetingOptions.map(value => <button key={value.id} data-tm={value.id} style={meetingStyle(value.id)} className={`${value.id === tm ? 'active' : ''} ${value.id === ALL_TM ? 'all-tm-pill' : ''}`} aria-pressed={value.id === tm} onClick={() => { if (value.id !== tm) start(value.id); }}>{meetingLabel(value.id)}</button>)}</div>
+          <div className="sidebar-subtitle"><span>{allTm ? 'Kanji seluruh TM' : `Kanji TM ${tm}`}</span><span>{meeting.kanji.length} kanji</span></div>
+          {allTm ? <details className="all-tm-roots"><summary>Pilih dari {meeting.kanji.length} kanji</summary>{rootButtons}</details> : rootButtons}
+          <button className={`text-button sidebar-all ${selectedKanji === null ? 'active' : ''}`} onClick={() => start(tm)}>{allTm ? 'Latih semua kanji' : `Latih semua kanji TM ${tm}`} <ArrowRight size={16} /></button>
+          <p className="sidebar-note">{selectedKanji ? `Jukugo dari bagian kanji ${selectedKanji}.` : allTm ? 'Jukugo dari seluruh TM 2–7.' : 'Jukugo dari seluruh kanji dalam pertemuan ini.'}</p>
           <button className="secondary-button sidebar-book" data-mode="book" style={themeStyle('book')} onClick={() => chooseMode('book')}><Library size={17} />Baca Buku</button>
         </aside>
       </section>}
 
       {screen === 'result' && <section className="result-screen" data-tm={tm} data-kanji={selectedKanji ?? 'all'}>
-        <div className="result-icon"><CheckCircle2 size={42} /></div><span className="mode-badge">{modeNames[mode]} · TM {tm} · {selectedKanji ?? 'Semua kanji'}</span><h1>Satu sesi selesai.</h1><p>{queue.length} soal {selectedKanji ? `untuk kanji ${selectedKanji}` : `dari TM ${tm}`} sudah kamu latih.</p>
+        <div className="result-icon"><CheckCircle2 size={42} /></div><span className="mode-badge">{modeNames[mode]} · {tmLabel} · {selectedKanji ?? 'Semua kanji'}</span><h1>Satu sesi selesai.</h1><p>{queue.length} soal {selectedKanji ? `untuk kanji ${selectedKanji}` : allTm ? 'dari seluruh TM 2–7' : `dari TM ${tm}`} sudah kamu latih.</p>
         <div className="result-stats"><div><strong>{results.independent}</strong><span>Benar tanpa bantuan</span></div><div><strong>{results.helped}</strong><span>Memakai show answer</span></div><div><strong>{results.skipped}</strong><span>Dilewati</span></div></div>
         <p className="result-detail">{results.correct} jawaban benar setelah latihan · {results.wrong} percobaan belum sesuai</p>
         {results.review.length > 0 && <button className="primary-button" onClick={() => start(tm, selectedKanji, results.review)}><RefreshCw size={18} /> Ulangi {results.review.length} soal yang perlu latihan</button>}
-        <div className="result-actions"><button className="secondary-button repeat-session" onClick={() => start(tm, selectedKanji)}>Ulangi {selectedKanji ? `kanji ${selectedKanji}` : `TM ${tm}`}</button><button className="secondary-button choose-kanji" onClick={() => chooseMeeting(tm)}>Pilih kanji lain <ArrowRight size={17} /></button><button className="text-button" onClick={() => setScreen('select')}>Pilih TM lain</button></div>
+        <div className="result-actions"><button className="secondary-button repeat-session" onClick={() => start(tm, selectedKanji)}>Ulangi {selectedKanji ? `kanji ${selectedKanji}` : tmLabel}</button><button className="secondary-button choose-kanji" onClick={() => chooseMeeting(tm)}>Pilih kanji lain <ArrowRight size={17} /></button><button className="text-button" onClick={() => setScreen('select')}>Pilih TM lain</button></div>
         <p className="meeting-kanji japanese" lang="ja">{selectedKanji ?? meeting.kanji.join(' ')}</p>
       </section>}
       {storageError && <p className="storage-warning" role="status">Browser tidak bisa menyimpan progres. Sesi latihan tetap bisa dilanjutkan.</p>}

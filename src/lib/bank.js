@@ -1,10 +1,14 @@
 import { toHiragana } from 'wanakana';
 import bank from '../data/bank.json';
 import englishMeanings from '../data/english-meanings.json';
-import { selectPracticeEntries } from './practice-selection.js';
+import { ALL_TM, selectPracticeEntries } from './practice-selection.js';
 import { assetUrl } from './assets.js';
 
 export const meetings = bank.meetings;
+export { ALL_TM };
+export const allMeetings = { id: ALL_TM, kanji: [...new Set(meetings.flatMap(meeting => meeting.kanji))] };
+export const meetingOptions = [allMeetings, ...meetings];
+export const meetingLabel = tm => tm === ALL_TM ? 'Semua TM' : `TM ${tm}`;
 export const entries = bank.entries.map(entry => ({
   ...entry,
   englishMeaning: englishMeanings[`${entry.word}|${entry.reading}`],

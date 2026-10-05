@@ -94,6 +94,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .meeting-progress span { background: var(--tm-accent); }
 .meeting-count { font-size: 14px; }
 .meeting-card small, .save-note { font-size: 13px; }
+.all-tm-card { grid-column: 1 / -1; }
+.all-tm-card .meeting-title h2 { display: inline-flex; align-items: center; gap: 8px; }
+.all-tm-description { color: var(--text); font-size: 16px; line-height: 1.6; margin: 15px 0 18px; }
 .all-kanji-card { display: flex; align-items: center; gap: 16px; width: 100%; padding: 22px 24px; margin: 0 0 28px; border: 1px solid var(--tm-accent); border-radius: 18px; background: var(--panel); text-align: left; box-shadow: var(--shadow); }
 .all-kanji-icon { display: grid; place-items: center; flex: 0 0 52px; height: 52px; border-radius: 14px; background: var(--tm-soft); color: var(--tm-accent); }
 .all-kanji-card > span:nth-child(2) { flex: 1; min-width: 0; }
@@ -116,6 +119,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .session-nav > span { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 .session-progress { margin: 16px 0 19px; }
 .session-progress > div:first-child { font-size: 14px; }
+.question-origins { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: -5px 0 16px; color: var(--muted); font-size: 13px; }
+.origin-tm { color: var(--tm-accent); background: var(--tm-soft); padding: 4px 8px; border-radius: 7px; }
 .progress-track { height: 6px; background: var(--accent-soft); }
 .progress-track span { background: var(--accent); }
 .practice-sheet { background: var(--panel); border-radius: 22px; border-top: 3px solid var(--accent); padding: 30px 26px 24px; box-shadow: var(--shadow); box-shadow: var(--shadow), 0 0 34px color-mix(in srgb, var(--accent) 7%, transparent); }
@@ -193,6 +198,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .tm-pills button { min-height: 44px; border: 1px solid var(--line); border-radius: 10px; background: var(--tm-soft); color: var(--tm-accent); padding: 9px 5px; font-size: 14px; }
 .tm-pills button.active { color: var(--on-accent); background: var(--tm-accent); border-color: var(--tm-accent); }
 .tm-pills button:hover:not(.active) { border-color: var(--tm-accent); box-shadow: 0 0 0 1px var(--tm-accent); }
+.tm-pills .all-tm-pill { grid-column: 1 / -1; }
+.all-tm-roots summary { min-height: 44px; padding: 10px 12px; border: 1px solid var(--control-border); border-radius: 10px; color: var(--text); cursor: pointer; font-size: 15px; }
+.all-tm-roots[open] summary { margin-bottom: 12px; }
+.all-tm-roots summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 .sidebar-subtitle { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 13px; }
 .sidebar-subtitle > span:first-child { color: var(--tm-accent); }
 .sidebar-subtitle > span:last-child { color: var(--muted); }

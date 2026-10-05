@@ -23,7 +23,7 @@ return (async () => {
     assert(document.body.dataset.studyTheme === mode, `${mode}: body theme`);
     assert(document.querySelector('.mesh-background').dataset.theme === mode, `${mode}: background remains mounted`);
     const meetings = [...document.querySelectorAll('.meeting-title h2')].map(node => getComputedStyle(node).color);
-    assert(new Set(meetings).size === 6, `${mode}: six TM markers need distinct colors`);
+    assert(new Set(meetings).size === 7, `${mode}: six TM markers and Semua TM need distinct colors`);
     await click('.meeting-card[data-tm="2"]');
     for (let i = 0; mode === 'writing' && !document.querySelector('.writing-box') && i < 50; i++) await pause();
     assert(color('.prompt h2') === rgb(STUDY_THEMES[mode].accent), `${mode}: prompt color`);
@@ -68,5 +68,5 @@ return (async () => {
   await click('.brand');
   assert(document.body.dataset.studyTheme === 'home', 'Returning home resets theme');
   assert(document.querySelector('.mesh-background').dataset.theme === 'home', 'Returning home preserves the Mesh drift background');
-  return { colors, bilingualPracticeStyles: 'passed in both modes', darkSurfaces: 'passed', promptGlowAndWeight: 'passed', tmColors: 'six distinct', strokePalette: 'passed', portalPalette: 'passed', touchTargets: 'passed', viewport: `${innerWidth}x${innerHeight}`, overflow: document.documentElement.scrollWidth > innerWidth };
+  return { colors, bilingualPracticeStyles: 'passed in both modes', darkSurfaces: 'passed', promptGlowAndWeight: 'passed', tmColors: 'six distinct plus all-TM', strokePalette: 'passed', portalPalette: 'passed', touchTargets: 'passed', viewport: `${innerWidth}x${innerHeight}`, overflow: document.documentElement.scrollWidth > innerWidth };
 })()

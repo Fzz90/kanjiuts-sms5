@@ -1,4 +1,12 @@
-# Verifikasi, 3 Oktober 2026
+# Verifikasi
+
+## Semua TM dan viewport foldable, 5 Oktober 2026
+
+- Semua TM tersedia pada pemilihan sesi dan panel kedua mode. Gabungan mencakup 67 kelompok kanji: 415 soal Yomikata dan 416 soal Renshuu. Kosakata bersama antar-TM tidak digandakan; variasi bacaan yang diterima dan keanggotaan kelompok sumber tetap berlaku. Soal menampilkan asal TM, sedangkan daftar 67 kanji dalam panel memakai disclosure native.
+- Semua 28 tes Node dan build produksi dengan prefix `/kanjiuts-sms5/` lulus. Dua tes data baru memeriksa gabungan semua pertemuan, kosakata lintas TM, scope per kanji, root di luar silabus, dan alternatif bacaan 紅葉.
+- `tests/browser-all-tm.js` melalui gstack `/browse` lulus pada 1280×720: penyelesaian seluruh 415/416 soal tanpa soal berulang, sumber TM, hasil, review per kanji, ulangi sesi, pilihan 67 kanji, dan pergantian antara Semua TM/TM individual. Fixture memberi kesempatan React menyelesaikan pembaruan setiap klik dan memberi giliran event loop per 32 soal agar seluruh sesi dapat diperiksa dalam batas waktu browser CLI.
+- `tests/browser-all-tm-layout.js` lulus untuk kedua mode pada 280×720, 375×812, 768×1024, 820×1180, 1180×820, dan 1440×900. Kartu, sesi, soal, panel, kotak tulis, dan pemilihan kanji muat tanpa scroll horizontal; tombol pilihan dan tindakan memiliki target sentuh minimum 44px. Screenshot menu HP dan latihan laptop diperiksa secara visual.
+- Simulasi perubahan viewport 280→768px mempertahankan ID soal serta teks jawaban Yomikata. Coretan Renshuu tetap sama ketika viewport berubah 280→768px lalu berotasi ke 1180×820. Pengujian memakai viewport Chromium, bukan perangkat foldable fisik. Fixture tema juga lulus pada 1180×820, termasuk aksen baru Semua TM, warna tiap mode, glows, kontrol, dan pembaca buku.
 
 ## Kunci kotak setelah Show answer
 

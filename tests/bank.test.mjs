@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
-import { selectPracticeEntries } from '../src/lib/practice-selection.js';
+import { ALL_TM, selectPracticeEntries } from '../src/lib/practice-selection.js';
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
 const source = read('src/data/source-vocabulary.json');
@@ -56,6 +56,34 @@ test('each kanji session contains exactly its source group, while all-kanji sess
   assert.deepEqual(selectPracticeEntries(bank, 2, 'writing', '鉄'), [], 'Reject a root from another TM');
   assert.deepEqual(selectPracticeEntries(bank, 99, 'reading'), [], 'Reject unknown TM');
   assert.ok(!selectPracticeEntries(bank, 2, 'writing', '側').some(item => item.word === '窓側の席'), 'Do not infer group membership from word characters');
+});
+
+test('all-TM sessions cover the union of meetings without repeating shared vocabulary', () => {
+  for (const mode of ['reading', 'writing']) {
+    const key = mode === 'reading' ? item => item.word : item => item.id;
+    const combined = selectPracticeEntries(bank, ALL_TM, mode);
+    const separate = bank.meetings.flatMap(meeting => selectPracticeEntries(bank, meeting.id, mode));
+    assert.deepEqual(new Set(combined.map(key)), new Set(separate.map(key)));
+    assert.equal(combined.length, new Set(combined.map(key)).size);
+    assert.equal(combined.length, mode === 'reading' ? 415 : 416);
+    assert.equal(combined.filter(item => item.word === '飛び込む').length, 1, 'Shared TM 2/7 vocabulary appears once');
+    assert.deepEqual(new Set(combined.flatMap(item => item.tms)), new Set([2, 3, 4, 5, 6, 7]));
+  }
+  assert.deepEqual(selectPracticeEntries(bank, ALL_TM, 'writing', '漢'), [], 'Reject a root outside the syllabus');
+});
+
+test('all-TM per-kanji sessions keep source group membership and accepted readings', () => {
+  for (const mode of ['reading', 'writing']) {
+    const key = mode === 'reading' ? item => item.word : item => item.id;
+    for (const group of source) {
+      const across = selectPracticeEntries(bank, ALL_TM, mode, group.k);
+      const separate = bank.meetings.flatMap(meeting => selectPracticeEntries(bank, meeting.id, mode, group.k));
+      assert.deepEqual(new Set(across.map(key)), new Set(separate.map(key)), `${mode}: ${group.k}`);
+    }
+  }
+  const maple = selectPracticeEntries(bank, ALL_TM, 'reading').find(item => item.word === '紅葉');
+  assert.deepEqual(new Set(maple.acceptedReadings), new Set(['こうよう', 'もみじ']));
+  assert.ok(!selectPracticeEntries(bank, ALL_TM, 'writing', '側').some(item => item.word === '窓側の席'));
 });
 
 test('all writing characters, including iteration mark, have local ordered stroke assets', () => {
