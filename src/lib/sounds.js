@@ -10,12 +10,8 @@ const sounds = {
   finish: { file: 'finish.mp3', frequency: 523.25 },
 };
 
-export const SFX_STORAGE = 'kanji-uts-s5-sfx-v1';
-function readPreference() {
-  try { return window.localStorage.getItem(SFX_STORAGE) !== 'off'; }
-  catch { return true; }
-}
-let enabled = readPreference();
+// Each page load starts with sound On; muting lasts until the page is closed or refreshed.
+let enabled = true;
 
 let context, activeSource, activeMedia, playback = 0;
 const buffers = new Map();
@@ -68,8 +64,6 @@ export const areSoundsEnabled = () => enabled;
 export function setSoundsEnabled(value) {
   enabled = Boolean(value);
   if (!enabled) stopSounds();
-  try { window.localStorage.setItem(SFX_STORAGE, enabled ? 'on' : 'off'); }
-  catch { /* Keep the current preference when browser storage is unavailable. */ }
   if (enabled) prepareSounds();
 }
 

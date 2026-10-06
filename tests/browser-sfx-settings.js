@@ -21,6 +21,7 @@ return (async () => {
   };
   await click('.mode-nav [data-mode="writing"]');
   const original = document.querySelector('[data-sfx="on"]').getAttribute('aria-pressed') === 'true';
+  assert(original, 'SFX starts On when the page opens');
   try {
     await click('[data-sfx="on"]');
     await click('.meeting-card[data-tm="2"]');
@@ -35,7 +36,7 @@ return (async () => {
     await click('.skip-button');
     await pause(100);
     assert(starts().length === mutedCount, 'Replay, retry and skip stay silent while Off');
-    assert(localStorage.getItem('kanji-uts-s5-sfx-v1') === 'off', 'Off preference saved');
+    assert(document.querySelector('[data-sfx="off"]').getAttribute('aria-pressed') === 'true', 'Off remains selected during practice');
     await click('.mode-nav [data-mode="reading"]');
     assert(document.querySelector('[data-sfx="off"]').getAttribute('aria-pressed') === 'true', 'Off follows mode changes');
     await click('.meeting-card[data-tm="2"]');
@@ -44,8 +45,8 @@ return (async () => {
     assert(starts().length === mutedCount, 'Yomikata Show answer also stays silent');
     await click('[data-sfx="on"]');
     await expectSound('skip.mp3', '.skip-button');
-    assert(localStorage.getItem('kanji-uts-s5-sfx-v1') === 'on', 'On preference saved and restores audio');
-    return { viewport: `${innerWidth}x${innerHeight}`, stopActiveAudio: 'passed', mutedReadingWritingReplayRetryAndSkip: 'passed', modePersistence: 'passed', onRestoresSound: 'passed' };
+    assert(document.querySelector('[data-sfx="on"]').getAttribute('aria-pressed') === 'true', 'On selected and restores audio');
+    return { viewport: `${innerWidth}x${innerHeight}`, defaultOn: 'passed', stopActiveAudio: 'passed', mutedReadingWritingReplayRetryAndSkip: 'passed', modePersistence: 'passed', onRestoresSound: 'passed' };
   } finally {
     await click(original ? '[data-sfx="on"]' : '[data-sfx="off"]');
     audio.restore();

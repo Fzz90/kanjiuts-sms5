@@ -28,25 +28,31 @@ function audioHarness() {
 }
 const response = file => ({ ok: true, arrayBuffer: async () => file });
 
-test('saved Off prevents every SFX from preparing or playing; On restores audio and preference', async t => {
+test('each page load starts On despite saved Off; muting prevents every SFX until On is restored', async t => {
   const harness = audioHarness(), requested = [], saved = new Map([['kanji-uts-s5-sfx-v1', 'off']]);
   const localStorage = { getItem: key => saved.get(key), setItem: (key, value) => saved.set(key, value) };
   install(t, { window: { AudioContext: harness.AudioContext, localStorage }, fetch: async path => { requested.push(path); return response(path); } });
   const sounds = await freshSounds();
-  assert.equal(sounds.areSoundsEnabled(), false);
+  assert.equal(sounds.areSoundsEnabled(), true);
+  assert.equal(harness.contexts.length, 0); // Default On does not start audio without an action.
+  sounds.setSoundsEnabled(false);
   sounds.prepareSounds();
   for (const name of ['correct', 'wrong', 'reveal', 'replay', 'skip', 'finish']) await sounds.playSound(name);
   assert.equal(harness.contexts.length, 0);
   assert.deepEqual(requested, []);
   sounds.setSoundsEnabled(true);
   await sounds.playSound('replay');
-  assert.equal(saved.get(sounds.SFX_STORAGE), 'on');
+  assert.equal(sounds.areSoundsEnabled(), true);
   assert.equal(harness.started.length, 1);
   sounds.setSoundsEnabled(false);
   assert.equal(harness.started[0].stopped, true);
   await sounds.playSound('finish');
   assert.equal(harness.started.length, 1);
-  assert.equal((await freshSounds()).areSoundsEnabled(), false);
+  const reloaded = await freshSounds();
+  assert.equal(reloaded.areSoundsEnabled(), true);
+  await reloaded.playSound('wrong');
+  assert.equal(harness.started.length, 2);
+  assert.equal(saved.get('kanji-uts-s5-sfx-v1'), 'off'); // Old stored preferences are ignored.
 });
 
 test('muting cancels pending audio even if On is restored before decoding finishes', async t => {

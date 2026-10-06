@@ -1,5 +1,11 @@
 # Verifikasi
 
+## Default SFX On, 7 Oktober 2026
+
+- Setiap pembukaan atau refresh halaman memulai SFX On. Nilai Off lama pada `kanji-uts-s5-sfx-v1` diabaikan; pengaturan kini hanya berlaku selama halaman terbuka dan tetap mengikuti pergantian mode. Audio tetap menunggu aksi pengguna untuk diaktifkan.
+- 31 tes Node dan build produksi GitHub Pages lulus. Regresi mencakup startup dengan Off tersimpan, mematikan keenam SFX, menghentikan sumber aktif, pemulihan On, dan inisialisasi ulang setelah Off yang kembali memutar audio.
+- gstack `/browse` pada 375×812 dengan audio asli: `tests/browser-sfx-settings.js` lulus meski storage lama berisi Off. Replay/retry/skip dan Show answer kedua mode tetap senyap saat Off; On memulihkan audio. Setelah memilih Off lalu refresh, kontrol kembali On sementara nilai lama di storage tetap Off.
+
 ## Pengaturan SFX On/Off, 6 Oktober 2026
 
 - Kontrol On/Off dengan aria-pressed berada tepat di kanan Awal pada kedua mode, termasuk pilih TM, latihan, pilih kanji, dan hasil. Pilihan disimpan pada `kanji-uts-s5-sfx-v1`; Off menghentikan sumber aktif dan membatalkan permintaan pemutaran yang tertunda. Seluruh jalur suara (Web Audio, oscillator fallback, elemen Audio) mengikuti pengaturan, sedangkan animasi/penilaian tetap berjalan. Storage yang diblokir tidak menghalangi pengaturan saat halaman terbuka.
