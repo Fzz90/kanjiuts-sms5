@@ -1,10 +1,11 @@
-// Reuse the UAS recordings. Web Audio also allows the finish sound after auto-advance.
+// Local recordings keep sound available on Pages. Web Audio allows auto-advance audio.
 import { assetUrl } from './assets.js';
 
 const sounds = {
   correct: { file: 'right.mp3', frequency: 880 },
   wrong: { file: 'wrong.mp3', frequency: 196 },
   reveal: { file: 'reveal.mp3', frequency: 660 },
+  replay: { file: 'replay.mp3', frequency: 660, volume: 1 },
   skip: { file: 'skip.mp3', frequency: 330 },
   finish: { file: 'finish.mp3', frequency: 523.25 },
 };
@@ -12,7 +13,7 @@ const sounds = {
 let context, activeSource, activeMedia, playback = 0;
 const buffers = new Map();
 const media = new Map();
-const volume = name => name === 'correct' ? .65 : .6;
+const volume = name => sounds[name].volume ?? (name === 'correct' ? .65 : .6);
 
 function getContext() {
   if (typeof window === 'undefined') return null;

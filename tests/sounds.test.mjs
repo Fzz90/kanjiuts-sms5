@@ -28,21 +28,23 @@ function audioHarness() {
 }
 const response = file => ({ ok: true, arrayBuffer: async () => file });
 
-test('preloaded UAS recordings play at reference volume; newer actions stop the previous sound', async t => {
+test('preloaded recordings preserve playback volume, including boosted replay; newer actions stop the previous sound', async t => {
   const harness = audioHarness(), requested = [];
   install(t, { window: { AudioContext: harness.AudioContext }, fetch: async path => { requested.push(path); return response(path); } });
   const sounds = await freshSounds();
   sounds.prepareSounds();
   await sounds.playSound('correct');
   await sounds.playSound('wrong');
+  await sounds.playSound('replay');
   assert.equal(harness.contexts.length, 1);
   assert.equal(harness.contexts[0].state, 'running');
-  assert.deepEqual(new Set(requested), new Set(['right', 'wrong', 'reveal', 'skip', 'finish'].map(name => `/sfx/${name}.mp3`)));
-  assert.deepEqual(harness.started.map(source => source.buffer.file), ['/sfx/right.mp3', '/sfx/wrong.mp3']);
-  assert.deepEqual(harness.gains, [.65, .6]);
+  assert.deepEqual(new Set(requested), new Set(['right', 'wrong', 'reveal', 'replay', 'skip', 'finish'].map(name => `/sfx/${name}.mp3`)));
+  assert.deepEqual(harness.started.map(source => source.buffer.file), ['/sfx/right.mp3', '/sfx/wrong.mp3', '/sfx/replay.mp3']);
+  assert.deepEqual(harness.gains, [.65, .6, 1]);
   assert.equal(harness.started[0].stopped, true);
   sounds.stopSounds();
   assert.equal(harness.started[1].stopped, true);
+  assert.equal(harness.started[2].stopped, true);
 });
 
 test('late loading cannot play a stale answer sound after another action or TM switch', async t => {
@@ -85,17 +87,19 @@ test('missing MP3 falls back to the reference tone without rejecting the action'
 });
 
 test('media fallback and unavailable or blocked browser audio never interrupt practice', async t => {
-  const played = [];
+  const played = [], volumes = [];
   class Audio {
     constructor(path) { this.src = path; }
-    async play() { played.push(this.src); throw new Error('Autoplay blocked'); }
+    async play() { played.push(this.src); volumes.push(this.volume); throw new Error('Autoplay blocked'); }
     pause() {}
   }
   install(t, { window: {}, Audio });
   const sounds = await freshSounds();
   sounds.prepareSounds();
   await assert.doesNotReject(sounds.playSound('finish'));
-  assert.deepEqual(played, ['/sfx/finish.mp3']);
+  await assert.doesNotReject(sounds.playSound('replay'));
+  assert.deepEqual(played, ['/sfx/finish.mp3', '/sfx/replay.mp3']);
+  assert.deepEqual(volumes, [.6, 1]);
   sounds.stopSounds();
   globalThis.Audio = undefined;
   const unavailable = await freshSounds();

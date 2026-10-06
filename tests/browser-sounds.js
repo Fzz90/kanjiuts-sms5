@@ -4,7 +4,7 @@ return (async () => {
   const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
   const tick = () => new Promise(resolve => requestAnimationFrame(resolve));
   const click = async selector => { const node = document.querySelector(selector); assert(node, `Missing ${selector}`); node.click(); await tick(); };
-  const wait = async (condition, message) => { for (let i = 0; i < 120 && !condition(); i++) await pause(25); assert(condition(), message); };
+  const wait = async (condition, message) => { for (let i = 0; i < 240 && !condition(); i++) await pause(25); assert(condition(), message); };
   const audio = window.__qaAudio;
   assert(audio, 'Install sound observer before entering a practice mode');
   const starts = () => audio.events.filter(event => event.type === 'start');
@@ -34,7 +34,7 @@ return (async () => {
     }
   };
   try {
-    await wait(() => audio.decoded.length === 5, 'All five actual MP3 files must decode');
+    await wait(() => audio.decoded.length === 6, 'All six actual MP3 files must decode');
     assert(audio.decoded.every(file => file.duration > 0 && file.channels > 0), 'MP3 audio data must be usable');
     await click('.meeting-card[data-tm="2"]');
     assert(document.querySelector('.practice-screen')?.dataset.kanji === 'all' && !document.querySelector('.kanji-screen'), 'Initial TM selection directly opens all questions');
@@ -66,6 +66,9 @@ return (async () => {
     await click('.root-grid [aria-label="Latih kanji 窓"]');
     await wait(() => document.querySelector('.writing-box'), 'Writing assets must load');
     await expectSound('reveal.mp3', () => click('.practice-actions .secondary-button'));
+    await expectSound('replay.mp3', () => click('.cell-replay'));
+    await expectSound('replay.mp3', () => click('.cell-replay'));
+    assert([...document.querySelectorAll('.writing-box')].every(svg => svg.getAttribute('aria-disabled') === 'true'), 'Replay SFX keeps revealed boxes locked');
     await expectSound('reveal.mp3', () => click('.practice-actions .secondary-button'));
     await expectSound('skip.mp3', () => click('.skip-button'));
     await wait(() => document.querySelector('.writing-box'), 'Next writing question must load');

@@ -150,7 +150,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
             setFailedBoxes(previous => previous.filter(i => i !== number));
             setFailedStrokes(previous => previous.map((stroke, i) => i === number ? null : stroke));
           }} onActivity={onWritingActivity} asset={assets[number]} showAnswer={showAnswer} delay={delay} failed={failedBoxes.includes(number)} failedStroke={failedStrokes[number] ?? null} disabled={correct || writingRevealed} onAnswerAnimationStart={() => {
-            void playSound('reveal');
+            void playSound('replay');
             setAnswerAnimations(previous => new Set(previous).add(number));
           }} onAnswerAnimationEnd={() => setAnswerAnimations(previous => {
             const active = new Set(previous);

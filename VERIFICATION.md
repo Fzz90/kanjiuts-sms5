@@ -1,5 +1,11 @@
 # Verifikasi
 
+## SFX Ulangi Animasi +3 dB, 6 Oktober 2026
+
+- SFX pengguna diproses dengan FFmpeg `volume=3dB` dan disimpan sebagai `public/sfx/replay.mp3` (MP3 256 kbps, stereo, 44,1 kHz). File sumber tidak diubah. Volumedetect pada audio hasil decode menunjukkan mean −30,3 menjadi −27,3 dB dan peak −16,5 menjadi −13,5 dB; jumlah sampel tetap 13.824. Gain Web Audio maupun elemen Audio adalah 1 untuk SFX ini.
+- Tombol replay per kotak memakai suara baru; Show answer dan Ulangi menulis tetap memakai reveal.mp3. `tests/browser-sounds.js` melalui gstack `/browse` lulus pada 375×812: enam MP3 benar-benar terdecode, replay.mp3 diputar pada klik replay berulang, kotak tetap terkunci, dan suara benar/salah/show answer/retry/lewati/selesai serta switch TM tetap bekerja. Browser melaporkan durasi replay 0,15673 detik, dua kanal.
+- 28 tes Node dan build produksi GitHub Pages lulus. Tes audio memeriksa gain Web Audio, fallback elemen Audio, penghentian sumber sebelumnya, dan penanganan audio yang diblokir. Verifikasi browser memakai Chromium.
+
 ## Ulangi menulis setelah Show answer, 6 Oktober 2026
 
 - Tombol utama Ulangi animasi diganti Ulangi menulis setelah jawaban dibuka. Tombol ini membatalkan seluruh playback, menghapus shadow/jawaban dan coretan, serta membuka kembali semua kotak pada soal yang sama. Replay per kotak tetap tersedia saat jawaban ditampilkan. Help disimpan sepanjang soal agar membuka jawaban berulang tidak menggandakan jumlah bantuan dan hasil retry tidak dihitung sebagai benar tanpa bantuan.
