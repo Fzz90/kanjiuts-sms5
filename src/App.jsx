@@ -35,9 +35,9 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
   const [drawings, setDrawings] = useState(() => kanji.map(() => []));
   const [reading, setReading] = useState('');
   const [showAnswer, setShowAnswer] = useState(false);
+  const [usedHelp, setUsedHelp] = useState(false);
   const [answerAnimations, setAnswerAnimations] = useState(() => new Set());
   const answerAnimating = answerAnimations.size > 0;
-  const [replay, setReplay] = useState(0);
   const [drawingReset, setDrawingReset] = useState(0);
   const [feedback, setFeedback] = useState(null);
   const [shake, setShake] = useState(0);
@@ -91,11 +91,11 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
     setFeedback(result);
     void playSound(result.correct ? 'correct' : 'wrong');
     if (!result.correct) { setHadMistake(true); setShake(previous => previous + 1); }
-    onAttempt({ correct: result.correct, helped: showAnswer, firstTry: !hadMistake && !showAnswer });
+    onAttempt({ correct: result.correct, helped: usedHelp, firstTry: !hadMistake && !usedHelp });
   };
   const reveal = () => {
     void playSound('reveal');
-    if (!showAnswer) onHelp();
+    if (!usedHelp) { setUsedHelp(true); onHelp(); }
     if (mode === 'writing') {
       setAnswerAnimations(new Set(kanji.map((_, number) => number)));
       setDrawings(kanji.map(() => []));
@@ -105,7 +105,16 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
       setFeedback(null);
     }
     setShowAnswer(true);
-    setReplay(previous => previous + 1);
+  };
+  const retryWriting = () => {
+    void playSound('reveal');
+    setShowAnswer(false);
+    setAnswerAnimations(new Set());
+    setDrawings(kanji.map(() => []));
+    setDrawingReset(previous => previous + 1);
+    setFailedBoxes([]);
+    setFailedStrokes([]);
+    setFeedback(null);
   };
   let boxIndex = -1, animationOffset = 0;
 
@@ -140,7 +149,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
             setFeedback(null);
             setFailedBoxes(previous => previous.filter(i => i !== number));
             setFailedStrokes(previous => previous.map((stroke, i) => i === number ? null : stroke));
-          }} onActivity={onWritingActivity} asset={assets[number]} showAnswer={showAnswer} replay={replay} delay={delay} failed={failedBoxes.includes(number)} failedStroke={failedStrokes[number] ?? null} disabled={correct || writingRevealed} onAnswerAnimationStart={() => {
+          }} onActivity={onWritingActivity} asset={assets[number]} showAnswer={showAnswer} delay={delay} failed={failedBoxes.includes(number)} failedStroke={failedStrokes[number] ?? null} disabled={correct || writingRevealed} onAnswerAnimationStart={() => {
             void playSound('reveal');
             setAnswerAnimations(previous => new Set(previous).add(number));
           }} onAnswerAnimationEnd={() => setAnswerAnimations(previous => {
@@ -164,7 +173,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
     </div>}
     <div className="practice-actions">
       {mode === 'writing' && correct ? <button ref={advanceButton} type="button" className="primary-button next-button" onClick={onAdvance}>Selanjutnya <ArrowRight size={18} /></button> : <>
-      <button className="secondary-button" onClick={reveal} disabled={correct || loading || assetError}>{showAnswer && mode === 'writing' ? <RefreshCw size={17} /> : <Eye size={17} />}{showAnswer && mode === 'writing' ? 'Ulangi animasi' : 'Show answer'}</button>
+      <button className={`secondary-button${writingRevealed ? ' retry-writing' : ''}`} onClick={writingRevealed ? retryWriting : reveal} disabled={correct || loading || assetError}>{writingRevealed ? <PenLine size={17} /> : <Eye size={17} />}{writingRevealed ? 'Ulangi menulis' : 'Show answer'}</button>
       {mode === 'writing' && <button className="primary-button" onClick={check} disabled={correct || writingRevealed || loading || assetError || drawings.every(d => !d.length)}>Periksa tulisan <Check size={17} /></button>}
       {correct ? <button className="text-button next-button" onClick={onAdvance}>Lanjut <ArrowRight size={16} /></button> : <button className="text-button skip-button" onClick={onSkip}>Lewati <ArrowRight size={16} /></button>}
       </>}

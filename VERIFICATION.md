@@ -1,5 +1,11 @@
 # Verifikasi
 
+## Ulangi menulis setelah Show answer, 6 Oktober 2026
+
+- Tombol utama Ulangi animasi diganti Ulangi menulis setelah jawaban dibuka. Tombol ini membatalkan seluruh playback, menghapus shadow/jawaban dan coretan, serta membuka kembali semua kotak pada soal yang sama. Replay per kotak tetap tersedia saat jawaban ditampilkan. Help disimpan sepanjang soal agar membuka jawaban berulang tidak menggandakan jumlah bantuan dan hasil retry tidak dihitung sebagai benar tanpa bantuan.
+- `tests/browser-writing-retry.js` lulus melalui gstack `/browse` pada 375×812 dan 820×1180: reset beberapa kotak saat animasi masih berjalan, soal/progres tidak berubah, reveal ulang dan replay lokal, tulisan referensi diterima setelah retry, Selanjutnya tetap manual, serta jumlah bantuan dan hasil sesi akurat.
+- `tests/browser-animation-lock.js` lulus pada 375×812 untuk penguncian mouse/touch/pen, replay lokal bersamaan, retry yang membatalkan playback, input/penilaian aktif kembali, pergantian soal/TM, dan reduced motion. `tests/browser-writing-reset.js` lulus pada 1440×900 untuk pembersihan coretan aktif/tersimpan serta status salah. 28 tes Node dan build produksi GitHub Pages lulus; browser yang diuji adalah Chromium dengan viewport sintetis.
+
 ## Replay seluruh kata tanpa jeda awal, 6 Oktober 2026
 
 - Ulangi animasi seluruh kata kini memulai stroke pertama dengan animation-delay 0 detik; urutan antar-stroke dan antar-kanji tetap sesuai. Show answer pertama dan replay per kotak mempertahankan jeda shadow 0,5 detik.

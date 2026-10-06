@@ -44,8 +44,10 @@ return (async () => {
   await draw(document.querySelector('.writing-box'));
   assert(!document.querySelector('.user-ink path'), 'Drawing remains blocked after animation');
   document.querySelector('.practice-actions .secondary-button').click(); await tick();
-  assert(!document.querySelector('.user-ink path'), 'Replay must keep revealed answer free of user ink');
-  assert([...document.querySelectorAll('.writing-box')].every(box => box.getAttribute('aria-disabled') === 'true'), 'Replay must lock every box again');
+  assert(!document.querySelector('.user-ink path, .answer-shadow, .answer-animation, .answer-note'), 'Ulangi menulis removes all handwriting and answers');
+  assert([...document.querySelectorAll('.writing-box')].every(box => box.getAttribute('aria-disabled') === 'false'), 'Retry unlocks every box');
+  await draw(document.querySelector('.writing-box'));
+  assert(document.querySelector('.user-ink path') && !document.querySelector('.practice-actions .primary-button').disabled, 'Retry restores drawing and grading');
   assert(document.documentElement.scrollWidth <= innerWidth, 'Page must not overflow horizontally');
-  return { resetCommittedAndLiveInk: 'passed', clearedErrorState: 'passed', shadowAndAnimation: 'passed', readOnlyAfterReveal: 'passed', replay: 'passed', boxWidth: document.querySelector('.writing-box').getBoundingClientRect().width, viewport: `${innerWidth}x${innerHeight}` };
+  return { resetCommittedAndLiveInk: 'passed', clearedErrorState: 'passed', shadowAndAnimation: 'passed', readOnlyAfterReveal: 'passed', retryWriting: 'passed', boxWidth: document.querySelector('.writing-box').getBoundingClientRect().width, viewport: `${innerWidth}x${innerHeight}` };
 })()

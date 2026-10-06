@@ -88,6 +88,6 @@ return (async () => {
     await click('.tm-pills [data-tm="3"]');
     assert(document.querySelector('.practice-screen')?.dataset.tm === '3' && !document.querySelector('.kanji-screen'), 'Renshuu TM switches directly');
     assert(document.documentElement.scrollWidth <= innerWidth, 'No horizontal overflow');
-    return { decoded: audio.decoded, soundEvents: [...new Set(starts().map(event => event.file))], autoFinish: 'passed', staleTimerAndAudio: 'passed', writingCorrectWrongRevealReplayAndSkip: 'passed', directTmSwitch: 'passed in both modes', viewport: `${innerWidth}x${innerHeight}` };
+    return { decoded: audio.decoded, soundEvents: [...new Set(starts().map(event => event.file))], autoFinish: 'passed', staleTimerAndAudio: 'passed', writingCorrectWrongRevealRetryAndSkip: 'passed', directTmSwitch: 'passed in both modes', viewport: `${innerWidth}x${innerHeight}` };
   } finally { audio.restore(); }
 })()

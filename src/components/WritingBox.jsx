@@ -3,11 +3,10 @@ import { RotateCcw, Undo2 } from 'lucide-react';
 
 const pathData = points => points.map((p, i) => `${i ? 'L' : 'M'}${(p.x * 109).toFixed(2)},${(p.y * 109).toFixed(2)}`).join(' ');
 
-export default function WritingBox({ number, strokes, onChange, onActivity, asset, showAnswer, replay, delay, failed, failedStroke, disabled, correctAnswer, onAnswerAnimationStart, onAnswerAnimationEnd }) {
+export default function WritingBox({ number, strokes, onChange, onActivity, asset, showAnswer, delay, failed, failedStroke, disabled, correctAnswer, onAnswerAnimationStart, onAnswerAnimationEnd }) {
   const readOnly = disabled || showAnswer;
   const [liveStroke, setLiveStroke] = useState([]);
   const [localReplay, setLocalReplay] = useState(0);
-  const animationLeadIn = localReplay || replay <= 1 ? .5 : 0;
   const pointer = useRef(null);
   const active = useRef([]);
   const frame = useRef(0);
@@ -71,9 +70,9 @@ export default function WritingBox({ number, strokes, onChange, onActivity, asse
       <path className="guide-line" d="M54.5 0V109 M0 54.5H109" />
       {showAnswer && asset && <g className="answer-shadow">{asset.paths.map((d, i) => <path key={i} d={d} />)}</g>}
       <g className="user-ink">{strokes.map((stroke, i) => <path key={i} className={failed && failedStroke === i ? 'stroke-error' : undefined} data-stroke-number={i + 1} d={pathData(stroke)} />)}{liveStroke.length > 0 && <path d={pathData(liveStroke)} />}</g>
-      {showAnswer && asset && <g key={`${replay}-${localReplay}`} className="answer-animation" onAnimationEnd={event => {
+      {showAnswer && asset && <g key={localReplay} className="answer-animation" onAnimationEnd={event => {
         if (event.animationName === 'write-stroke' && event.target === event.currentTarget.lastElementChild) onAnswerAnimationEnd?.();
-      }}>{asset.paths.map((d, i) => <path key={i} d={d} pathLength="1" style={{ '--stroke-delay': `${animationLeadIn + (localReplay ? 0 : delay) + i * .58}s` }} />)}</g>}
+      }}>{asset.paths.map((d, i) => <path key={i} d={d} pathLength="1" style={{ '--stroke-delay': `${.5 + (localReplay ? 0 : delay) + i * .58}s` }} />)}</g>}
     </svg>
     {correctAnswer && <div className="writing-correct-answer" role="status"><span>Jawaban kanji</span><strong className="japanese" lang="ja">{correctAnswer}</strong></div>}
     <div className="cell-actions">

@@ -15,7 +15,7 @@ return (async () => {
   const waitForBoxes = () => wait(() => !!document.querySelector('.writing-box') && !document.querySelector('.asset-status'), 'Writing assets must load');
   const normalActions = () => {
     const buttons = [...document.querySelectorAll('.practice-actions button')];
-    assert(buttons.length === 3 && buttons.some(button => /Show answer|Ulangi animasi/.test(button.textContent))
+    assert(buttons.length === 3 && buttons.some(button => /Show answer|Ulangi menulis/.test(button.textContent))
       && buttons.some(button => button.textContent.includes('Periksa tulisan')) && buttons.some(button => button.textContent.includes('Lewati')), 'Unanswered/wrong writing must retain three actions');
   };
   const sendStroke = async (svg, stroke) => {
