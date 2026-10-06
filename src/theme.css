@@ -415,6 +415,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .header-actions { position: static; grid-column: 1 / -1; justify-self: end; }
   .app-shell[data-screen="practice"] .brand { grid-column: 1 / -1; }
 }
+@media (max-width: 500px) {
+  .header-actions { width: 100%; justify-self: stretch; justify-content: space-between; }
+}
 @media (max-width: 360px) {
   .header-actions .home-button { font-size: 12px; padding: 7px 8px; }
 }

@@ -11,7 +11,11 @@ return (async () => {
     const home = document.querySelector('.home-button').getBoundingClientRect();
     const sfx = document.querySelector('.sfx-control').getBoundingClientRect();
     const actions = document.querySelector('.header-actions').getBoundingClientRect();
-    assert(sfx.left > home.right && Math.abs((sfx.top + sfx.height / 2) - (home.top + home.height / 2)) < 1, 'SFX sits immediately to the right of Awal on the same row');
+    assert(sfx.left > home.right && Math.abs((sfx.top + sfx.height / 2) - (home.top + home.height / 2)) < 1, 'SFX sits to the right of Awal on the same row');
+    if (innerWidth <= 500) {
+      const header = document.querySelector('.site-header').getBoundingClientRect();
+      assert(Math.abs(home.left - actions.left) < 1 && Math.abs(sfx.right - actions.right) < 1 && Math.abs(actions.width - header.width) < 1, 'Mobile controls occupy opposite ends of the full header width');
+    }
     assert(!overlaps(actions, document.querySelector('.brand').getBoundingClientRect()) && !overlaps(actions, document.querySelector('.mode-nav').getBoundingClientRect()), 'Header controls do not overlap title or navigation');
     for (const button of document.querySelectorAll('.header-actions button')) {
       const rect = button.getBoundingClientRect();
@@ -34,5 +38,5 @@ return (async () => {
     layout();
     report.push({ mode, selectPracticeChooserResult: 'passed' });
   }
-  return { viewport: `${innerWidth}x${innerHeight}`, report, placement: 'right of Awal', touchTargets: '44px minimum', overflow: false };
+  return { viewport: `${innerWidth}x${innerHeight}`, report, placement: innerWidth <= 500 ? 'space-between' : 'right of Awal', touchTargets: '44px minimum', overflow: false };
 })()
