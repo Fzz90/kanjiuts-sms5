@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { ArrowLeft, ArrowRight, BookOpen, Check, CheckCircle2, Eye, Home, Library, PenLine, RefreshCw, RotateCcw, X } from 'lucide-react';
+import { ArrowLeft, ArrowRight, BookOpen, Check, CheckCircle2, Eye, Home, Library, PenLine, RefreshCw, RotateCcw, Volume2, VolumeX, X } from 'lucide-react';
 import { toHiragana } from 'wanakana';
 import WritingBox from './components/WritingBox.jsx';
 import BookReader from './components/BookReader.jsx';
@@ -7,7 +7,7 @@ import MeshBackground from './components/MeshBackground.jsx';
 import { themeStyle, meetingStyle } from './lib/study-themes.js';
 import { ALL_TM, meetingOptions, meetingLabel, meetingEntries, shuffle, checkReading, isKanji, loadCharacter } from './lib/bank.js';
 import { gradeDrawing } from './lib/grading.js';
-import { prepareSounds, playSound, stopSounds } from './lib/sounds.js';
+import { areSoundsEnabled, setSoundsEnabled, prepareSounds, playSound, stopSounds } from './lib/sounds.js';
 import { assetUrl } from './lib/assets.js';
 
 const STORAGE = 'kanji-uts-s5-progress-v1';
@@ -194,6 +194,7 @@ export default function App() {
   const [progress, setProgress] = useState(readProgress);
   const [storageError, setStorageError] = useState(false);
   const [sensitivity, setSensitivity] = useState('normal');
+  const [sfxEnabled, setSfxEnabled] = useState(areSoundsEnabled);
   const [activeWriters, setActiveWriters] = useState(() => new Set());
   const writingActivity = useCallback((token, active) => setActiveWriters(current => {
     if (current.has(token) === active) return current;
@@ -264,6 +265,10 @@ export default function App() {
     else { setMode(selected); setScreen('select'); }
     window.scrollTo({ top: 0, behavior: 'auto' });
   };
+  const changeSfx = value => {
+    setSoundsEnabled(value);
+    setSfxEnabled(value);
+  };
 
   return <><MeshBackground theme={activeTheme} paused={screen === 'book' || activeWriters.size > 0} /><div className="app-shell" data-study-theme={activeTheme} data-screen={screen}>
     <header className="site-header">
@@ -273,7 +278,14 @@ export default function App() {
         <button style={themeStyle('book')} data-mode="book" className={screen === 'book' ? 'active' : ''} aria-current={screen === 'book' ? 'page' : undefined} onClick={() => chooseMode('book')}><Library size={18} />Baca Buku</button>
       </nav>
       <button className="brand" onClick={() => setScreen('home')} aria-label="Halaman awal Kanji UTS"><span className="brand-mark japanese" lang="ja">漢</span><span>Latihan Kanji UTS<small>Semester 5 · Pertemuan 2–7</small></span></button>
-      {screen !== 'home' && screen !== 'book' && <button className="home-button" onClick={() => setScreen('home')}><Home size={16} /><span>Awal</span></button>}
+      {screen !== 'home' && screen !== 'book' && <div className="header-actions">
+        <button className="home-button" onClick={() => setScreen('home')}><Home size={16} /><span>Awal</span></button>
+        <div className="sfx-control" role="group" aria-label="Pengaturan SFX">
+          <span className="sfx-label" aria-hidden="true">{sfxEnabled ? <Volume2 size={16} /> : <VolumeX size={16} />}SFX</span>
+          <button type="button" data-sfx="on" aria-label="SFX On" aria-pressed={sfxEnabled} onClick={() => changeSfx(true)}>On</button>
+          <button type="button" data-sfx="off" aria-label="SFX Off" aria-pressed={!sfxEnabled} onClick={() => changeSfx(false)}>Off</button>
+        </div>
+      </div>}
     </header>
 
     <main>

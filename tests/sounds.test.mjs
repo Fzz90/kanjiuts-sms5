@@ -28,6 +28,64 @@ function audioHarness() {
 }
 const response = file => ({ ok: true, arrayBuffer: async () => file });
 
+test('saved Off prevents every SFX from preparing or playing; On restores audio and preference', async t => {
+  const harness = audioHarness(), requested = [], saved = new Map([['kanji-uts-s5-sfx-v1', 'off']]);
+  const localStorage = { getItem: key => saved.get(key), setItem: (key, value) => saved.set(key, value) };
+  install(t, { window: { AudioContext: harness.AudioContext, localStorage }, fetch: async path => { requested.push(path); return response(path); } });
+  const sounds = await freshSounds();
+  assert.equal(sounds.areSoundsEnabled(), false);
+  sounds.prepareSounds();
+  for (const name of ['correct', 'wrong', 'reveal', 'replay', 'skip', 'finish']) await sounds.playSound(name);
+  assert.equal(harness.contexts.length, 0);
+  assert.deepEqual(requested, []);
+  sounds.setSoundsEnabled(true);
+  await sounds.playSound('replay');
+  assert.equal(saved.get(sounds.SFX_STORAGE), 'on');
+  assert.equal(harness.started.length, 1);
+  sounds.setSoundsEnabled(false);
+  assert.equal(harness.started[0].stopped, true);
+  await sounds.playSound('finish');
+  assert.equal(harness.started.length, 1);
+  assert.equal((await freshSounds()).areSoundsEnabled(), false);
+});
+
+test('muting cancels pending audio even if On is restored before decoding finishes', async t => {
+  const harness = audioHarness();
+  let release;
+  install(t, { window: { AudioContext: harness.AudioContext }, fetch: path => path.includes('right') ? new Promise(resolve => { release = resolve; }) : Promise.resolve(response(path)) });
+  const sounds = await freshSounds();
+  const pending = sounds.playSound('correct');
+  await new Promise(resolve => setImmediate(resolve));
+  sounds.setSoundsEnabled(false);
+  sounds.setSoundsEnabled(true);
+  release(response('/sfx/right.mp3'));
+  await pending;
+  assert.deepEqual(harness.started, []);
+  await sounds.playSound('wrong');
+  assert.equal(harness.started[0].buffer.file, '/sfx/wrong.mp3');
+});
+
+test('Off pauses media fallback and works when browser storage is blocked', async t => {
+  const played = [], instances = [];
+  class Audio {
+    constructor(path) { this.src = path; instances.push(this); }
+    async play() { played.push(this.src); }
+    pause() { this.paused = true; }
+  }
+  const browser = {};
+  Object.defineProperty(browser, 'localStorage', { get() { throw new Error('Storage blocked'); } });
+  install(t, { window: browser, Audio });
+  const sounds = await freshSounds();
+  await sounds.playSound('reveal');
+  assert.doesNotThrow(() => sounds.setSoundsEnabled(false));
+  assert.equal(instances[0].paused, true);
+  await sounds.playSound('skip');
+  assert.deepEqual(played, ['/sfx/reveal.mp3']);
+  assert.doesNotThrow(() => sounds.setSoundsEnabled(true));
+  await sounds.playSound('replay');
+  assert.deepEqual(played, ['/sfx/reveal.mp3', '/sfx/replay.mp3']);
+});
+
 test('preloaded recordings preserve playback volume, including boosted replay; newer actions stop the previous sound', async t => {
   const harness = audioHarness(), requested = [];
   install(t, { window: { AudioContext: harness.AudioContext }, fetch: async path => { requested.push(path); return response(path); } });

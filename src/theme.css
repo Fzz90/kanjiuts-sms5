@@ -49,6 +49,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .brand small { font-size: 15px; font-weight: 400; margin-top: 8px; letter-spacing: .02em; }
 .home-button { position: absolute; bottom: 5px; left: 0; border-radius: 999px; background: var(--panel); color: var(--muted); font-size: 14px; min-height: 44px; }
 .home-button:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+.header-actions { position: absolute; bottom: 5px; left: 0; display: flex; align-items: center; gap: 8px; max-width: 100%; }
+.header-actions .home-button { position: static; margin: 0; flex-shrink: 0; }
+.sfx-control { display: flex; align-items: center; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); }
+.sfx-label { display: inline-flex; align-items: center; gap: 4px; padding: 0 4px; color: var(--muted); font-size: 12px; }
+.sfx-control button { min-width: 44px; min-height: 44px; padding: 6px; border: 1px solid transparent; border-radius: 999px; background: transparent; color: var(--muted); font-size: 13px; }
+.sfx-control button:hover { color: var(--accent); background: var(--accent-soft); }
+.sfx-control button[aria-pressed="true"] { color: var(--on-accent); background: var(--accent); border-color: var(--accent); }
 .home-screen, .meeting-screen { width: 100%; max-width: none; padding: 10px 0 35px; }
 .intro { display: block; text-align: center; margin: 4px 0 30px; }
 .intro-eyebrow { display: block; color: var(--muted); font-size: 11px; letter-spacing: .15em; margin-bottom: 12px; }
@@ -256,6 +263,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .app-shell[data-screen="practice"] .brand { justify-self: start; font-size: 28px; }
   .app-shell[data-screen="practice"] .brand-mark { width: 48px; height: 48px; font-size: 30px; }
   .app-shell[data-screen="practice"] .home-button { position: static; margin: 0; }
+  .app-shell[data-screen="practice"] .header-actions { position: static; justify-self: end; }
   .prompt h2 { letter-spacing: .025em; text-wrap: balance; }
   .word-prompt { font-size: clamp(68px, 8vw, 84px); }
   .kana-prompt { font-size: clamp(44px, 5vw, 56px); }
@@ -401,4 +409,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .mode-card { grid-template-columns: 88px 1fr; }
   .mode-content { padding: 18px 12px; }
   .mode-content h2 { font-size: 20px; }
+}
+
+@media (max-width: 949px) {
+  .header-actions { position: static; grid-column: 1 / -1; justify-self: end; }
+  .app-shell[data-screen="practice"] .brand { grid-column: 1 / -1; }
+}
+@media (max-width: 360px) {
+  .header-actions .home-button { font-size: 12px; padding: 7px 8px; }
 }

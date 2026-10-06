@@ -10,6 +10,13 @@ const sounds = {
   finish: { file: 'finish.mp3', frequency: 523.25 },
 };
 
+export const SFX_STORAGE = 'kanji-uts-s5-sfx-v1';
+function readPreference() {
+  try { return window.localStorage.getItem(SFX_STORAGE) !== 'off'; }
+  catch { return true; }
+}
+let enabled = readPreference();
+
 let context, activeSource, activeMedia, playback = 0;
 const buffers = new Map();
 const media = new Map();
@@ -53,11 +60,21 @@ export function stopSounds() {
   playback += 1;
   try { activeSource?.stop(); } catch { /* A completed source is already stopped. */ }
   activeSource = null;
-  activeMedia?.pause();
+  try { activeMedia?.pause(); } catch { /* Restricted media must not block muting. */ }
   activeMedia = null;
 }
 
+export const areSoundsEnabled = () => enabled;
+export function setSoundsEnabled(value) {
+  enabled = Boolean(value);
+  if (!enabled) stopSounds();
+  try { window.localStorage.setItem(SFX_STORAGE, enabled ? 'on' : 'off'); }
+  catch { /* Keep the current preference when browser storage is unavailable. */ }
+  if (enabled) prepareSounds();
+}
+
 export function prepareSounds() {
+  if (!enabled) return;
   const audioContext = getContext();
   if (audioContext) {
     // Resume inside the initial mode/TM tap, before any asynchronous work.
@@ -67,6 +84,7 @@ export function prepareSounds() {
 }
 
 async function playMedia(name) {
+  if (!enabled) return;
   const audio = loadMedia(name);
   if (!audio) return;
   try {
@@ -77,7 +95,7 @@ async function playMedia(name) {
 }
 
 export async function playSound(name) {
-  if (!sounds[name]) return;
+  if (!enabled || !sounds[name]) return;
   stopSounds();
   const request = playback;
   const audioContext = getContext();

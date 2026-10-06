@@ -1,5 +1,12 @@
 # Verifikasi
 
+## Pengaturan SFX On/Off, 6 Oktober 2026
+
+- Kontrol On/Off dengan aria-pressed berada tepat di kanan Awal pada kedua mode, termasuk pilih TM, latihan, pilih kanji, dan hasil. Pilihan disimpan pada `kanji-uts-s5-sfx-v1`; Off menghentikan sumber aktif dan membatalkan permintaan pemutaran yang tertunda. Seluruh jalur suara (Web Audio, oscillator fallback, elemen Audio) mengikuti pengaturan, sedangkan animasi/penilaian tetap berjalan. Storage yang diblokir tidak menghalangi pengaturan saat halaman terbuka.
+- 31 tes Node dan build produksi GitHub Pages lulus. Tes baru mencakup Off saat startup tanpa membuat konteks atau mengunduh audio, keenam SFX saat muted, pemulihan On, audio tertunda yang tidak boleh hidup kembali setelah Off→On, penghentian elemen Audio, dan storage diblokir.
+- `tests/browser-sfx-settings.js` melalui gstack `/browse` lulus pada 375×812 dengan audio asli: suara aktif berhenti saat Off, replay/retry/skip dan Show answer kedua mode senyap, pergantian mode mempertahankan pilihan, serta On kembali memutar suara. Refresh setelah Off mempertahankan aria-pressed pada Off.
+- `tests/browser-sfx-layout.js` lulus pada 280×720, 375×812, 768×1024, 820×1180, 950×800, 1180×820, dan 1440×900. Kedua mode pada empat jenis halaman memiliki SFX di kanan Awal, target minimal 44px, tanpa tabrakan judul/navigasi atau overflow horizontal. Screenshot header HP dan desktop diperiksa. Browser yang diuji adalah Chromium dengan viewport sintetis.
+
 ## SFX Ulangi Animasi +3 dB, 6 Oktober 2026
 
 - SFX pengguna diproses dengan FFmpeg `volume=3dB` dan disimpan sebagai `public/sfx/replay.mp3` (MP3 256 kbps, stereo, 44,1 kHz). File sumber tidak diubah. Volumedetect pada audio hasil decode menunjukkan mean −30,3 menjadi −27,3 dB dan peak −16,5 menjadi −13,5 dB; jumlah sampel tetap 13.824. Gain Web Audio maupun elemen Audio adalah 1 untuk SFX ini.
