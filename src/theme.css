@@ -382,11 +382,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .writing-sheet .practice-actions > button { width: 100%; margin: 0; min-height: 48px; }
   .writing-sheet .writing-tools { align-items: center; }
   .writing-sheet .sensitivity { max-width: none; justify-content: flex-start; }
-  .app-shell[data-study-theme="writing"][data-screen="practice"] .site-header { grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 14px 8px; margin-bottom: 18px; }
-  .app-shell[data-study-theme="writing"][data-screen="practice"] .mode-nav { grid-column: 1 / -1; }
-  .app-shell[data-study-theme="writing"][data-screen="practice"] .brand { font-size: 18px; gap: 8px; justify-self: start; }
-  .app-shell[data-study-theme="writing"][data-screen="practice"] .brand small { font-size: 11px; margin-top: 5px; }
-  .app-shell[data-study-theme="writing"][data-screen="practice"] .brand-mark { width: 34px; height: 38px; font-size: 24px; }
   .app-shell[data-study-theme="writing"][data-screen="practice"] .home-button { margin: 0; padding: 7px 9px; font-size: 12px; }
   .cell-meta { font-size: 11px; }
   .sensitivity { font-size: 13px; max-width: 160px; gap: 6px; }

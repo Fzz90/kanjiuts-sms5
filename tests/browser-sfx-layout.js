@@ -15,6 +15,8 @@ return (async () => {
     if (innerWidth <= 500) {
       const header = document.querySelector('.site-header').getBoundingClientRect();
       assert(Math.abs(home.left - actions.left) < 1 && Math.abs(sfx.right - actions.right) < 1 && Math.abs(actions.width - header.width) < 1, 'Mobile controls occupy opposite ends of the full header width');
+      const brand = document.querySelector('.brand').getBoundingClientRect();
+      assert(Math.abs((brand.left + brand.right) / 2 - (header.left + header.right) / 2) < 1, 'Mobile title and kanji icon stay centered in both study modes');
     }
     assert(!overlaps(actions, document.querySelector('.brand').getBoundingClientRect()) && !overlaps(actions, document.querySelector('.mode-nav').getBoundingClientRect()), 'Header controls do not overlap title or navigation');
     for (const button of document.querySelectorAll('.header-actions button')) {
