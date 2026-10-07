@@ -8,12 +8,12 @@ const source = read('src/data/source-vocabulary.json');
 const bank = read('src/data/bank.json');
 const englishMeanings = read('src/data/english-meanings.json');
 const manifest = read('public/strokes/manifest.json');
-const expected = ['込連窓側葉景記形吉結婚', '共供両若老息娘奥将祖育', '性招取最初番歳枚冊億点', '階段号倍次々他勝負賛成', '絶対続辞投選約束守過夢', '的飛機失鉄速遅駐泊船座席'];
+const expected = ['義議党遊泳疲暖涼静公園', '込連窓側葉景記形吉結婚', '共供両若老息娘奥将祖育', '性招取最初番歳枚冊億点', '階段号倍次々他勝負賛成', '絶対続辞投選約束守過夢', '的飛機失鉄速遅駐泊船座席'];
 
 test('every source occurrence appears in its exact TM and no foreign vocabulary was added', () => {
-  assert.equal(source.length, 67);
-  assert.equal(source.reduce((sum, group) => sum + group.w.length, 0), 431);
-  assert.equal(bank.entries.length, 416);
+  assert.equal(source.length, 78);
+  assert.equal(source.reduce((sum, group) => sum + group.w.length, 0), 491);
+  assert.equal(bank.entries.length, 474);
   assert.equal(Object.keys(englishMeanings).length, bank.entries.length);
   for (const item of bank.entries) {
     const meaning = englishMeanings[`${item.word}|${item.reading}`];
@@ -21,12 +21,28 @@ test('every source occurrence appears in its exact TM and no foreign vocabulary 
   }
   const sourcePairs = new Set(source.flatMap(group => group.w.map(([word, reading]) => `${word}\0${reading}`)));
   for (const item of bank.entries) assert.ok(sourcePairs.has(`${item.word}\0${item.reading}`), item.word);
-  source.forEach((group, index) => {
-    const tm = Math.min(7, 2 + Math.floor(index / 11));
+  source.forEach(group => {
+    const tm = group.tm;
     group.w.forEach(([word, reading]) => assert.ok(bank.entries.some(item => item.word === word && item.reading === reading && item.tms.includes(tm)), `${tm}: ${word}`));
   });
   assert.deepEqual(bank.meetings.map(tm => tm.kanji.join('')), expected);
-  assert.deepEqual(bank.meetings.map(tm => tm.sourceCount), [79, 66, 69, 69, 71, 77]);
+  assert.deepEqual(bank.meetings.map(tm => tm.sourceCount), [60, 79, 66, 69, 69, 71, 77]);
+});
+
+test('TM 1 preserves all PDF 180-184 vocabulary, both duplicate groups, and difficult readings', () => {
+  const groups = source.filter(group => group.tm === 1);
+  assert.deepEqual(groups.map(group => group.n), Array.from({ length: 11 }, (_, i) => 398 + i));
+  assert.deepEqual(groups.map(group => group.p), [180, 181, 181, 182, 182, 183, 183, 183, 184, 184, 184]);
+  assert.deepEqual(groups.map(group => group.w.length), [8, 6, 4, 4, 5, 3, 6, 4, 6, 7, 7]);
+  for (const mode of ['reading', 'writing']) assert.equal(selectPracticeEntries(bank, 1, mode).length, 58);
+  assert.deepEqual(bank.entries.find(item => item.word === '公園').roots, ['公', '園']);
+  assert.deepEqual(bank.entries.find(item => item.word === '遊園地').roots, ['遊', '園']);
+  for (const [word, reading] of [['静脈', 'じょうみゃく'], ['国会議員', 'こっかいぎいん'], ['清涼飲料水', 'せいりょういんりょうすい'], ['エデンの園', 'エデンのその']]) {
+    const entry = bank.entries.find(item => item.word === word);
+    assert.equal(entry.reading, reading);
+    assert.deepEqual(entry.tms, [1]);
+  }
+  assert.ok(!selectPracticeEntries(bank, 1, 'reading').some(item => ['関', '係'].includes(item.word)), 'Exclude groups before 義 on PDF 180');
 });
 
 test('stable IDs are unique and repeated vocabulary preserves TM membership', () => {
@@ -38,8 +54,8 @@ test('stable IDs are unique and repeated vocabulary preserves TM membership', ()
 
 test('each kanji session contains exactly its source group, while all-kanji sessions keep the complete TM', () => {
   for (const mode of ['reading', 'writing']) {
-    source.forEach((group, index) => {
-      const tm = Math.min(7, 2 + Math.floor(index / 11));
+    source.forEach(group => {
+      const tm = group.tm;
       const selected = selectPracticeEntries(bank, tm, mode, group.k);
       const key = mode === 'reading' ? item => item.word : item => `${item.word}|${item.reading}`;
       const expectedKeys = new Set(group.w.map(([word, reading]) => key({ word, reading })));
@@ -65,9 +81,9 @@ test('all-TM sessions cover the union of meetings without repeating shared vocab
     const separate = bank.meetings.flatMap(meeting => selectPracticeEntries(bank, meeting.id, mode));
     assert.deepEqual(new Set(combined.map(key)), new Set(separate.map(key)));
     assert.equal(combined.length, new Set(combined.map(key)).size);
-    assert.equal(combined.length, mode === 'reading' ? 415 : 416);
+    assert.equal(combined.length, mode === 'reading' ? 473 : 474);
     assert.equal(combined.filter(item => item.word === '飛び込む').length, 1, 'Shared TM 2/7 vocabulary appears once');
-    assert.deepEqual(new Set(combined.flatMap(item => item.tms)), new Set([2, 3, 4, 5, 6, 7]));
+    assert.deepEqual(new Set(combined.flatMap(item => item.tms)), new Set([1, 2, 3, 4, 5, 6, 7]));
   }
   assert.deepEqual(selectPracticeEntries(bank, ALL_TM, 'writing', '漢'), [], 'Reject a root outside the syllabus');
 });
@@ -88,7 +104,7 @@ test('all-TM per-kanji sessions keep source group membership and accepted readin
 
 test('all writing characters, including iteration mark, have local ordered stroke assets', () => {
   const chars = new Set(bank.entries.flatMap(item => [...item.word].filter(c => /[\p{Script=Han}々]/u.test(c))));
-  assert.equal(chars.size, 314);
+  assert.equal(chars.size, 353);
   for (const character of chars) {
     const filename = `public/strokes/${character.codePointAt(0).toString(16).padStart(5, '0')}.json`;
     assert.ok(existsSync(new URL(filename, root)), character);

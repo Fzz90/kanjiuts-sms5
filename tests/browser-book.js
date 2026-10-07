@@ -4,13 +4,13 @@ return (async () => {
   const selection = () => document.querySelector('.book-page-select select');
   const choose = async index => { const select = selection(); select.value = String(index); select.dispatchEvent(new Event('change', { bubbles: true })); await pause(); };
   await choose(0);
-  assert(document.querySelector('.book-prev-button').disabled, 'Back must be disabled on page 185');
+  assert(document.querySelector('.book-prev-button').disabled, 'Back must be disabled on page 180');
   document.querySelector('.book-next-button').click();
   await pause();
-  assert(selection().value === '1', 'Next should show PDF186');
+  assert(selection().value === '1', 'Next should show PDF181');
   document.querySelector('.book-prev-button').click();
   await pause();
-  assert(selection().value === '0', 'Back should show PDF185');
+  assert(selection().value === '0', 'Back should show PDF180');
   document.querySelector('.book-page-viewport').focus();
   window.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));
   await pause();
@@ -19,7 +19,7 @@ return (async () => {
   selection().dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));
   await pause();
   assert(selection().value === '1', 'Keyboard must not interfere with select');
-  await choose(24);
+  await choose(29);
   assert(document.querySelector('.book-next-button').disabled, 'Next must be disabled on PDF209');
   assert(document.querySelector('.book-page-counter').textContent.includes('209'), 'Last page label incorrect');
   const widthBefore = parseFloat(document.querySelector('.book-page-image').style.width);
@@ -30,15 +30,16 @@ return (async () => {
   document.querySelector('[aria-label="Pas halaman"]').click();
   await pause();
   assert(document.querySelector('.book-zoom-value').textContent === '100%', 'Fit page should reset zoom');
-  const pages = await Promise.all(Array.from({ length: 25 }, (_, i) => new Promise(resolve => {
+  const pageBase = new URL(document.querySelector('.book-page-image').src);
+  const pages = await Promise.all(Array.from({ length: 30 }, (_, i) => new Promise(resolve => {
     const image = new Image();
-    image.onload = () => resolve({ page: 185 + i, width: image.naturalWidth, height: image.naturalHeight });
-    image.onerror = () => resolve({ page: 185 + i, error: true });
-    image.src = `/book/pages/page-${String(i + 1).padStart(2, '0')}.webp`;
+    image.onload = () => resolve({ page: 180 + i, width: image.naturalWidth, height: image.naturalHeight });
+    image.onerror = () => resolve({ page: 180 + i, error: true });
+    image.src = new URL(`page-${180 + i}.webp`, pageBase).href;
   })));
   assert(pages.every(page => !page.error && page.width > 1000), 'Some slides failed to load');
   await choose(0);
   document.querySelector('[aria-label="Tutup layar penuh"]').click();
   await pause();
-  return { slidesLoaded: pages.length, navigation: 'passed', keyboard: 'passed', boundaries: 'passed', zoom: 'passed', persistedPage: localStorage.getItem('kanji-uts-book-page-v1'), overflow: document.documentElement.scrollWidth > innerWidth };
+  return { slidesLoaded: pages.length, navigation: 'passed', keyboard: 'passed', boundaries: 'passed', zoom: 'passed', persistedPage: localStorage.getItem('kanji-uts-book-page-v2'), overflow: document.documentElement.scrollWidth > innerWidth };
 })();

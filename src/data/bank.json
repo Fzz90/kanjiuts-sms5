@@ -1,6 +1,23 @@
 {
   "meetings": [
     {
+      "id": 1,
+      "kanji": [
+        "義",
+        "議",
+        "党",
+        "遊",
+        "泳",
+        "疲",
+        "暖",
+        "涼",
+        "静",
+        "公",
+        "園"
+      ],
+      "sourceCount": 60
+    },
+    {
       "id": 2,
       "kanji": [
         "込",
@@ -105,6 +122,1343 @@
     }
   ],
   "entries": [
+    {
+      "id": "db138b94b6441aed",
+      "word": "主義",
+      "reading": "しゅぎ",
+      "readings": [
+        "しゅぎ"
+      ],
+      "meanings": [
+        "prinsip; paham; -isme"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "義"
+      ],
+      "pages": [
+        180
+      ],
+      "acceptedReadings": [
+        "しゅぎ"
+      ]
+    },
+    {
+      "id": "d6271a8eb79109d5",
+      "word": "民主主義",
+      "reading": "みんしゅしゅぎ",
+      "readings": [
+        "みんしゅしゅぎ"
+      ],
+      "meanings": [
+        "demokrasi"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "義"
+      ],
+      "pages": [
+        180
+      ],
+      "acceptedReadings": [
+        "みんしゅしゅぎ"
+      ]
+    },
+    {
+      "id": "df8aa10d127f4202",
+      "word": "社会主義",
+      "reading": "しゃかいしゅぎ",
+      "readings": [
+        "しゃかいしゅぎ"
+      ],
+      "meanings": [
+        "sosialisme"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "義"
+      ],
+      "pages": [
+        180
+      ],
+      "acceptedReadings": [
+        "しゃかいしゅぎ"
+      ]
+    },
+    {
+      "id": "fcb5690608393b44",
+      "word": "講義",
+      "reading": "こうぎ",
+      "readings": [
+        "こうぎ"
+      ],
+      "meanings": [
+        "kuliah; ceramah"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "義"
+      ],
+      "pages": [
+        180
+      ],
+      "acceptedReadings": [
+        "こうぎ"
+      ]
+    },
+    {
+      "id": "974182477baaf616",
+      "word": "義務",
+      "reading": "ぎむ",
+      "readings": [
+        "ぎむ"
+      ],
+      "meanings": [
+        "kewajiban"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "義"
+      ],
+      "pages": [
+        180
+      ],
+      "acceptedReadings": [
+        "ぎむ"
+      ]
+    },
+    {
+      "id": "90eee49cc855a812",
+      "word": "義理",
+      "reading": "ぎり",
+      "readings": [
+        "ぎり"
+      ],
+      "meanings": [
+        "kewajiban sosial; kewajiban moral"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "義"
+      ],
+      "pages": [
+        180
+      ],
+      "acceptedReadings": [
+        "ぎり"
+      ]
+    },
+    {
+      "id": "9e6683e45c258671",
+      "word": "正義",
+      "reading": "せいぎ",
+      "readings": [
+        "せいぎ"
+      ],
+      "meanings": [
+        "keadilan"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "義"
+      ],
+      "pages": [
+        180
+      ],
+      "acceptedReadings": [
+        "せいぎ"
+      ]
+    },
+    {
+      "id": "c0c24d8d7005890f",
+      "word": "定義",
+      "reading": "ていぎ",
+      "readings": [
+        "ていぎ"
+      ],
+      "meanings": [
+        "definisi"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "義"
+      ],
+      "pages": [
+        180
+      ],
+      "acceptedReadings": [
+        "ていぎ"
+      ]
+    },
+    {
+      "id": "e47785e0c656879c",
+      "word": "会議",
+      "reading": "かいぎ",
+      "readings": [
+        "かいぎ"
+      ],
+      "meanings": [
+        "rapat; konferensi"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "議"
+      ],
+      "pages": [
+        181
+      ],
+      "acceptedReadings": [
+        "かいぎ"
+      ]
+    },
+    {
+      "id": "40b454a227f4e1ea",
+      "word": "国会議員",
+      "reading": "こっかいぎいん",
+      "readings": [
+        "こっかいぎいん"
+      ],
+      "meanings": [
+        "anggota parlemen"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "議"
+      ],
+      "pages": [
+        181
+      ],
+      "acceptedReadings": [
+        "こっかいぎいん"
+      ]
+    },
+    {
+      "id": "ec8af1fc367e4a9e",
+      "word": "不思議な",
+      "reading": "ふしぎな",
+      "readings": [
+        "ふしぎな"
+      ],
+      "meanings": [
+        "misterius; aneh"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "議"
+      ],
+      "pages": [
+        181
+      ],
+      "acceptedReadings": [
+        "ふしぎな"
+      ]
+    },
+    {
+      "id": "760ac589ba08ed07",
+      "word": "議会",
+      "reading": "ぎかい",
+      "readings": [
+        "ぎかい"
+      ],
+      "meanings": [
+        "parlemen"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "議"
+      ],
+      "pages": [
+        181
+      ],
+      "acceptedReadings": [
+        "ぎかい"
+      ]
+    },
+    {
+      "id": "dc0761e3b9823b1e",
+      "word": "議論する",
+      "reading": "ぎろんする",
+      "readings": [
+        "ぎろんする"
+      ],
+      "meanings": [
+        "berdiskusi; berdebat"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "議"
+      ],
+      "pages": [
+        181
+      ],
+      "acceptedReadings": [
+        "ぎろんする"
+      ]
+    },
+    {
+      "id": "20eea0ab07bed467",
+      "word": "議題",
+      "reading": "ぎだい",
+      "readings": [
+        "ぎだい"
+      ],
+      "meanings": [
+        "topik diskusi; agenda pembahasan"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "議"
+      ],
+      "pages": [
+        181
+      ],
+      "acceptedReadings": [
+        "ぎだい"
+      ]
+    },
+    {
+      "id": "d5c57d0d38bad4d9",
+      "word": "政党",
+      "reading": "せいとう",
+      "readings": [
+        "せいとう"
+      ],
+      "meanings": [
+        "partai politik"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "党"
+      ],
+      "pages": [
+        181
+      ],
+      "acceptedReadings": [
+        "せいとう"
+      ]
+    },
+    {
+      "id": "bc48450b6e012e12",
+      "word": "与党",
+      "reading": "よとう",
+      "readings": [
+        "よとう"
+      ],
+      "meanings": [
+        "partai yang berkuasa"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "党"
+      ],
+      "pages": [
+        181
+      ],
+      "acceptedReadings": [
+        "よとう"
+      ]
+    },
+    {
+      "id": "f2e95f3d26871c89",
+      "word": "野党",
+      "reading": "やとう",
+      "readings": [
+        "やとう"
+      ],
+      "meanings": [
+        "partai oposisi"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "党"
+      ],
+      "pages": [
+        181
+      ],
+      "acceptedReadings": [
+        "やとう"
+      ]
+    },
+    {
+      "id": "bda04575c5afc309",
+      "word": "党首",
+      "reading": "とうしゅ",
+      "readings": [
+        "とうしゅ"
+      ],
+      "meanings": [
+        "ketua partai"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "党"
+      ],
+      "pages": [
+        181
+      ],
+      "acceptedReadings": [
+        "とうしゅ"
+      ]
+    },
+    {
+      "id": "58a04652246fad1f",
+      "word": "遊ぶ",
+      "reading": "あそぶ",
+      "readings": [
+        "あそぶ"
+      ],
+      "meanings": [
+        "bermain"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "遊"
+      ],
+      "pages": [
+        182
+      ],
+      "acceptedReadings": [
+        "あそぶ"
+      ]
+    },
+    {
+      "id": "a61dbc2d75b57c5f",
+      "word": "遊び",
+      "reading": "あそび",
+      "readings": [
+        "あそび"
+      ],
+      "meanings": [
+        "permainan; kegiatan bermain"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "遊"
+      ],
+      "pages": [
+        182
+      ],
+      "acceptedReadings": [
+        "あそび"
+      ]
+    },
+    {
+      "id": "b4a1ee086de37d8c",
+      "word": "遊園地",
+      "reading": "ゆうえんち",
+      "readings": [
+        "ゆうえんち"
+      ],
+      "meanings": [
+        "taman hiburan"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "遊",
+        "園"
+      ],
+      "pages": [
+        182,
+        184
+      ],
+      "acceptedReadings": [
+        "ゆうえんち"
+      ]
+    },
+    {
+      "id": "c9444b243af5d607",
+      "word": "周遊",
+      "reading": "しゅうゆう",
+      "readings": [
+        "しゅうゆう"
+      ],
+      "meanings": [
+        "wisata berkeliling"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "遊"
+      ],
+      "pages": [
+        182
+      ],
+      "acceptedReadings": [
+        "しゅうゆう"
+      ]
+    },
+    {
+      "id": "76a7f713c3dbea3e",
+      "word": "泳ぐ",
+      "reading": "およぐ",
+      "readings": [
+        "およぐ"
+      ],
+      "meanings": [
+        "berenang"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "泳"
+      ],
+      "pages": [
+        182
+      ],
+      "acceptedReadings": [
+        "およぐ"
+      ]
+    },
+    {
+      "id": "b6c78c16c9609524",
+      "word": "水泳",
+      "reading": "すいえい",
+      "readings": [
+        "すいえい"
+      ],
+      "meanings": [
+        "renang; olahraga berenang"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "泳"
+      ],
+      "pages": [
+        182
+      ],
+      "acceptedReadings": [
+        "すいえい"
+      ]
+    },
+    {
+      "id": "2681b39f15aa9386",
+      "word": "平泳ぎ",
+      "reading": "ひらおよぎ",
+      "readings": [
+        "ひらおよぎ"
+      ],
+      "meanings": [
+        "renang gaya dada"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "泳"
+      ],
+      "pages": [
+        182
+      ],
+      "acceptedReadings": [
+        "ひらおよぎ"
+      ]
+    },
+    {
+      "id": "b56f84bf1bd481cc",
+      "word": "背泳ぎ",
+      "reading": "せおよぎ",
+      "readings": [
+        "せおよぎ"
+      ],
+      "meanings": [
+        "renang gaya punggung"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "泳"
+      ],
+      "pages": [
+        182
+      ],
+      "acceptedReadings": [
+        "せおよぎ"
+      ]
+    },
+    {
+      "id": "480f2be24bf4fd7a",
+      "word": "競泳",
+      "reading": "きょうえい",
+      "readings": [
+        "きょうえい"
+      ],
+      "meanings": [
+        "perlombaan renang"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "泳"
+      ],
+      "pages": [
+        182
+      ],
+      "acceptedReadings": [
+        "きょうえい"
+      ]
+    },
+    {
+      "id": "65f5cb2d1bd40f2d",
+      "word": "疲れる",
+      "reading": "つかれる",
+      "readings": [
+        "つかれる"
+      ],
+      "meanings": [
+        "menjadi lelah"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "疲"
+      ],
+      "pages": [
+        183
+      ],
+      "acceptedReadings": [
+        "つかれる"
+      ]
+    },
+    {
+      "id": "289de83ab595a535",
+      "word": "疲れ",
+      "reading": "つかれ",
+      "readings": [
+        "つかれ"
+      ],
+      "meanings": [
+        "kelelahan"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "疲"
+      ],
+      "pages": [
+        183
+      ],
+      "acceptedReadings": [
+        "つかれ"
+      ]
+    },
+    {
+      "id": "d83c74f16dbb27c6",
+      "word": "疲労",
+      "reading": "ひろう",
+      "readings": [
+        "ひろう"
+      ],
+      "meanings": [
+        "kelelahan"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "疲"
+      ],
+      "pages": [
+        183
+      ],
+      "acceptedReadings": [
+        "ひろう"
+      ]
+    },
+    {
+      "id": "b1d6f8ff05979142",
+      "word": "暖かい",
+      "reading": "あたたかい",
+      "readings": [
+        "あたたかい"
+      ],
+      "meanings": [
+        "hangat"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "暖"
+      ],
+      "pages": [
+        183
+      ],
+      "acceptedReadings": [
+        "あたたかい"
+      ]
+    },
+    {
+      "id": "58727f9028f83086",
+      "word": "暖める",
+      "reading": "あたためる",
+      "readings": [
+        "あたためる"
+      ],
+      "meanings": [
+        "menghangatkan"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "暖"
+      ],
+      "pages": [
+        183
+      ],
+      "acceptedReadings": [
+        "あたためる"
+      ]
+    },
+    {
+      "id": "c5295da956683ef6",
+      "word": "暖まる",
+      "reading": "あたたまる",
+      "readings": [
+        "あたたまる"
+      ],
+      "meanings": [
+        "menjadi hangat"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "暖"
+      ],
+      "pages": [
+        183
+      ],
+      "acceptedReadings": [
+        "あたたまる"
+      ]
+    },
+    {
+      "id": "1bc4c1ae48741191",
+      "word": "暖房",
+      "reading": "だんぼう",
+      "readings": [
+        "だんぼう"
+      ],
+      "meanings": [
+        "pemanas ruangan; penghangatan"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "暖"
+      ],
+      "pages": [
+        183
+      ],
+      "acceptedReadings": [
+        "だんぼう"
+      ]
+    },
+    {
+      "id": "92799432a64b79c5",
+      "word": "温暖な",
+      "reading": "おんだんな",
+      "readings": [
+        "おんだんな"
+      ],
+      "meanings": [
+        "hangat; beriklim hangat"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "暖"
+      ],
+      "pages": [
+        183
+      ],
+      "acceptedReadings": [
+        "おんだんな"
+      ]
+    },
+    {
+      "id": "5250ab6f7a1903af",
+      "word": "暖冬",
+      "reading": "だんとう",
+      "readings": [
+        "だんとう"
+      ],
+      "meanings": [
+        "musim dingin yang ringan"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "暖"
+      ],
+      "pages": [
+        183
+      ],
+      "acceptedReadings": [
+        "だんとう"
+      ]
+    },
+    {
+      "id": "7afabeebb280bba1",
+      "word": "涼しい",
+      "reading": "すずしい",
+      "readings": [
+        "すずしい"
+      ],
+      "meanings": [
+        "sejuk"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "涼"
+      ],
+      "pages": [
+        183
+      ],
+      "acceptedReadings": [
+        "すずしい"
+      ]
+    },
+    {
+      "id": "4aba1a6d41c729b4",
+      "word": "涼む",
+      "reading": "すずむ",
+      "readings": [
+        "すずむ"
+      ],
+      "meanings": [
+        "menyejukkan diri"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "涼"
+      ],
+      "pages": [
+        183
+      ],
+      "acceptedReadings": [
+        "すずむ"
+      ]
+    },
+    {
+      "id": "065b665d37ae5143",
+      "word": "清涼飲料水",
+      "reading": "せいりょういんりょうすい",
+      "readings": [
+        "せいりょういんりょうすい"
+      ],
+      "meanings": [
+        "minuman ringan"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "涼"
+      ],
+      "pages": [
+        183
+      ],
+      "acceptedReadings": [
+        "せいりょういんりょうすい"
+      ]
+    },
+    {
+      "id": "602fd41fb60ba14f",
+      "word": "夕涼み",
+      "reading": "ゆうすずみ",
+      "readings": [
+        "ゆうすずみ"
+      ],
+      "meanings": [
+        "menikmati udara sejuk pada sore hari"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "涼"
+      ],
+      "pages": [
+        183
+      ],
+      "acceptedReadings": [
+        "ゆうすずみ"
+      ]
+    },
+    {
+      "id": "f6079eb704e82710",
+      "word": "静かな",
+      "reading": "しずかな",
+      "readings": [
+        "しずかな"
+      ],
+      "meanings": [
+        "tenang; sunyi"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "静"
+      ],
+      "pages": [
+        184
+      ],
+      "acceptedReadings": [
+        "しずかな"
+      ]
+    },
+    {
+      "id": "5fe0f093269a2569",
+      "word": "静まる",
+      "reading": "しずまる",
+      "readings": [
+        "しずまる"
+      ],
+      "meanings": [
+        "menjadi tenang; menjadi sunyi"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "静"
+      ],
+      "pages": [
+        184
+      ],
+      "acceptedReadings": [
+        "しずまる"
+      ]
+    },
+    {
+      "id": "a8667a97c7ed0216",
+      "word": "冷静な",
+      "reading": "れいせいな",
+      "readings": [
+        "れいせいな"
+      ],
+      "meanings": [
+        "tenang; berkepala dingin"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "静"
+      ],
+      "pages": [
+        184
+      ],
+      "acceptedReadings": [
+        "れいせいな"
+      ]
+    },
+    {
+      "id": "28a1239951d58dfb",
+      "word": "安静",
+      "reading": "あんせい",
+      "readings": [
+        "あんせい"
+      ],
+      "meanings": [
+        "beristirahat tenang di tempat tidur"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "静"
+      ],
+      "pages": [
+        184
+      ],
+      "acceptedReadings": [
+        "あんせい"
+      ]
+    },
+    {
+      "id": "2378a5fa1f979680",
+      "word": "静養する",
+      "reading": "せいようする",
+      "readings": [
+        "せいようする"
+      ],
+      "meanings": [
+        "beristirahat untuk memulihkan kesehatan"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "静"
+      ],
+      "pages": [
+        184
+      ],
+      "acceptedReadings": [
+        "せいようする"
+      ]
+    },
+    {
+      "id": "dcaa2eab31236838",
+      "word": "静脈",
+      "reading": "じょうみゃく",
+      "readings": [
+        "じょうみゃく"
+      ],
+      "meanings": [
+        "vena; pembuluh darah balik"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "静"
+      ],
+      "pages": [
+        184
+      ],
+      "acceptedReadings": [
+        "じょうみゃく"
+      ]
+    },
+    {
+      "id": "c3f997ee44baf62d",
+      "word": "公園",
+      "reading": "こうえん",
+      "readings": [
+        "こうえん"
+      ],
+      "meanings": [
+        "taman"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "公",
+        "園"
+      ],
+      "pages": [
+        184
+      ],
+      "acceptedReadings": [
+        "こうえん"
+      ]
+    },
+    {
+      "id": "cd6b76a163c7e9ff",
+      "word": "公平",
+      "reading": "こうへい",
+      "readings": [
+        "こうへい"
+      ],
+      "meanings": [
+        "keadilan; sikap tidak memihak"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "公"
+      ],
+      "pages": [
+        184
+      ],
+      "acceptedReadings": [
+        "こうへい"
+      ]
+    },
+    {
+      "id": "7e2aba3a4f7c508d",
+      "word": "公務員",
+      "reading": "こうむいん",
+      "readings": [
+        "こうむいん"
+      ],
+      "meanings": [
+        "pegawai negeri"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "公"
+      ],
+      "pages": [
+        184
+      ],
+      "acceptedReadings": [
+        "こうむいん"
+      ]
+    },
+    {
+      "id": "c9c711ce795272e5",
+      "word": "公衆",
+      "reading": "こうしゅう",
+      "readings": [
+        "こうしゅう"
+      ],
+      "meanings": [
+        "masyarakat umum"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "公"
+      ],
+      "pages": [
+        184
+      ],
+      "acceptedReadings": [
+        "こうしゅう"
+      ]
+    },
+    {
+      "id": "5f1af78fe57fca93",
+      "word": "公立",
+      "reading": "こうりつ",
+      "readings": [
+        "こうりつ"
+      ],
+      "meanings": [
+        "didirikan atau dikelola pemerintah"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "公"
+      ],
+      "pages": [
+        184
+      ],
+      "acceptedReadings": [
+        "こうりつ"
+      ]
+    },
+    {
+      "id": "3b26a090bb07d22a",
+      "word": "公の",
+      "reading": "おおやけの",
+      "readings": [
+        "おおやけの"
+      ],
+      "meanings": [
+        "publik; resmi"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "公"
+      ],
+      "pages": [
+        184
+      ],
+      "acceptedReadings": [
+        "おおやけの"
+      ]
+    },
+    {
+      "id": "222d76f1233c650a",
+      "word": "公開",
+      "reading": "こうかい",
+      "readings": [
+        "こうかい"
+      ],
+      "meanings": [
+        "pembukaan untuk umum"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "公"
+      ],
+      "pages": [
+        184
+      ],
+      "acceptedReadings": [
+        "こうかい"
+      ]
+    },
+    {
+      "id": "c468e0cfe679bf68",
+      "word": "動物園",
+      "reading": "どうぶつえん",
+      "readings": [
+        "どうぶつえん"
+      ],
+      "meanings": [
+        "kebun binatang"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "園"
+      ],
+      "pages": [
+        184
+      ],
+      "acceptedReadings": [
+        "どうぶつえん"
+      ]
+    },
+    {
+      "id": "ecb17ff4ad3acdf9",
+      "word": "幼稚園",
+      "reading": "ようちえん",
+      "readings": [
+        "ようちえん"
+      ],
+      "meanings": [
+        "taman kanak-kanak"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "園"
+      ],
+      "pages": [
+        184
+      ],
+      "acceptedReadings": [
+        "ようちえん"
+      ]
+    },
+    {
+      "id": "d0d85adaf98a1424",
+      "word": "園芸",
+      "reading": "えんげい",
+      "readings": [
+        "えんげい"
+      ],
+      "meanings": [
+        "berkebun; hortikultura"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "園"
+      ],
+      "pages": [
+        184
+      ],
+      "acceptedReadings": [
+        "えんげい"
+      ]
+    },
+    {
+      "id": "5702eea8744d2404",
+      "word": "庭園",
+      "reading": "ていえん",
+      "readings": [
+        "ていえん"
+      ],
+      "meanings": [
+        "taman; kebun"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "園"
+      ],
+      "pages": [
+        184
+      ],
+      "acceptedReadings": [
+        "ていえん"
+      ]
+    },
+    {
+      "id": "e1d306cdf44220bb",
+      "word": "エデンの園",
+      "reading": "エデンのその",
+      "readings": [
+        "エデンのその"
+      ],
+      "meanings": [
+        "Taman Eden"
+      ],
+      "tms": [
+        1
+      ],
+      "roots": [
+        "園"
+      ],
+      "pages": [
+        184
+      ],
+      "acceptedReadings": [
+        "エデンのその"
+      ]
+    },
     {
       "id": "38c7365e97655043",
       "word": "込む",
@@ -9713,5 +11067,5 @@
       ]
     }
   ],
-  "sourceCount": 431
+  "sourceCount": 491
 }

@@ -30,7 +30,7 @@ return (async () => {
     touchTargets('.tm-pills button, .all-tm-roots summary, .practice-actions button');
     await click('.all-tm-roots summary');
     fits('.root-grid button'); touchTargets('.root-grid button');
-    assert(document.querySelectorAll('.root-grid button').length === 67, 'All roots fit the expandable sidebar');
+    assert(document.querySelectorAll('.root-grid button').length === 78, 'All roots fit the expandable sidebar');
     await click('.session-nav .text-button');
     fits('.all-kanji-card, .kanji-card'); touchTargets('.kanji-card');
     await click('.all-kanji-card');

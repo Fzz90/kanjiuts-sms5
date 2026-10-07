@@ -23,10 +23,10 @@ return (async () => {
   const reports = [];
   for (const mode of ['reading', 'writing']) {
     await click(`.mode-nav [data-mode="${mode}"]`);
-    assert(document.querySelectorAll('.meeting-card').length === 7, 'Selection offers all TM and six individual meetings');
+    assert(document.querySelectorAll('.meeting-card').length === 8, 'Selection offers all TM and seven individual meetings');
     const combined = meetingEntries(ALL_TM, mode);
     const card = document.querySelector('.meeting-card[data-tm="all"]');
-    assert(card.textContent.includes(`${combined.length} soal`) && card.textContent.includes('67 kanji'), 'All-TM card displays the correct totals');
+    assert(card.textContent.includes(`${combined.length} soal`) && card.textContent.includes('78 kanji'), 'All-TM card displays the correct totals');
     await click('.meeting-card[data-tm="all"]');
     assert(document.querySelector('.practice-screen')?.dataset.tm === ALL_TM && !document.querySelector('.kanji-screen'), 'All-TM selection starts questions directly');
     assert(document.querySelector('.session-nav').textContent.includes('Semua TM') && !document.body.textContent.includes('TM all'), 'Human-readable session labels');
@@ -37,7 +37,7 @@ return (async () => {
     assert(activeId() === id, 'Active all-TM button does not restart the session');
     assert(!document.querySelector('.all-tm-roots').open, 'Long kanji list starts collapsed');
     await click('.all-tm-roots summary');
-    assert(document.querySelectorAll('.root-grid button').length === 67, 'All roots remain available');
+    assert(document.querySelectorAll('.root-grid button').length === 78, 'All roots remain available');
     await click('.root-grid [aria-label="Latih kanji 窓"]');
     assert(document.querySelector('.practice-screen').dataset.tm === ALL_TM && document.querySelector('.practice-screen').dataset.kanji === '窓', 'Per-kanji filtering retains all-TM scope');
     const subset = meetingEntries(ALL_TM, mode, '窓'); count(subset.length);
@@ -46,11 +46,11 @@ return (async () => {
     await click('.result-screen .primary-button'); count(subset.length);
     await exhaust(subset);
     await click('.choose-kanji');
-    assert(document.querySelectorAll('.kanji-card').length === 67, 'All-TM kanji chooser contains every root');
+    assert(document.querySelectorAll('.kanji-card').length === 78, 'All-TM kanji chooser contains every root');
     await click('.all-kanji-card'); count(combined.length);
     const visited = await exhaust(combined);
-    assert(new Set([...visited].flatMap(id => entries.find(entry => entry.id === id).tms)).size === meetings.length, 'Completed session covers all six meetings');
-    assert(document.querySelector('.result-screen').textContent.includes('seluruh TM 2–7'), 'Result names the combined scope');
+    assert(new Set([...visited].flatMap(id => entries.find(entry => entry.id === id).tms)).size === meetings.length, 'Completed session covers all seven meetings');
+    assert(document.querySelector('.result-screen').textContent.includes('seluruh TM 1–7'), 'Result names the combined scope');
     await click('.repeat-session'); count(combined.length);
     assert(document.querySelector('.practice-screen').dataset.kanji === 'all', 'Repeat restores the entire combined session');
     await click('.tm-pills [data-tm="7"]'); count(meetingEntries(7, mode).length);

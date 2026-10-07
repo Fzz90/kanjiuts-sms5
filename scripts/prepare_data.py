@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = Path(r'C:\Users\Faiz Syihab\.claude-mem\observer-sessions\tmp\pdfs\kanji\jukugo-complete.json')
+SOURCE = ROOT / 'src' / 'data' / 'source-vocabulary.json'
 REVISION = '70a0b7ae0c18ceb5cb358274b029cce0234a43bc'
 SVG_NS = '{http://www.w3.org/2000/svg}'
 
@@ -20,13 +20,13 @@ def download(url):
 
 def build():
     groups = json.loads(SOURCE.read_text(encoding='utf-8'))
-    assert len(groups) == 67 and sum(len(g['w']) for g in groups) == 431
+    assert len(groups) == 78 and sum(len(g['w']) for g in groups) == 491
     target = ROOT / 'src' / 'data'
     target.mkdir(parents=True, exist_ok=True)
     (target / 'source-vocabulary.json').write_text(json.dumps(groups, ensure_ascii=False, indent=2), encoding='utf-8')
     meetings, records, all_readings = [], {}, {}
-    for tm in range(2, 8):
-        members = groups[(tm - 2) * 11:(tm - 1) * 11] if tm < 7 else groups[55:]
+    for tm in range(1, 8):
+        members = [group for group in groups if group['tm'] == tm]
         meetings.append({'id': tm, 'kanji': [g['k'] for g in members], 'sourceCount': sum(len(g['w']) for g in members)})
         for group in members:
             for word, reading, meaning in group['w']:
@@ -41,7 +41,7 @@ def build():
                         item[field].append(value)
     for item in records.values():
         item['acceptedReadings'] = sorted(all_readings[item['word']])
-    bank = {'meetings': meetings, 'entries': list(records.values()), 'sourceCount': 431}
+    bank = {'meetings': meetings, 'entries': list(records.values()), 'sourceCount': sum(len(group['w']) for group in groups)}
     (target / 'bank.json').write_text(json.dumps(bank, ensure_ascii=False, indent=2), encoding='utf-8')
     chars = sorted({c for item in records.values() for c in item['word'] if '\u4e00' <= c <= '\u9fff' or c == '々'})
     print(f'Bank: {len(records)} vocabulary records, {len(chars)} writing characters', flush=True)

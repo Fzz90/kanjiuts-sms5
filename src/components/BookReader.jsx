@@ -4,17 +4,22 @@ import { ArrowLeft, ArrowRight, BookOpen, ExternalLink, Maximize, Maximize2, Mov
 import './book-reader.css';
 import { assetUrl } from '../lib/assets.js';
 
-const PAGE_COUNT = 25;
-const FIRST_PDF_PAGE = 185;
-const STORAGE_KEY = 'kanji-uts-book-page-v1';
-const PDF_URL = assetUrl('book/kanji-look-and-learn-185-209.pdf');
+const PAGE_COUNT = 30;
+const FIRST_PDF_PAGE = 180;
+const STORAGE_KEY = 'kanji-uts-book-page-v2';
+const PDF_URL = assetUrl('book/kanji-look-and-learn-180-209.pdf');
 
 function readLastPage() {
   try {
     const saved = window.localStorage.getItem(STORAGE_KEY);
-    if (saved === null || !/^\d+$/.test(saved)) return 0;
+    if (saved === null) {
+      const legacy = window.localStorage.getItem('kanji-uts-book-page-v1');
+      const index = legacy !== null && /^\d+$/.test(legacy) ? Number(legacy) : -1;
+      return Number.isInteger(index) && index >= 0 && index < 25 ? index + 5 : 0;
+    }
+    if (!/^\d+$/.test(saved)) return 0;
     const value = Number(saved);
-    return Number.isInteger(value) && value >= 0 && value < PAGE_COUNT ? value : 0;
+    return Number.isInteger(value) && value >= FIRST_PDF_PAGE && value < FIRST_PDF_PAGE + PAGE_COUNT ? value - FIRST_PDF_PAGE : 0;
   } catch {
     return 0;
   }
@@ -40,7 +45,7 @@ export default function BookReader({ onBack }) {
   const imageKey = `${page}-${retry}`;
   const status = imageState.key === imageKey ? imageState.state : 'loading';
   const pageNumber = FIRST_PDF_PAGE + page;
-  const imageUrl = assetUrl(`book/pages/page-${String(page + 1).padStart(2, '0')}.webp${retry ? `?retry=${retry}` : ''}`);
+  const imageUrl = assetUrl(`book/pages/page-${pageNumber}.webp${retry ? `?retry=${retry}` : ''}`);
   // The unzoomed reference size must not shrink when a scrollbar appears.
   const fitWidth = viewportSize.boxWidth > 0
     ? Math.max(1, Math.min(viewportSize.boxWidth - 24, (viewportSize.boxHeight - 24) * ratio))
@@ -51,7 +56,7 @@ export default function BookReader({ onBack }) {
 
   useEffect(() => {
     try {
-      window.localStorage.setItem(STORAGE_KEY, String(page));
+      window.localStorage.setItem(STORAGE_KEY, String(FIRST_PDF_PAGE + page));
     } catch {
       // Reading remains available when storage is blocked or full.
     }
@@ -351,7 +356,7 @@ export default function BookReader({ onBack }) {
         <div className="book-title-block">
           <span className="book-eyebrow"><BookOpen size={15} aria-hidden="true" /> KANJI LOOK AND LEARN</span>
           <h1 id="book-reader-title">Baca Buku</h1>
-          <p>Materi halaman PDF 185–209. Baca satu halaman, lanjut sesuai ritmemu.</p>
+          <p>Materi halaman PDF 180–209. Baca satu halaman, lanjut sesuai ritmemu.</p>
         </div>
         <a className="book-pdf-link" href={`${PDF_URL}#page=${page + 1}`} target="_blank" rel="noopener noreferrer">
           Buka PDF <ExternalLink size={15} aria-hidden="true" />

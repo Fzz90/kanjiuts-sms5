@@ -1,183 +1,219 @@
 {
   "title": "KANJI LOOK AND LEARN",
-  "originalPageStart": 185,
+  "originalPageStart": 180,
   "originalPageEnd": 209,
-  "sourceSha256": "7a89cb1b6d6115966f1e746f4327328cf8b671b97f71fb4aace73d50b8cf6c28",
+  "pdf": "kanji-look-and-learn-180-209.pdf",
   "pages": [
     {
       "slide": 1,
-      "pdfPage": 185,
-      "src": "/book/pages/page-01.webp",
+      "pdfPage": 180,
+      "src": "/book/pages/page-180.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 2,
-      "pdfPage": 186,
-      "src": "/book/pages/page-02.webp",
+      "pdfPage": 181,
+      "src": "/book/pages/page-181.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 3,
-      "pdfPage": 187,
-      "src": "/book/pages/page-03.webp",
+      "pdfPage": 182,
+      "src": "/book/pages/page-182.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 4,
-      "pdfPage": 188,
-      "src": "/book/pages/page-04.webp",
+      "pdfPage": 183,
+      "src": "/book/pages/page-183.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 5,
-      "pdfPage": 189,
-      "src": "/book/pages/page-05.webp",
+      "pdfPage": 184,
+      "src": "/book/pages/page-184.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 6,
-      "pdfPage": 190,
-      "src": "/book/pages/page-06.webp",
+      "pdfPage": 185,
+      "src": "/book/pages/page-185.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 7,
-      "pdfPage": 191,
-      "src": "/book/pages/page-07.webp",
+      "pdfPage": 186,
+      "src": "/book/pages/page-186.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 8,
-      "pdfPage": 192,
-      "src": "/book/pages/page-08.webp",
+      "pdfPage": 187,
+      "src": "/book/pages/page-187.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 9,
-      "pdfPage": 193,
-      "src": "/book/pages/page-09.webp",
+      "pdfPage": 188,
+      "src": "/book/pages/page-188.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 10,
-      "pdfPage": 194,
-      "src": "/book/pages/page-10.webp",
+      "pdfPage": 189,
+      "src": "/book/pages/page-189.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 11,
-      "pdfPage": 195,
-      "src": "/book/pages/page-11.webp",
+      "pdfPage": 190,
+      "src": "/book/pages/page-190.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 12,
-      "pdfPage": 196,
-      "src": "/book/pages/page-12.webp",
+      "pdfPage": 191,
+      "src": "/book/pages/page-191.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 13,
-      "pdfPage": 197,
-      "src": "/book/pages/page-13.webp",
+      "pdfPage": 192,
+      "src": "/book/pages/page-192.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 14,
-      "pdfPage": 198,
-      "src": "/book/pages/page-14.webp",
+      "pdfPage": 193,
+      "src": "/book/pages/page-193.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 15,
-      "pdfPage": 199,
-      "src": "/book/pages/page-15.webp",
+      "pdfPage": 194,
+      "src": "/book/pages/page-194.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 16,
-      "pdfPage": 200,
-      "src": "/book/pages/page-16.webp",
+      "pdfPage": 195,
+      "src": "/book/pages/page-195.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 17,
-      "pdfPage": 201,
-      "src": "/book/pages/page-17.webp",
+      "pdfPage": 196,
+      "src": "/book/pages/page-196.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 18,
-      "pdfPage": 202,
-      "src": "/book/pages/page-18.webp",
+      "pdfPage": 197,
+      "src": "/book/pages/page-197.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 19,
-      "pdfPage": 203,
-      "src": "/book/pages/page-19.webp",
+      "pdfPage": 198,
+      "src": "/book/pages/page-198.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 20,
-      "pdfPage": 204,
-      "src": "/book/pages/page-20.webp",
+      "pdfPage": 199,
+      "src": "/book/pages/page-199.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 21,
-      "pdfPage": 205,
-      "src": "/book/pages/page-21.webp",
+      "pdfPage": 200,
+      "src": "/book/pages/page-200.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 22,
-      "pdfPage": 206,
-      "src": "/book/pages/page-22.webp",
+      "pdfPage": 201,
+      "src": "/book/pages/page-201.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 23,
-      "pdfPage": 207,
-      "src": "/book/pages/page-23.webp",
+      "pdfPage": 202,
+      "src": "/book/pages/page-202.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 24,
-      "pdfPage": 208,
-      "src": "/book/pages/page-24.webp",
+      "pdfPage": 203,
+      "src": "/book/pages/page-203.webp",
       "width": 1210,
       "height": 1827
     },
     {
       "slide": 25,
+      "pdfPage": 204,
+      "src": "/book/pages/page-204.webp",
+      "width": 1210,
+      "height": 1827
+    },
+    {
+      "slide": 26,
+      "pdfPage": 205,
+      "src": "/book/pages/page-205.webp",
+      "width": 1210,
+      "height": 1827
+    },
+    {
+      "slide": 27,
+      "pdfPage": 206,
+      "src": "/book/pages/page-206.webp",
+      "width": 1210,
+      "height": 1827
+    },
+    {
+      "slide": 28,
+      "pdfPage": 207,
+      "src": "/book/pages/page-207.webp",
+      "width": 1210,
+      "height": 1827
+    },
+    {
+      "slide": 29,
+      "pdfPage": 208,
+      "src": "/book/pages/page-208.webp",
+      "width": 1210,
+      "height": 1827
+    },
+    {
+      "slide": 30,
       "pdfPage": 209,
-      "src": "/book/pages/page-25.webp",
+      "src": "/book/pages/page-209.webp",
       "width": 1210,
       "height": 1827
     }
-  ]
+  ],
+  "sourceSha256": "8e2d6768e952cceed67c5710232e742976a1e1746b8f583c0721ce3256190de1"
 }

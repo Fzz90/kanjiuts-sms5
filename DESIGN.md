@@ -14,7 +14,7 @@ Palet dipilih melalui workflow ui-ux-pro-max: pencarian design system, palet lan
 | Baca Buku | Apricot `#F0BB9E`, aksen kedua `#E6A884` |
 | Jawaban benar / salah | `#90DAB5` / `#FFA3AC` |
 
-TM 2–7 memiliki enam warna penanda berbeda: indigo, teal, cokelat, plum, biru mineral, dan zaitun. Penanda diterapkan pada kartu pilihan, progres TM, chip sesi, dan tombol TM aktif. Identitas mode tetap konsisten selama berganti TM. Nomor dan label tetap tersedia sehingga informasi tidak bergantung pada warna saja.
+TM 1–7 memiliki tujuh warna penanda berbeda: rose, indigo, teal, cokelat, plum, biru mineral, dan zaitun. Penanda diterapkan pada kartu pilihan, progres TM, chip sesi, dan tombol TM aktif. Identitas mode tetap konsisten selama berganti TM. Nomor dan label tetap tersedia sehingga informasi tidak bergantung pada warna saja.
 
 Teks aksen memenuhi rasio kontras minimal 4,5:1 pada latar, panel, bidang tulis, serta bidang lembut masing-masing; label tombol gelap memenuhi 4,5:1 pada bidang aktif. Kontrol memiliki fokus terlihat, dan tombol alat tulis/zoom menyediakan target sentuh minimal 44px. Sour Gummy untuk UI mengikuti referensi; Kosugi Maru untuk kanji, hiragana, katakana, dan input bacaan sesuai pilihan pengguna.
 
@@ -57,7 +57,7 @@ Buku:     [halaman | zoom | layar penuh]
           [back | nomor halaman | next]
 ```
 
-Halaman sumber ditampilkan utuh, termasuk halaman rangkuman. Navigasi dibatasi pada 25 slide; tampilan menyebut nomor asli PDF 185–209. Gambar 180 dpi disimpan lokal dan file PDF asli tersedia dari pembaca. Zoom dan navigasi keyboard hanya berlaku selama pembaca aktif.
+Halaman sumber ditampilkan utuh, termasuk halaman rangkuman. Navigasi dibatasi pada 30 slide; tampilan menyebut nomor asli PDF 180–209. Gambar 180 dpi dan cuplikan PDF tersedia lokal dari pembaca. Posisi membaca disimpan sebagai nomor asli PDF agar penambahan halaman tidak menggeser bacaan. Zoom dan navigasi keyboard hanya berlaku selama pembaca aktif.
 
 Slide buku memakai filter statis `invert(0.9) hue-rotate(180deg)` untuk tampilan malam: teks terang pada halaman gelap. Filter tidak memakai blur atau animasi, dan berkas gambar serta PDF asli tetap utuh.
 

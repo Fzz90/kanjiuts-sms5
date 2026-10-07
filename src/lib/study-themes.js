@@ -16,6 +16,7 @@ export const STUDY_THEMES = {
 
 export const MEETING_THEMES = {
   all: { accent: '#C7B9FF', soft: '#332E4A' },
+  1: { accent: '#F5AAA8', soft: '#3F292D' },
   2: { accent: '#ADBEFF', soft: '#2B304A' },
   3: { accent: '#93D9C7', soft: '#203A34' },
   4: { accent: '#E6B78C', soft: '#3B2F25' },

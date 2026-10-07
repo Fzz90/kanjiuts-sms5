@@ -1,0 +1,117 @@
+[
+  {
+    "n": 398, "k": "義", "p": 180, "tm": 1,
+    "words": [
+      ["主義", "しゅぎ", "prinsip; paham; -isme", "principle; -ism"],
+      ["民主主義", "みんしゅしゅぎ", "demokrasi", "democracy"],
+      ["社会主義", "しゃかいしゅぎ", "sosialisme", "socialism"],
+      ["講義", "こうぎ", "kuliah; ceramah", "lecture"],
+      ["義務", "ぎむ", "kewajiban", "duty"],
+      ["義理", "ぎり", "kewajiban sosial; kewajiban moral", "obligation"],
+      ["正義", "せいぎ", "keadilan", "justice"],
+      ["定義", "ていぎ", "definisi", "definition"]
+    ]
+  },
+  {
+    "n": 399, "k": "議", "p": 181, "tm": 1,
+    "words": [
+      ["会議", "かいぎ", "rapat; konferensi", "conference; meeting"],
+      ["国会議員", "こっかいぎいん", "anggota parlemen", "Member of Congress"],
+      ["不思議な", "ふしぎな", "misterius; aneh", "mysterious"],
+      ["議会", "ぎかい", "parlemen", "the Diet"],
+      ["議論する", "ぎろんする", "berdiskusi; berdebat", "to discuss"],
+      ["議題", "ぎだい", "topik diskusi; agenda pembahasan", "topic for discussion"]
+    ]
+  },
+  {
+    "n": 400, "k": "党", "p": 181, "tm": 1,
+    "words": [
+      ["政党", "せいとう", "partai politik", "political party"],
+      ["与党", "よとう", "partai yang berkuasa", "ruling party"],
+      ["野党", "やとう", "partai oposisi", "opposition party"],
+      ["党首", "とうしゅ", "ketua partai", "the head of a party"]
+    ]
+  },
+  {
+    "n": 401, "k": "遊", "p": 182, "tm": 1,
+    "words": [
+      ["遊ぶ", "あそぶ", "bermain", "to play"],
+      ["遊び", "あそび", "permainan; kegiatan bermain", "play"],
+      ["遊園地", "ゆうえんち", "taman hiburan", "amusement park"],
+      ["周遊", "しゅうゆう", "wisata berkeliling", "excursion"]
+    ]
+  },
+  {
+    "n": 402, "k": "泳", "p": 182, "tm": 1,
+    "words": [
+      ["泳ぐ", "およぐ", "berenang", "to swim"],
+      ["水泳", "すいえい", "renang; olahraga berenang", "swimming"],
+      ["平泳ぎ", "ひらおよぎ", "renang gaya dada", "breaststroke"],
+      ["背泳ぎ", "せおよぎ", "renang gaya punggung", "backstroke"],
+      ["競泳", "きょうえい", "perlombaan renang", "swimming race"]
+    ]
+  },
+  {
+    "n": 403, "k": "疲", "p": 183, "tm": 1,
+    "words": [
+      ["疲れる", "つかれる", "menjadi lelah", "to get tired"],
+      ["疲れ", "つかれ", "kelelahan", "fatigue"],
+      ["疲労", "ひろう", "kelelahan", "fatigue"]
+    ]
+  },
+  {
+    "n": 404, "k": "暖", "p": 183, "tm": 1,
+    "words": [
+      ["暖かい", "あたたかい", "hangat", "warm"],
+      ["暖める", "あたためる", "menghangatkan", "to warm"],
+      ["暖まる", "あたたまる", "menjadi hangat", "to become warm"],
+      ["暖房", "だんぼう", "pemanas ruangan; penghangatan", "heating"],
+      ["温暖な", "おんだんな", "hangat; beriklim hangat", "warm"],
+      ["暖冬", "だんとう", "musim dingin yang ringan", "mild winter"]
+    ]
+  },
+  {
+    "n": 405, "k": "涼", "p": 183, "tm": 1,
+    "words": [
+      ["涼しい", "すずしい", "sejuk", "cool"],
+      ["涼む", "すずむ", "menyejukkan diri", "to keep oneself cool"],
+      ["清涼飲料水", "せいりょういんりょうすい", "minuman ringan", "soft drink"],
+      ["夕涼み", "ゆうすずみ", "menikmati udara sejuk pada sore hari", "cooling oneself in the evening"]
+    ]
+  },
+  {
+    "n": 406, "k": "静", "p": 184, "tm": 1,
+    "words": [
+      ["静かな", "しずかな", "tenang; sunyi", "quiet"],
+      ["静まる", "しずまる", "menjadi tenang; menjadi sunyi", "to become quiet"],
+      ["冷静な", "れいせいな", "tenang; berkepala dingin", "calm"],
+      ["安静", "あんせい", "beristirahat tenang di tempat tidur", "to lie quietly in bed"],
+      ["静養する", "せいようする", "beristirahat untuk memulihkan kesehatan", "to rest"],
+      ["静脈", "じょうみゃく", "vena; pembuluh darah balik", "vein"]
+    ]
+  },
+  {
+    "n": 407, "k": "公", "p": 184, "tm": 1,
+    "words": [
+      ["公園", "こうえん", "taman", "park"],
+      ["公平", "こうへい", "keadilan; sikap tidak memihak", "impartiality"],
+      ["公務員", "こうむいん", "pegawai negeri", "civil servant"],
+      ["公衆", "こうしゅう", "masyarakat umum", "the public"],
+      ["公立", "こうりつ", "didirikan atau dikelola pemerintah", "public (institution)"],
+      ["公の", "おおやけの", "publik; resmi", "public; official"],
+      ["公開", "こうかい", "pembukaan untuk umum", "opening to public"]
+    ]
+  },
+  {
+    "n": 408, "k": "園", "p": 184, "tm": 1,
+    "words": [
+      ["公園", "こうえん", "taman", "park"],
+      ["動物園", "どうぶつえん", "kebun binatang", "zoo"],
+      ["遊園地", "ゆうえんち", "taman hiburan", "amusement park"],
+      ["幼稚園", "ようちえん", "taman kanak-kanak", "kindergarten"],
+      ["園芸", "えんげい", "berkebun; hortikultura", "gardening"],
+      ["庭園", "ていえん", "taman; kebun", "garden"],
+      ["エデンの園", "エデンのその", "Taman Eden", "the Garden of Eden"]
+    ]
+  }
+]

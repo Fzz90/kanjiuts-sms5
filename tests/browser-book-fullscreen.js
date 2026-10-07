@@ -95,14 +95,14 @@ return (async () => {
   assert(dialog.open && document.querySelector('.book-page-select select').value === '1', 'Next must remain in full screen');
   assert(document.querySelector('.book-zoom-value').textContent === zoomBeforeNavigation, 'Navigation must preserve zoom');
   assert(viewport.scrollTop === 0 && viewport.scrollLeft === 0, 'New page must reset pan');
-  await choose(24);
+  await choose(29);
   assert(document.querySelector('.book-next-button').disabled, 'Last-page boundary must remain enforced');
 
   dialog.dispatchEvent(new Event('cancel', { cancelable: true }));
   await pause();
   assert(!document.querySelector('.book-fullscreen-dialog'), 'Cancel must close modal');
   assert(document.body.style.overflow === bodyOverflow, 'Body scrolling must be restored');
-  assert(document.querySelector('.book-page-select select').value === '24', 'Closing must preserve page');
+  assert(document.querySelector('.book-page-select select').value === '29', 'Closing must preserve page');
   assert(document.querySelector('.book-zoom-value').textContent === '100%', 'Closing must restore normal fit');
   assert(document.activeElement.matches('.book-expand-button'), 'Focus must return to full-screen button');
 

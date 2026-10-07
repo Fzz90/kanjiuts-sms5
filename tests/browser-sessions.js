@@ -25,7 +25,7 @@ return (async () => {
     await click('.meeting-card[data-tm="2"]');
     assert(document.querySelector('.practice-screen')?.dataset.kanji === 'all' && !document.querySelector('.kanji-screen'), 'TM selection must open all questions directly');
     await click('.session-nav .text-button');
-    assert(document.querySelectorAll('.kanji-card').length === meetings[0].kanji.length, 'Every kanji must have a card');
+    assert(document.querySelectorAll('.kanji-card').length === meetings.find(meeting => meeting.id === 2).kanji.length, 'Every kanji must have a card');
     assert(!document.querySelector('.practice-sheet') && document.querySelector('.all-kanji-card'), 'TM must offer both session routes');
     const subset = meetingEntries(2, mode, '窓');
     await click('.kanji-card[data-kanji="窓"]');

@@ -5,7 +5,7 @@ import WritingBox from './components/WritingBox.jsx';
 import BookReader from './components/BookReader.jsx';
 import MeshBackground from './components/MeshBackground.jsx';
 import { themeStyle, meetingStyle } from './lib/study-themes.js';
-import { ALL_TM, meetingOptions, meetingLabel, meetingEntries, shuffle, checkReading, isKanji, loadCharacter } from './lib/bank.js';
+import { ALL_TM, meetingOptions, meetingLabel, meetingEntries, shuffle, checkReading, normalizeReading, isKanji, loadCharacter } from './lib/bank.js';
 import { gradeDrawing } from './lib/grading.js';
 import { areSoundsEnabled, setSoundsEnabled, prepareSounds, playSound, stopSounds } from './lib/sounds.js';
 import { assetUrl } from './lib/assets.js';
@@ -121,7 +121,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
   return <section className={`practice-sheet ${mode === 'writing' ? 'writing-sheet' : ''}`} data-entry-id={item.id}>
     <div className="prompt">
       <span className="prompt-label">{mode === 'reading' ? 'Bagaimana bacaan jukugo ini?' : 'Tulis kanji dari bacaan ini'}</span>
-      <h2 className={`japanese ${mode === 'reading' ? 'word-prompt' : 'kana-prompt'}`} lang="ja">{mode === 'reading' ? item.word : item.reading}</h2>
+      <h2 className={`japanese ${mode === 'reading' ? 'word-prompt' : 'kana-prompt'}`} lang="ja">{mode === 'reading' ? item.word : normalizeReading(item.reading)}</h2>
       <p className="meaning meaning-en" lang="en">{item.englishMeaning}</p>
       <p className="meaning meaning-id" lang="id"><q>{item.meanings.join(' / ')}</q></p>
     </div>
@@ -185,7 +185,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
 export default function App() {
   const [screen, setScreen] = useState('home');
   const [mode, setMode] = useState('reading');
-  const [tm, setTm] = useState(2);
+  const [tm, setTm] = useState(1);
   const [selectedKanji, setSelectedKanji] = useState(null);
   const [queue, setQueue] = useState([]);
   const [index, setIndex] = useState(0);
@@ -277,7 +277,7 @@ export default function App() {
         <button style={themeStyle('writing')} data-mode="writing" className={screen !== 'home' && screen !== 'book' && mode === 'writing' ? 'active' : ''} aria-current={screen !== 'home' && screen !== 'book' && mode === 'writing' ? 'page' : undefined} onClick={() => chooseMode('writing')}><PenLine size={18} />Kanji Renshuu</button>
         <button style={themeStyle('book')} data-mode="book" className={screen === 'book' ? 'active' : ''} aria-current={screen === 'book' ? 'page' : undefined} onClick={() => chooseMode('book')}><Library size={18} />Baca Buku</button>
       </nav>
-      <button className="brand" onClick={() => setScreen('home')} aria-label="Halaman awal Kanji UTS"><span className="brand-mark japanese" lang="ja">漢</span><span>Latihan Kanji UTS<small>Semester 5 · Pertemuan 2–7</small></span></button>
+      <button className="brand" onClick={() => setScreen('home')} aria-label="Halaman awal Kanji UTS"><span className="brand-mark japanese" lang="ja">漢</span><span>Latihan Kanji UTS<small>Semester 5 · Pertemuan 1–7</small></span></button>
       {screen !== 'home' && screen !== 'book' && <div className="header-actions">
         <button className="home-button" onClick={() => setScreen('home')}><Home size={16} /><span>Awal</span></button>
         <div className="sfx-control" role="group" aria-label="Pengaturan SFX">
@@ -301,8 +301,8 @@ export default function App() {
             <div className="mode-content"><span className="mode-icon"><PenLine size={23} /></span><h2>Kanji Renshuu</h2><p>Lihat hiragana.<br />Tulis kanji, periksa bentuk dan stroke.</p><span className="mode-start">Latihan menulis <ArrowRight size={20} /></span></div>
           </button>
           <button className="mode-card book-card" data-mode="book" style={themeStyle('book')} onClick={() => chooseMode('book')}>
-            <div className="mode-preview book-preview" aria-hidden="true"><img src={assetUrl('book/pages/page-01.webp')} alt="" /><span><Library size={21} />25 halaman</span></div>
-            <div className="mode-content"><span className="mode-icon"><Library size={23} /></span><h2>Baca Buku</h2><p>Kanji Look and Learn.<br />Baca halaman PDF 185–209 per slide.</p><span className="mode-start">Buka buku <ArrowRight size={20} /></span></div>
+            <div className="mode-preview book-preview" aria-hidden="true"><img src={assetUrl('book/pages/page-180.webp')} alt="" /><span><Library size={21} />30 halaman</span></div>
+            <div className="mode-content"><span className="mode-icon"><Library size={23} /></span><h2>Baca Buku</h2><p>Kanji Look and Learn.<br />Baca halaman PDF 180–209 per slide.</p><span className="mode-start">Buka buku <ArrowRight size={20} /></span></div>
           </button>
         </div>
       </section>}
@@ -317,7 +317,7 @@ export default function App() {
           const studied = list.filter(item => progress[`${mode}:${item.id}`]?.correct > 0).length;
           return <button className={`meeting-card ${value.id === ALL_TM ? 'all-tm-card' : ''}`} key={value.id} data-tm={value.id} style={meetingStyle(value.id)} onClick={() => start(value.id)}>
             <div className="meeting-title"><h2>{value.id === ALL_TM && <Library size={20} />}{meetingLabel(value.id)}</h2><ArrowRight size={21} /></div>
-            {value.id === ALL_TM ? <p className="all-tm-description">Campur seluruh kanji TM 2–7. Soal diacak dalam satu sesi.</p> : <p className="meeting-kanji japanese" lang="ja">{value.kanji.join(' ')}</p>}
+            {value.id === ALL_TM ? <p className="all-tm-description">Campur seluruh kanji TM 1–7. Soal diacak dalam satu sesi.</p> : <p className="meeting-kanji japanese" lang="ja">{value.kanji.join(' ')}</p>}
             <div className="meeting-count"><span>{list.length} soal</span><span>{value.kanji.length} kanji</span></div>
             <div className="meeting-progress"><span style={{ width: `${studied / list.length * 100}%` }} /></div>
             <small>{studied ? `${studied} pernah dijawab benar` : 'Siap mulai latihan'}</small>
@@ -328,7 +328,7 @@ export default function App() {
 
       {screen === 'kanji' && <section className="meeting-screen kanji-screen" data-tm={tm} style={meetingStyle(tm)}>
         <button className="back-link text-button" onClick={() => setScreen('select')}><ArrowLeft size={17} /> Ganti TM</button>
-        <div className="section-heading"><span className="mode-badge">{modeNames[mode]} · {tmLabel}</span><h1>Mau latihan kanji yang mana?</h1><p>{allTm ? 'Pilih satu kanji dari TM 2–7, atau latih seluruh kanji.' : 'Pilih satu kanji, atau latih semua kanji dalam pertemuan ini.'}</p></div>
+        <div className="section-heading"><span className="mode-badge">{modeNames[mode]} · {tmLabel}</span><h1>Mau latihan kanji yang mana?</h1><p>{allTm ? 'Pilih satu kanji dari TM 1–7, atau latih seluruh kanji.' : 'Pilih satu kanji, atau latih semua kanji dalam pertemuan ini.'}</p></div>
         <button className="all-kanji-card" onClick={() => start(tm)}>
           <span className="all-kanji-icon"><Library size={25} /></span>
           <span><strong>{allTm ? 'Semua kanji · Semua TM' : `Semua kanji TM ${tm}`}</strong><small>{meetingEntries(tm, mode).length} soal · {meeting.kanji.length} kanji</small></span>
@@ -371,13 +371,13 @@ export default function App() {
           <div className="sidebar-subtitle"><span>{allTm ? 'Kanji seluruh TM' : `Kanji TM ${tm}`}</span><span>{meeting.kanji.length} kanji</span></div>
           {allTm ? <details className="all-tm-roots"><summary>Pilih dari {meeting.kanji.length} kanji</summary>{rootButtons}</details> : rootButtons}
           <button className={`text-button sidebar-all ${selectedKanji === null ? 'active' : ''}`} onClick={() => start(tm)}>{allTm ? 'Latih semua kanji' : `Latih semua kanji TM ${tm}`} <ArrowRight size={16} /></button>
-          <p className="sidebar-note">{selectedKanji ? `Jukugo dari bagian kanji ${selectedKanji}.` : allTm ? 'Jukugo dari seluruh TM 2–7.' : 'Jukugo dari seluruh kanji dalam pertemuan ini.'}</p>
+          <p className="sidebar-note">{selectedKanji ? `Jukugo dari bagian kanji ${selectedKanji}.` : allTm ? 'Jukugo dari seluruh TM 1–7.' : 'Jukugo dari seluruh kanji dalam pertemuan ini.'}</p>
           <button className="secondary-button sidebar-book" data-mode="book" style={themeStyle('book')} onClick={() => chooseMode('book')}><Library size={17} />Baca Buku</button>
         </aside>
       </section>}
 
       {screen === 'result' && <section className="result-screen" data-tm={tm} data-kanji={selectedKanji ?? 'all'}>
-        <div className="result-icon"><CheckCircle2 size={42} /></div><span className="mode-badge">{modeNames[mode]} · {tmLabel} · {selectedKanji ?? 'Semua kanji'}</span><h1>Satu sesi selesai.</h1><p>{queue.length} soal {selectedKanji ? `untuk kanji ${selectedKanji}` : allTm ? 'dari seluruh TM 2–7' : `dari TM ${tm}`} sudah kamu latih.</p>
+        <div className="result-icon"><CheckCircle2 size={42} /></div><span className="mode-badge">{modeNames[mode]} · {tmLabel} · {selectedKanji ?? 'Semua kanji'}</span><h1>Satu sesi selesai.</h1><p>{queue.length} soal {selectedKanji ? `untuk kanji ${selectedKanji}` : allTm ? 'dari seluruh TM 1–7' : `dari TM ${tm}`} sudah kamu latih.</p>
         <div className="result-stats"><div><strong>{results.independent}</strong><span>Benar tanpa bantuan</span></div><div><strong>{results.helped}</strong><span>Memakai show answer</span></div><div><strong>{results.skipped}</strong><span>Dilewati</span></div></div>
         <p className="result-detail">{results.correct} jawaban benar setelah latihan · {results.wrong} percobaan belum sesuai</p>
         {results.review.length > 0 && <button className="primary-button" onClick={() => start(tm, selectedKanji, results.review)}><RefreshCw size={18} /> Ulangi {results.review.length} soal yang perlu latihan</button>}
