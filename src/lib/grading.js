@@ -96,15 +96,47 @@ function inkFootprint(strokes) {
   return cells.size;
 }
 
+function connectionZones(strokes) {
+  const zones = [];
+  for (let i = 0; i < strokes.length; i++) {
+    const stroke = simplify(strokes[i]);
+    for (const tip of [stroke[0], stroke.at(-1)]) {
+      if (strokes.some((other, j) => j !== i && other.some(p => distance(tip, p) <= .075))) zones.push(tip);
+    }
+    for (let n = 1; n < stroke.length - 1; n++) {
+      const previous = stroke[n - 1], point = stroke[n], next = stroke[n + 1];
+      const lengths = distance(previous, point) * distance(point, next);
+      const cosine = ((point.x - previous.x) * (next.x - point.x) + (point.y - previous.y) * (next.y - point.y)) / (lengths || 1);
+      if (cosine < .5) zones.push(point);
+    }
+  }
+  return zones;
+}
+
+const nearConnection = (point, zones) => zones.some(zone => distance(point, zone) <= .12);
+
+function connectionErrors(strokes, errors, zones) {
+  // Small gaps and overhangs at joins/corners are handwriting variation.
+  // Isolated marks and distinctive protruding ends get no extra allowance.
+  return errors.map((stroke, i) => stroke.map((error, n) => Math.max(0, error - (nearConnection(strokes[i][n], zones) ? .025 : 0))));
+}
+
 function gradeFreeShape(drawn, reference) {
   // Compare the complete ink in both directions, without pairing strokes.
   // Reverse coverage prevents unrelated ink or missing parts from passing.
   const aligned = align(drawn, reference, true);
   const actual = shapeSamples(aligned);
   const expected = shapeSamples(reference);
-  const actualErrors = shapeDistances(actual, expected.flat());
-  const expectedErrors = shapeDistances(expected, actual.flat());
+  const zones = connectionZones(expected);
+  const rawActualErrors = shapeDistances(actual, expected.flat());
+  const rawExpectedErrors = shapeDistances(expected, actual.flat());
+  const actualErrors = connectionErrors(actual, rawActualErrors, zones);
+  const expectedErrors = connectionErrors(expected, rawExpectedErrors, zones);
   const mean = values => values.reduce((sum, value) => sum + value, 0) / values.length;
+  const missingTip = expected.some((stroke, i) => [0, stroke.length - 1].some(n => !nearConnection(stroke[n], zones) && rawExpectedErrors[i][n] > .12));
+  const extraTip = actual.some((stroke, i) => [0, stroke.length - 1].some(n => !nearConnection(stroke[n], zones) && rawActualErrors[i][n] > .12));
+  const extraMark = actual.some((stroke, i) => pathLength(stroke) < .12 && mean(rawActualErrors[i]) > .045 && !stroke.some(p => nearConnection(p, zones)));
+  if (missingTip || extraTip || extraMark) return { correct: false, type: 'shape', message: 'Ada bagian pembeda kanji yang hilang atau coretan tambahan. Perhatikan bentuk lengkapnya.' };
   const errors = [...actualErrors.flat(), ...expectedErrors.flat()].sort((a, b) => a - b);
   const error = (mean(actualErrors.flat()) + mean(expectedErrors.flat())) / 2;
   const coverageError = errors[Math.floor((errors.length - 1) * .9)];

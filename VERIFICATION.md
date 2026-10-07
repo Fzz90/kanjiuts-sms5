@@ -1,5 +1,12 @@
 # Verifikasi
 
+## Sambungan dan bagian pembeda mode Bebas, 8 Oktober 2026
+
+- Sudut dan sambungan acuan mendapat kelonggaran lokal untuk celah kecil dan ujung yang sedikit melewati garis. Kelonggaran tidak diberikan pada ujung terpisah atau tanda pendek yang jauh dari sambungan. Pemeriksaan ujung yang hilang/berlebih menjaga tonjolan pembeda seperti garis atas pada 失, tanpa mencocokkan nomor/arah/jumlah stroke.
+- 43 tes Node dan build produksi GitHub Pages lulus. Regresi mencakup kotak 口/田 dengan celah dan ujung berlebih, sambungan sudut terpisah, tanda tambahan yang tidak terkait, serta bentuk 失 dengan tonjolan atas hilang dan perbandingan sebaliknya.
+- `tests/browser-free-junctions.js` melalui gstack `/browse` pada Chromium 375×812 lulus dengan aset KanjiVG asli dan input pointer sintetis: 窓口/吉田さん dengan celah dan ujung berlebih diterima; 失 tanpa garis atas ditolak, lalu gambar lengkap diterima setelah Hapus semua. Jawaban tercetak dan tombol Selanjutnya tetap bekerja.
+- `tests/browser-free.js` tetap lulus pada 375×812: seluruh 353 karakter menerima 1.059 variasi positif; pola coretan acak ditolak untuk semuanya. Penilaian tetap pencocokan geometri, bukan pengenalan arti/OCR atau pengukuran akurasi tulisan tangan pengguna nyata.
+
 ## Kelonggaran Bebas +25%, 8 Oktober 2026
 
 - Batas jarak bentuk rata-rata, cakupan, dan tiap bagian dinaikkan 25% hanya untuk Bebas. Pembatas kepadatan tinta, input kosong/invalid/kecil, serta penilaian Longgar/Normal/Ketat tetap berlaku.

@@ -136,3 +136,43 @@ test('Bebas rejects dense scribbles that run near every line of a complex shape'
   assert.equal(gradeDrawing(scribble, grid, 'free').correct, false);
   assert.equal(gradeDrawing([...grid, ...grid], grid, 'free').correct, true);
 });
+
+const mouth = [
+  [point(.2, .2), point(.2, .8)],
+  [point(.2, .2), point(.8, .2), point(.8, .8)],
+  [point(.2, .8), point(.8, .8)],
+];
+
+test('Bebas allows small corner gaps and overhangs in mouth and rice-field outlines', () => {
+  const field = [...mouth, [point(.5, .2), point(.5, .8)], [point(.2, .5), point(.8, .5)]];
+  for (const expected of [mouth, field]) {
+    const loose = expected.map(stroke => {
+      const points = resample(stroke, 40);
+      const start = points[2], end = points.at(-3), previous = points.at(-4);
+      const length = Math.hypot(end.x - previous.x, end.y - previous.y);
+      return [start, ...points.slice(3, -3), end, point(end.x + (end.x - previous.x) * .06 / length, end.y + (end.y - previous.y) * .06 / length)];
+    });
+    assert.equal(gradeDrawing(loose.reverse(), expected, 'free').correct, true);
+  }
+});
+
+test('Bebas tolerates a small detached corner continuation but rejects an unrelated mark', () => {
+  const corner = [...mouth, [point(.93, .85), point(.95, .86)]];
+  assert.equal(gradeDrawing(corner, mouth, 'free').correct, true);
+  const mark = [...reference, [point(.23, .20), point(.25, .22)]];
+  assert.equal(gradeDrawing(mark, reference, 'free').correct, false);
+});
+
+test('Bebas preserves the distinctive upper protrusion in lost versus arrow-like shapes', () => {
+  const lost = [
+    [point(.33, .21), point(.19, .43)],
+    [point(.30, .35), point(.725, .32)],
+    [point(.18, .55), point(.81, .50)],
+    [point(.495, .13), point(.5, .53), point(.36, .75), point(.16, .88)],
+    [point(.5, .53), point(.79, .88)],
+  ];
+  const missingTop = lost.map((stroke, n) => n === 3 ? [point(.498, .35), ...stroke.slice(1)] : stroke);
+  assert.equal(gradeDrawing(lost, lost, 'free').correct, true);
+  assert.equal(gradeDrawing(missingTop, lost, 'free').correct, false);
+  assert.equal(gradeDrawing(lost, missingTop, 'free').correct, false);
+});
