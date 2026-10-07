@@ -1,5 +1,11 @@
 # Verifikasi
 
+## Kelonggaran Bebas +25%, 8 Oktober 2026
+
+- Batas jarak bentuk rata-rata, cakupan, dan tiap bagian dinaikkan 25% hanya untuk Bebas. Pembatas kepadatan tinta, input kosong/invalid/kecil, serta penilaian Longgar/Normal/Ketat tetap berlaku.
+- 40 tes Node dan build produksi GitHub Pages lulus. Regresi baru menerima bentuk 木 dengan garis mendatar sedikit lebih rendah yang sebelumnya ditolak, sementara garis yang terlalu jauh dan bagian utama yang hilang tetap ditolak.
+- `tests/browser-free.js` melalui gstack `/browse` lulus pada Chromium 375×812: integrasi Normal/Bebas, jawaban benar, Show answer, dan Ulangi menulis. Seluruh 353 karakter menerima 1.059 kasus positif; pola coretan acak ditolak untuk seluruh karakter. Jejak pointer sintetis memeriksa sambungan UI dan algoritme, belum mengukur akurasi tulisan tangan pengguna nyata.
+
 ## Mode Bebas, 7 Oktober 2026
 
 - Toleransi bentuk pada Kanji Renshuu berurutan Bebas, Longgar, Normal, dan Ketat. Normal tetap pilihan awal. Bebas membandingkan seluruh bentuk tinta dengan contoh tanpa mencocokkan nomor stroke, arah, atau jumlahnya; tiga mode lama mempertahankan penilaian sebelumnya.

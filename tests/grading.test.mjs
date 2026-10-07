@@ -92,6 +92,12 @@ test('Bebas tolerates uneven sampling, translation, scale and small handwriting 
   assert.equal(gradeDrawing(drawn, reference, 'free').correct, true);
 });
 
+test('Bebas accepts a recognizable shifted crossbar but rejects a misplaced one', () => {
+  const shiftedCrossbar = offset => reference.map((stroke, n) => stroke.map(p => point(p.x, p.y + (n === 0 ? offset : 0))));
+  assert.equal(gradeDrawing(shiftedCrossbar(.11), reference, 'free').correct, true);
+  assert.equal(gradeDrawing(shiftedCrossbar(.2), reference, 'free').correct, false);
+});
+
 test('Bebas handles flat shapes without losing their horizontal or vertical extent', () => {
   for (const line of [[point(.15, .5), point(.85, .5)], [point(.5, .15), point(.5, .85)]]) {
     const points = resample(line, 11).reverse();

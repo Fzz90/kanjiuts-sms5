@@ -42,6 +42,8 @@ function align(strokes, reference, shapeOnly = false) {
 
 const meanDistance = (a, b) => a.reduce((sum, p, i) => sum + distance(p, b[i]), 0) / a.length;
 const tolerances = { relaxed: .15, normal: .115, strict: .085 };
+// Allow 25% more shape deviation in Bebas while keeping the ink density guard.
+const freeShapeAllowance = 1.25;
 
 function simplify(points, epsilon = .016) {
   if (points.length < 3) return points;
@@ -108,7 +110,10 @@ function gradeFreeShape(drawn, reference) {
   const coverageError = errors[Math.floor((errors.length - 1) * .9)];
   const partError = Math.max(...actualErrors.map(mean), ...expectedErrors.map(mean));
   const similarDensity = inkFootprint(aligned) <= inkFootprint(reference) * 1.8;
-  return error <= .045 && coverageError <= .1 && partError <= .08 && similarDensity
+  const similarShape = error <= .045 * freeShapeAllowance
+    && coverageError <= .1 * freeShapeAllowance
+    && partError <= .08 * freeShapeAllowance;
+  return similarShape && similarDensity
     ? { correct: true, type: 'correct', score: Math.round(Math.max(0, 1 - error) * 100), message: 'Bentuk kanji mirip dengan contoh.' }
     : { correct: false, type: 'shape', message: 'Bentuk kanji belum mirip dengan contoh. Perhatikan bentuk keseluruhannya.' };
 }
