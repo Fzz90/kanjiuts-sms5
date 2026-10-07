@@ -3,7 +3,7 @@ import { RotateCcw, Undo2 } from 'lucide-react';
 
 const pathData = points => points.map((p, i) => `${i ? 'L' : 'M'}${(p.x * 109).toFixed(2)},${(p.y * 109).toFixed(2)}`).join(' ');
 
-export default function WritingBox({ number, strokes, onChange, onActivity, asset, showAnswer, delay, failed, failedStroke, disabled, correctAnswer, onAnswerAnimationStart, onAnswerAnimationEnd }) {
+export default function WritingBox({ number, strokes, onChange, onActivity, asset, showAnswer, delay, failed, failedStroke, disabled, correctAnswer, allowDot = false, onAnswerAnimationStart, onAnswerAnimationEnd }) {
   const readOnly = disabled || showAnswer;
   const [liveStroke, setLiveStroke] = useState([]);
   const [localReplay, setLocalReplay] = useState(0);
@@ -32,7 +32,9 @@ export default function WritingBox({ number, strokes, onChange, onActivity, asse
     cancelFrame();
     setLiveStroke([]);
     onActivity?.(token.current, false);
-    if (!cancelled && !readOnly && points.length > 1) onChange([...strokes, points]);
+    if (!cancelled && !readOnly && (points.length > 1 || allowDot)) {
+      onChange([...strokes, points.length === 1 ? [points[0], { ...points[0] }] : points]);
+    }
     if (event.currentTarget.hasPointerCapture?.(event.pointerId)) event.currentTarget.releasePointerCapture?.(event.pointerId);
   };
 

@@ -86,7 +86,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
       const failures = checked.flatMap((grade, i) => grade.correct ? [] : [i]);
       setFailedBoxes(failures);
       setFailedStrokes(checked.map(grade => grade.correct ? null : grade.stroke ?? null));
-      result = failures.length ? { ...checked[failures[0]], message: `Kotak ${failures[0] + 1}: ${checked[failures[0]].message}` } : { correct: true, message: `${sensitivity === 'free' ? 'Bentuk kanji mirip dengan contoh.' : 'Bentuk dan urutan stroke sesuai.'} Tekan Selanjutnya untuk melanjutkan.` };
+      result = failures.length ? { ...checked[failures[0]], message: `Kotak ${failures[0] + 1}: ${checked[failures[0]].message}` } : { correct: true, message: `${sensitivity === 'free' ? 'Latihan menulis selesai.' : 'Bentuk dan urutan stroke sesuai.'} Tekan Selanjutnya untuk melanjutkan.` };
     }
     setFeedback(result);
     void playSound(result.correct ? 'correct' : 'wrong');
@@ -144,7 +144,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
           if (!character) return <span className="okurigana japanese" lang="ja" key={index}>{kana}</span>;
           const number = ++boxIndex, delay = animationOffset;
           animationOffset += (assets[number]?.paths.length ?? 0) * .58;
-          return <div className="writing-unit" key={index}><WritingBox key={`${drawingReset}-${failedBoxes.includes(number) ? shake : 'steady'}`} number={number + 1} strokes={drawings[number]} onChange={strokes => {
+          return <div className="writing-unit" key={index}><WritingBox key={`${drawingReset}-${failedBoxes.includes(number) ? shake : 'steady'}`} number={number + 1} strokes={drawings[number]} allowDot={sensitivity === 'free'} onChange={strokes => {
             setDrawings(previous => previous.map((drawing, i) => i === number ? strokes : drawing));
             setFeedback(null);
             setFailedBoxes(previous => previous.filter(i => i !== number));
@@ -178,7 +178,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
       {correct ? <button className="text-button next-button" onClick={onAdvance}>Lanjut <ArrowRight size={16} /></button> : <button className="text-button skip-button" onClick={onSkip}>Lewati <ArrowRight size={16} /></button>}
       </>}
     </div>
-    {mode === 'writing' && <p className="grading-note">{sensitivity === 'free' ? 'Mode Bebas menilai kemiripan bentuk akhir kanji. Jumlah, arah, dan urutan stroke tidak dinilai.' : 'Penilaian membandingkan bentuk dan urutan stroke. Gunakan “Bebas” untuk latihan berdasarkan kemiripan bentuk saja.'}</p>}
+    {mode === 'writing' && <p className="grading-note">{sensitivity === 'free' ? 'Mode Bebas menerima setiap coretan tanpa penilaian tulisan. Isi tiap kotak, lalu tekan Periksa tulisan.' : 'Penilaian membandingkan bentuk dan urutan stroke. Gunakan “Bebas” untuk latihan tanpa penilaian tulisan.'}</p>}
   </section>;
 }
 

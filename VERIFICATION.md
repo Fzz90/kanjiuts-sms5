@@ -1,5 +1,13 @@
 # Verifikasi
 
+## Bebas tanpa penilaian tulisan, 8 Oktober 2026
+
+- Mode Bebas kini menerima semua input tulisan yang tidak kosong, termasuk coretan acak, satu titik, bentuk tidak lengkap, dan tulisan kecil. Pemeriksaan geometri Bebas beserta aturan sudut/ujung/tanda pembeda dihapus. Longgar, Normal, dan Ketat tetap menilai geometri seperti sebelumnya.
+- Ketukan tunggal di kotak disimpan sebagai titik pada mode Bebas. Tiap kotak tetap perlu diisi. Feedback mengonfirmasi latihan selesai tanpa menyatakan bentuknya mirip; jawaban kanji muncul dan tombol Selanjutnya tetap manual.
+- 35 tes Node dan build produksi GitHub Pages lulus. `tests/browser-free.js` melalui gstack `/browse` pada Chromium 375×812 lulus: Normal menolak stroke terbalik, Bebas menerima gambar yang sama, coretan acak dan ketukan tiap kotak diterima, kotak kosong tidak bisa diselesaikan, serta Show answer mengunci kotak dan Ulangi menulis membukanya lagi. Tidak ada overflow horizontal.
+
+Bagian berikut mencatat verifikasi versi sebelumnya, ketika Bebas masih menilai kemiripan geometri.
+
 ## Sambungan dan bagian pembeda mode Bebas, 8 Oktober 2026
 
 - Sudut dan sambungan acuan mendapat kelonggaran lokal untuk celah kecil dan ujung yang sedikit melewati garis. Kelonggaran tidak diberikan pada ujung terpisah atau tanda pendek yang jauh dari sambungan. Pemeriksaan ujung yang hilang/berlebih menjaga tonjolan pembeda seperti garis atas pada 失, tanpa mencocokkan nomor/arah/jumlah stroke.

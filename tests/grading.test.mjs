@@ -62,117 +62,33 @@ test('resampling preserves start, end and arc length distribution', () => {
   assert.deepEqual(result, [point(0, 0), point(.5, 0), point(1, 0), point(1, .5), point(1, 1)]);
 });
 
-test('Bebas accepts the same shape with shuffled and reversed strokes', () => {
-  const drawn = [reference[3], reference[1], reference[0], reference[2]].map(stroke => [...stroke].reverse());
-  assert.equal(gradeDrawing(drawn, reference, 'free').correct, true);
-  for (const sensitivity of ['relaxed', 'normal', 'strict']) {
-    assert.equal(gradeDrawing(drawn, reference, sensitivity).correct, false);
-  }
-});
-
-test('Bebas accepts split strokes, joined adjacent strokes and retracing', () => {
-  const split = reference.flatMap(stroke => {
-    const points = resample(stroke, 13);
-    return [points.slice(0, 5), points.slice(4, 9), points.slice(8)];
-  }).reverse();
-  assert.equal(gradeDrawing(split, reference, 'free').correct, true);
-  assert.equal(gradeDrawing(split, reference, 'relaxed').type, 'count');
-  const corner = [
-    [point(.2, .2), point(.8, .2)],
-    [point(.8, .2), point(.8, .8)],
-    [point(.8, .8), point(.2, .8)],
-  ];
-  assert.equal(gradeDrawing([corner.flat()], corner, 'free').correct, true);
-  assert.equal(gradeDrawing([...reference, reference[0]], reference, 'free').correct, true);
-});
-
-test('Bebas tolerates uneven sampling, translation, scale and small handwriting variations', () => {
-  const drawn = reference.map((stroke, n) => resample(stroke, 20 + n * 23)
-    .map((p, i) => point(p.x * .74 + .14 + Math.sin(i) * .012, p.y * .74 + .11 + Math.cos(i) * .012)));
-  assert.equal(gradeDrawing(drawn, reference, 'free').correct, true);
-});
-
-test('Bebas accepts a recognizable shifted crossbar but rejects a misplaced one', () => {
-  const shiftedCrossbar = offset => reference.map((stroke, n) => stroke.map(p => point(p.x, p.y + (n === 0 ? offset : 0))));
-  assert.equal(gradeDrawing(shiftedCrossbar(.11), reference, 'free').correct, true);
-  assert.equal(gradeDrawing(shiftedCrossbar(.2), reference, 'free').correct, false);
-});
-
-test('Bebas handles flat shapes without losing their horizontal or vertical extent', () => {
-  for (const line of [[point(.15, .5), point(.85, .5)], [point(.5, .15), point(.5, .85)]]) {
-    const points = resample(line, 11).reverse();
-    assert.equal(gradeDrawing([points.slice(0, 6), points.slice(5)], [line], 'free').correct, true);
-  }
-});
-
-test('Bebas rejects missing major parts, extra unrelated ink and scribbles', () => {
-  const invalid = [
-    reference.slice(1),
-    [...reference, [point(.1, .02), point(.9, .02)]],
-    [Array.from({ length: 35 }, (_, i) => point(i % 2 ? .9 : .1, .1 + i / 45))],
-    [[point(.15, .15), point(.85, .15), point(.85, .85), point(.15, .85), point(.15, .15)]],
-    [reference[0]],
-  ];
-  for (const drawn of invalid) {
-    const grade = gradeDrawing(drawn, reference, 'free');
-    assert.equal(grade.correct, false);
-    assert.equal(grade.type, 'shape');
-    assert.equal(grade.stroke, undefined);
-  }
-});
-
-test('Bebas still rejects empty, invalid and unusably small input', () => {
-  assert.equal(gradeDrawing([], reference, 'free').type, 'empty');
-  assert.equal(gradeDrawing([[point(NaN, 0)]], reference, 'free').type, 'invalid');
-  assert.equal(gradeDrawing(reference.map(s => s.map(p => point(p.x / 8, p.y / 8))), reference, 'free').type, 'size');
-});
-
-test('Bebas rejects dense scribbles that run near every line of a complex shape', () => {
-  const grid = [
-    ...[.2, .4, .6, .8].map(y => [point(.1, y), point(.9, y)]),
-    ...[.2, .4, .6, .8].map(x => [point(x, .1), point(x, .9)]),
-  ];
+test('Bebas accepts any nonempty drawing, including scribbles, dots and incomplete shapes', () => {
   const scribble = [Array.from({ length: 60 }, (_, i) => point(i % 2 ? .9 : .1, .1 + i * .8 / 59))];
-  assert.equal(gradeDrawing(scribble, grid, 'free').correct, false);
-  assert.equal(gradeDrawing([...grid, ...grid], grid, 'free').correct, true);
-});
-
-const mouth = [
-  [point(.2, .2), point(.2, .8)],
-  [point(.2, .2), point(.8, .2), point(.8, .8)],
-  [point(.2, .8), point(.8, .8)],
-];
-
-test('Bebas allows small corner gaps and overhangs in mouth and rice-field outlines', () => {
-  const field = [...mouth, [point(.5, .2), point(.5, .8)], [point(.2, .5), point(.8, .5)]];
-  for (const expected of [mouth, field]) {
-    const loose = expected.map(stroke => {
-      const points = resample(stroke, 40);
-      const start = points[2], end = points.at(-3), previous = points.at(-4);
-      const length = Math.hypot(end.x - previous.x, end.y - previous.y);
-      return [start, ...points.slice(3, -3), end, point(end.x + (end.x - previous.x) * .06 / length, end.y + (end.y - previous.y) * .06 / length)];
-    });
-    assert.equal(gradeDrawing(loose.reverse(), expected, 'free').correct, true);
+  const drawings = [
+    scribble,
+    [[point(.5, .5)]],
+    [[point(.49, .49), point(.495, .495)]],
+    reference.slice(1),
+    reference.map(stroke => [...stroke].reverse()).reverse(),
+    [...reference, ...scribble],
+  ];
+  for (const drawn of drawings) {
+    assert.equal(gradeDrawing(drawn, reference, 'free').correct, true);
+    assert.equal(gradeDrawing(drawn, undefined, 'free').correct, true);
   }
 });
 
-test('Bebas tolerates a small detached corner continuation but rejects an unrelated mark', () => {
-  const corner = [...mouth, [point(.93, .85), point(.95, .86)]];
-  assert.equal(gradeDrawing(corner, mouth, 'free').correct, true);
-  const mark = [...reference, [point(.23, .20), point(.25, .22)]];
-  assert.equal(gradeDrawing(mark, reference, 'free').correct, false);
+test('Bebas requires nonempty valid pointer input', () => {
+  assert.equal(gradeDrawing([], reference, 'free').type, 'empty');
+  assert.equal(gradeDrawing([], undefined, 'free').type, 'empty');
+  assert.equal(gradeDrawing([[point(NaN, 0)]], reference, 'free').type, 'invalid');
 });
 
-test('Bebas preserves the distinctive upper protrusion in lost versus arrow-like shapes', () => {
-  const lost = [
-    [point(.33, .21), point(.19, .43)],
-    [point(.30, .35), point(.725, .32)],
-    [point(.18, .55), point(.81, .50)],
-    [point(.495, .13), point(.5, .53), point(.36, .75), point(.16, .88)],
-    [point(.5, .53), point(.79, .88)],
-  ];
-  const missingTop = lost.map((stroke, n) => n === 3 ? [point(.498, .35), ...stroke.slice(1)] : stroke);
-  assert.equal(gradeDrawing(lost, lost, 'free').correct, true);
-  assert.equal(gradeDrawing(missingTop, lost, 'free').correct, false);
-  assert.equal(gradeDrawing(lost, missingTop, 'free').correct, false);
+test('graded modes continue rejecting scribbles accepted by Bebas', () => {
+  const scribble = reference.map(() => Array.from({ length: 32 }, (_, i) => point(i % 2 ? .9 : .1, .1 + i / 40)));
+  assert.equal(gradeDrawing(scribble, reference, 'free').correct, true);
+  for (const sensitivity of ['relaxed', 'normal', 'strict']) {
+    assert.equal(gradeDrawing(scribble, reference, sensitivity).correct, false);
+    assert.equal(gradeDrawing(reference, undefined, sensitivity).type, 'unavailable');
+  }
 });

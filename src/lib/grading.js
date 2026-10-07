@@ -31,19 +31,15 @@ function bounds(strokes) {
   return { width: maxX - minX, height: maxY - minY, cx: (minX + maxX) / 2, cy: (minY + maxY) / 2 };
 }
 
-function align(strokes, reference, shapeOnly = false) {
+function align(strokes, reference) {
   const actual = bounds(strokes), expected = bounds(reference);
   // One uniform transform per character; never align individual strokes independently.
-  const scale = shapeOnly
-    ? Math.max(expected.width, expected.height) / Math.max(actual.width, actual.height, .001)
-    : Math.min(expected.width / Math.max(actual.width, .001), expected.height / Math.max(actual.height, .001));
+  const scale = Math.min(expected.width / Math.max(actual.width, .001), expected.height / Math.max(actual.height, .001));
   return strokes.map(stroke => stroke.map(point => ({ x: (point.x - actual.cx) * scale + expected.cx, y: (point.y - actual.cy) * scale + expected.cy })));
 }
 
 const meanDistance = (a, b) => a.reduce((sum, p, i) => sum + distance(p, b[i]), 0) / a.length;
 const tolerances = { relaxed: .15, normal: .115, strict: .085 };
-// Allow 25% more shape deviation in Bebas while keeping the ink density guard.
-const freeShapeAllowance = 1.25;
 
 function simplify(points, epsilon = .016) {
   if (points.length < 3) return points;
@@ -60,106 +56,16 @@ function simplify(points, epsilon = .016) {
     : [first, last];
 }
 
-function shapeSamples(strokes) {
-  // Sample by ink length so splitting a line does not change its weight.
-  return strokes.map(stroke => {
-    const points = simplify(stroke);
-    return resample(points, Math.max(2, Math.min(128, Math.ceil(pathLength(points) / .02) + 1)));
-  });
-}
-
-function shapeDistances(strokes, target) {
-  return strokes.map(stroke => stroke.map(point => {
-    let nearest = Infinity;
-    for (const other of target) {
-      const dx = point.x - other.x, dy = point.y - other.y;
-      nearest = Math.min(nearest, dx * dx + dy * dy);
-    }
-    return Math.sqrt(nearest);
-  }));
-}
-
-function inkFootprint(strokes) {
-  // Count occupied cells, not pen travel: retracing does not add ink, while
-  // a dense scribble cannot pass just because it runs near every reference line.
-  const cells = new Set();
-  const mark = p => cells.add(`${Math.round(p.x * 64)},${Math.round(p.y * 64)}`);
-  for (const stroke of strokes) {
-    const points = simplify(stroke);
-    mark(points[0]);
-    for (let i = 1; i < points.length; i++) {
-      const start = points[i - 1], end = points[i];
-      const steps = Math.max(1, Math.ceil(distance(start, end) * 128));
-      for (let n = 1; n <= steps; n++) mark({ x: start.x + (end.x - start.x) * n / steps, y: start.y + (end.y - start.y) * n / steps });
-    }
-  }
-  return cells.size;
-}
-
-function connectionZones(strokes) {
-  const zones = [];
-  for (let i = 0; i < strokes.length; i++) {
-    const stroke = simplify(strokes[i]);
-    for (const tip of [stroke[0], stroke.at(-1)]) {
-      if (strokes.some((other, j) => j !== i && other.some(p => distance(tip, p) <= .075))) zones.push(tip);
-    }
-    for (let n = 1; n < stroke.length - 1; n++) {
-      const previous = stroke[n - 1], point = stroke[n], next = stroke[n + 1];
-      const lengths = distance(previous, point) * distance(point, next);
-      const cosine = ((point.x - previous.x) * (next.x - point.x) + (point.y - previous.y) * (next.y - point.y)) / (lengths || 1);
-      if (cosine < .5) zones.push(point);
-    }
-  }
-  return zones;
-}
-
-const nearConnection = (point, zones) => zones.some(zone => distance(point, zone) <= .12);
-
-function connectionErrors(strokes, errors, zones) {
-  // Small gaps and overhangs at joins/corners are handwriting variation.
-  // Isolated marks and distinctive protruding ends get no extra allowance.
-  return errors.map((stroke, i) => stroke.map((error, n) => Math.max(0, error - (nearConnection(strokes[i][n], zones) ? .025 : 0))));
-}
-
-function gradeFreeShape(drawn, reference) {
-  // Compare the complete ink in both directions, without pairing strokes.
-  // Reverse coverage prevents unrelated ink or missing parts from passing.
-  const aligned = align(drawn, reference, true);
-  const actual = shapeSamples(aligned);
-  const expected = shapeSamples(reference);
-  const zones = connectionZones(expected);
-  const rawActualErrors = shapeDistances(actual, expected.flat());
-  const rawExpectedErrors = shapeDistances(expected, actual.flat());
-  const actualErrors = connectionErrors(actual, rawActualErrors, zones);
-  const expectedErrors = connectionErrors(expected, rawExpectedErrors, zones);
-  const mean = values => values.reduce((sum, value) => sum + value, 0) / values.length;
-  const missingTip = expected.some((stroke, i) => [0, stroke.length - 1].some(n => !nearConnection(stroke[n], zones) && rawExpectedErrors[i][n] > .12));
-  const extraTip = actual.some((stroke, i) => [0, stroke.length - 1].some(n => !nearConnection(stroke[n], zones) && rawActualErrors[i][n] > .12));
-  const extraMark = actual.some((stroke, i) => pathLength(stroke) < .12 && mean(rawActualErrors[i]) > .045 && !stroke.some(p => nearConnection(p, zones)));
-  if (missingTip || extraTip || extraMark) return { correct: false, type: 'shape', message: 'Ada bagian pembeda kanji yang hilang atau coretan tambahan. Perhatikan bentuk lengkapnya.' };
-  const errors = [...actualErrors.flat(), ...expectedErrors.flat()].sort((a, b) => a - b);
-  const error = (mean(actualErrors.flat()) + mean(expectedErrors.flat())) / 2;
-  const coverageError = errors[Math.floor((errors.length - 1) * .9)];
-  const partError = Math.max(...actualErrors.map(mean), ...expectedErrors.map(mean));
-  const similarDensity = inkFootprint(aligned) <= inkFootprint(reference) * 1.8;
-  const similarShape = error <= .045 * freeShapeAllowance
-    && coverageError <= .1 * freeShapeAllowance
-    && partError <= .08 * freeShapeAllowance;
-  return similarShape && similarDensity
-    ? { correct: true, type: 'correct', score: Math.round(Math.max(0, 1 - error) * 100), message: 'Bentuk kanji mirip dengan contoh.' }
-    : { correct: false, type: 'shape', message: 'Bentuk kanji belum mirip dengan contoh. Perhatikan bentuk keseluruhannya.' };
-}
-
 export function gradeDrawing(drawn, reference, sensitivity = 'normal') {
-  if (!reference?.length) return { correct: false, type: 'unavailable', message: 'Contoh stroke belum tersedia. Coba muat ulang.' };
+  if (sensitivity !== 'free' && !reference?.length) return { correct: false, type: 'unavailable', message: 'Contoh stroke belum tersedia. Coba muat ulang.' };
   if (!Array.isArray(drawn) || !drawn.length) return { correct: false, type: 'empty', message: 'Kotak masih kosong. Tulis kanjinya terlebih dahulu.' };
   if (drawn.some(stroke => !Array.isArray(stroke) || !stroke.length || stroke.some(p => !Number.isFinite(p.x) || !Number.isFinite(p.y)))) {
     return { correct: false, type: 'invalid', message: 'Jejak tulisan belum terbaca. Hapus dan coba lagi.' };
   }
-  if (sensitivity !== 'free' && drawn.length !== reference.length) return { correct: false, type: 'count', message: `Jumlah stroke belum sesuai (${drawn.length} dari ${reference.length}).` };
+  if (sensitivity === 'free') return { correct: true, type: 'correct', message: 'Latihan menulis selesai.' };
+  if (drawn.length !== reference.length) return { correct: false, type: 'count', message: `Jumlah stroke belum sesuai (${drawn.length} dari ${reference.length}).` };
   const box = bounds(drawn), expectedBox = bounds(reference);
   if (Math.max(box.width, box.height) < .25) return { correct: false, type: 'size', message: 'Tulisan terlalu kecil. Gunakan bagian tengah kotak.' };
-  if (sensitivity === 'free') return gradeFreeShape(drawn, reference);
   const ratio = (box.width / Math.max(box.height, .001)) / (expectedBox.width / Math.max(expectedBox.height, .001));
   if (ratio < .5 || ratio > 1.8) return { correct: false, type: 'shape', message: 'Perbandingan lebar dan tinggi belum sesuai.' };
   const actual = align(drawn, reference).map(stroke => resample(simplify(stroke)));
