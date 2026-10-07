@@ -86,7 +86,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
       const failures = checked.flatMap((grade, i) => grade.correct ? [] : [i]);
       setFailedBoxes(failures);
       setFailedStrokes(checked.map(grade => grade.correct ? null : grade.stroke ?? null));
-      result = failures.length ? { ...checked[failures[0]], message: `Kotak ${failures[0] + 1}: ${checked[failures[0]].message}` } : { correct: true, message: 'Bentuk dan urutan stroke sesuai. Tekan Selanjutnya untuk melanjutkan.' };
+      result = failures.length ? { ...checked[failures[0]], message: `Kotak ${failures[0] + 1}: ${checked[failures[0]].message}` } : { correct: true, message: `${sensitivity === 'free' ? 'Bentuk kanji mirip dengan contoh.' : 'Bentuk dan urutan stroke sesuai.'} Tekan Selanjutnya untuk melanjutkan.` };
     }
     setFeedback(result);
     void playSound(result.correct ? 'correct' : 'wrong');
@@ -161,7 +161,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
       </div>}
       <div className="writing-tools">
         <button className="text-button" disabled={correct || writingRevealed || drawings.every(d => !d.length)} onClick={() => { setDrawings(kanji.map(() => [])); setFeedback(null); setFailedBoxes([]); setFailedStrokes([]); }}><RotateCcw size={16} /> Hapus semua</button>
-        <label className="sensitivity">Toleransi bentuk <select value={sensitivity} onChange={event => onSensitivity(event.target.value)} disabled={correct}><option value="relaxed">Longgar</option><option value="normal">Normal</option><option value="strict">Ketat</option></select></label>
+        <label className="sensitivity">Toleransi bentuk <select value={sensitivity} onChange={event => onSensitivity(event.target.value)} disabled={correct}><option value="free">Bebas</option><option value="relaxed">Longgar</option><option value="normal">Normal</option><option value="strict">Ketat</option></select></label>
       </div>
     </>}
 
@@ -178,7 +178,7 @@ function Practice({ mode, item, sensitivity, onSensitivity, onAttempt, onHelp, o
       {correct ? <button className="text-button next-button" onClick={onAdvance}>Lanjut <ArrowRight size={16} /></button> : <button className="text-button skip-button" onClick={onSkip}>Lewati <ArrowRight size={16} /></button>}
       </>}
     </div>
-    {mode === 'writing' && <p className="grading-note">Penilaian membandingkan bentuk dan urutan stroke. Gunakan “Longgar” bila tulisan alami terlalu sering ditolak.</p>}
+    {mode === 'writing' && <p className="grading-note">{sensitivity === 'free' ? 'Mode Bebas menilai kemiripan bentuk akhir kanji. Jumlah, arah, dan urutan stroke tidak dinilai.' : 'Penilaian membandingkan bentuk dan urutan stroke. Gunakan “Bebas” untuk latihan berdasarkan kemiripan bentuk saja.'}</p>}
   </section>;
 }
 

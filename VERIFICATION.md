@@ -1,5 +1,14 @@
 # Verifikasi
 
+## Mode Bebas, 7 Oktober 2026
+
+- Toleransi bentuk pada Kanji Renshuu berurutan Bebas, Longgar, Normal, dan Ketat. Normal tetap pilihan awal. Bebas membandingkan seluruh bentuk tinta dengan contoh tanpa mencocokkan nomor stroke, arah, atau jumlahnya; tiga mode lama mempertahankan penilaian sebelumnya.
+- Bentuk diselaraskan dengan satu transformasi ukuran/posisi per karakter. Jarak bentuk dibandingkan dua arah agar bagian yang hilang dan tinta yang tidak sesuai tetap terdeteksi. Luas jejak tinta unik juga dibatasi agar coretan rapat yang memenuhi kotak tidak diterima hanya karena dekat dengan garis contoh; menimpa garis yang sama tetap diperbolehkan.
+- 38 tes Node dan build produksi lulus. Regresi Bebas mencakup urutan/arah terbalik, garis dipecah atau disambung, penimpaan garis, variasi kecil, bentuk mendatar/tegak, bagian utama hilang, tinta tambahan, input kosong/invalid/kecil, dan coretan rapat. Longgar, Normal, dan Ketat tetap menolak urutan/arah yang tidak sesuai.
+- `tests/browser-free.js` lulus pada Chromium dengan viewport 1440×1000 dan 375×812. Uji pointer sintetis membuktikan tulisan terbalik ditolak oleh Normal lalu diterima oleh Bebas tanpa menggambar ulang, pilihan bertahan pada soal berikutnya, jawaban tercetak muncul setelah benar, Show answer mengunci kotak, Ulangi menulis membersihkan contoh, serta coretan acak ditolak. Tidak ada error aplikasi atau overflow horizontal.
+- Pada masing-masing viewport, seluruh 314 karakter lokal menerima tiga variasi: bentuk sumber, stroke dipecah sekaligus dibalik arah/urutannya, serta bentuk sedikit digeser/diperkecil dengan jitter kecil (942 kasus positif). Pola zigzag acak yang sama ditolak untuk seluruh 314 contoh.
+- Penilaian ini tetap pencocokan geometri, bukan OCR. Uji memakai jejak sintetis dari KanjiVG; belum merupakan pengukuran akurasi tulisan tangan pengguna nyata atau pengujian perangkat fisik.
+
 ## Default SFX On, 7 Oktober 2026
 
 - Setiap pembukaan atau refresh halaman memulai SFX On. Nilai Off lama pada `kanji-uts-s5-sfx-v1` diabaikan; pengaturan kini hanya berlaku selama halaman terbuka dan tetap mengikuti pergantian mode. Audio tetap menunggu aksi pengguna untuk diaktifkan.
