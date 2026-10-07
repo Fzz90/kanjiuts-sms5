@@ -231,7 +231,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .result-screen { width: 100%; background: var(--panel); border-radius: 22px; border-top: 3px solid var(--accent); box-shadow: var(--shadow); }
 .result-icon { color: var(--accent); }
 .result-screen .mode-badge { display: inline-flex; }
-.result-stats strong { color: var(--accent); }
+.result-independent strong { color: #44eb44; }
+.result-helped strong { color: #8b48e8; }
+.result-skipped strong { color: #d60d2e; }
 .result-stats span { font-size: 14px; }
 .site-footer { color: var(--muted); font-size: 13px; margin-top: 10px; padding: 24px 10px; background: var(--bg); border-radius: 16px 16px 0 0; }
 .site-footer a:hover { color: var(--accent); }

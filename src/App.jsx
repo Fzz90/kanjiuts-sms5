@@ -378,7 +378,11 @@ export default function App() {
 
       {screen === 'result' && <section className="result-screen" data-tm={tm} data-kanji={selectedKanji ?? 'all'}>
         <div className="result-icon"><CheckCircle2 size={42} /></div><span className="mode-badge">{modeNames[mode]} · {tmLabel} · {selectedKanji ?? 'Semua kanji'}</span><h1>Satu sesi selesai.</h1><p>{queue.length} soal {selectedKanji ? `untuk kanji ${selectedKanji}` : allTm ? 'dari seluruh TM 1–7' : `dari TM ${tm}`} sudah kamu latih.</p>
-        <div className="result-stats"><div><strong>{results.independent}</strong><span>Benar tanpa bantuan</span></div><div><strong>{results.helped}</strong><span>Memakai show answer</span></div><div><strong>{results.skipped}</strong><span>Dilewati</span></div></div>
+        <div className="result-stats">
+          <div className="result-independent"><strong>{results.independent}</strong><span>Benar tanpa bantuan</span></div>
+          <div className="result-helped"><strong>{results.helped}</strong><span>Memakai show answer</span></div>
+          <div className="result-skipped"><strong>{results.skipped}</strong><span>Dilewati</span></div>
+        </div>
         <p className="result-detail">{results.correct} jawaban benar setelah latihan · {results.wrong} percobaan belum sesuai</p>
         {results.review.length > 0 && <button className="primary-button" onClick={() => start(tm, selectedKanji, results.review)}><RefreshCw size={18} /> Ulangi {results.review.length} soal yang perlu latihan</button>}
         <div className="result-actions"><button className="secondary-button repeat-session" onClick={() => start(tm, selectedKanji)}>Ulangi {selectedKanji ? `kanji ${selectedKanji}` : tmLabel}</button><button className="secondary-button choose-kanji" onClick={() => chooseMeeting(tm)}>Pilih kanji lain <ArrowRight size={17} /></button><button className="text-button" onClick={() => setScreen('select')}>Pilih TM lain</button></div>
